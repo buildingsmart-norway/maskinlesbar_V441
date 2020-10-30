@@ -1,16 +1,42 @@
 # baseURI: http://rdf.vegdata.no/V441/v441-owl
-# imports: http://www.opengis.net/ont/geosparql
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://xmlns.com/foaf/0.1/
 
 @prefix : <http://rdf.vegdata.no/V441/v441-owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+vann:preferredNamespacePrefix
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en ;
+  rdfs:isDefinedBy vann: ;
+  rdfs:label "Preferred Namespace Prefix"@en ;
+.
+vann:preferredNamespaceUri
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en ;
+  rdfs:isDefinedBy vann: ;
+  rdfs:label "Preferred Namespace Uri"@en ;
+.
 <http://rdf.vegdata.no/V441/v441-owl>
   rdf:type owl:Ontology ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  dc:creator :SVV ;
+  dc:creator :bSINorway ;
+  dc:title "Hb V441" ;
+  dcterms:abstract "Ontologi som representerer innehållet i Håndbok V441"@no ;
+  dcterms:abstract "Ontology representing the content and structure of Handbook V441 {@no} " ;
+  dcterms:created "2020-10-30" ;
+  vann:preferredNamespacePrefix "v441" ;
+  vann:preferredNamespaceUri "http://www.vegvesen.no/def/test/v440-owl" ;
+  owl:imports dc: ;
+  owl:imports foaf: ;
+  owl:versionInfo "0.1" ;
 .
 :Akselererende_utvikling
   rdf:type :Skadeutvikling ;
@@ -134,6 +160,10 @@
   :kode "60"^^xsd:int ;
   rdfs:label "Belastning"@no ;
   rdfs:subClassOf :Skadearsak ;
+.
+:Beskrivelse
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
 .
 :Bevegelse
   rdf:type :Materialuavhengig_skade ;
@@ -518,9 +548,14 @@
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Beskrivelse ;
     ] ;
+.
+:Lokasjonsbeskrivelse
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Lokasjon ;
+  rdfs:subPropertyOf :Beskrivelse ;
 .
 :Lose_skruer_eller_nagler
   rdf:type :Skade_pa_stal ;
@@ -804,6 +839,12 @@
   :kode "-" ;
   rdfs:label "Rotobjekt for v441"@no ;
   rdfs:subClassOf owl:Thing ;
+.
+:SVV
+  rdf:type foaf:Organization ;
+  foaf:homepage <https://www.vegvesen.no/> ;
+  foaf:name "Norwegian Public Roads Administration"@en ;
+  foaf:name "Statens Vegvesen"@no ;
 .
 :Sarbarhet
   rdf:type owl:Class ;
@@ -1173,6 +1214,12 @@
   rdf:type :Belastning ;
   :kode "65"^^xsd:int ;
   rdfs:label "Vindlast"@no ;
+.
+:bSINorway
+  rdf:type foaf:Organization ;
+  foaf:homepage <https://buildingsmart.no/> ;
+  foaf:name "buildingSMART Norge"@no ;
+  foaf:name "buildingSMART Norway"@en ;
 .
 :kode
   rdf:type owl:AnnotationProperty ;
