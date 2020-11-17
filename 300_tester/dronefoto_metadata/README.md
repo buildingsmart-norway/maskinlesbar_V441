@@ -2,7 +2,7 @@
 
 I følgende eksempelbilde tatt av MavicPro 2 ved å bruke Drone Deploy app for android. 
 
-![eksempel dronefoto][dronefoto.jpg]
+![eksempel dronefoto]["dronefoto.jpg"]
 
 ## Exif metadata
 
