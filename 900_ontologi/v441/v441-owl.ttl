@@ -1201,6 +1201,11 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty :ForslagTilTiltakSarbarhet ;
     ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Sarbarhetsbeskrivelse ;
+    ] ;
   owl:disjointUnionOf (
       :Bareevne
       :Trafikksikkerhet
@@ -1231,6 +1236,11 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
 - Pilarer med dårlig kapasitet mot sidekrefter"""@no ;
   rdfs:label "Påkjørsel"@no ;
   rdfs:subClassOf :Sarbarhet ;
+.
+:Sarbarhetsbeskrivelse
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Sarbarhet ;
+  rdfs:subPropertyOf :Beskrivelse ;
 .
 :Setning
   rdf:type :Materialuavhengig_skade ;
