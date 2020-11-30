@@ -463,6 +463,11 @@ og utføres av driftsentreprenøren. Generell inspeksjon beskrives ikke i denne 
   rdfs:domain :Inspeksjon ;
   rdfs:subPropertyOf :HarDokument ;
 .
+:HarDokumentSarbarhet
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Sarbarhet ;
+  rdfs:subPropertyOf :HarDokument ;
+.
 :HarDokumentSkade
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
@@ -1204,7 +1209,17 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :HarDokumentSarbarhet ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty :Sarbarhetsbeskrivelse ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty foaf:depiction ;
     ] ;
   owl:disjointUnionOf (
       :Bareevne

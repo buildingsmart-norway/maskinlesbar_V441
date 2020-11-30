@@ -133,8 +133,8 @@
 				</ownedEnd>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_dst022084_AF9D_485d_9BCF_3D8B63FAF114" name="Lokalisering" visibility="public" association="EAID_F6022084_AF9D_485d_9BCF_3D8B63FAF114" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
 					<type xmi:idref="EAID_D7FD1662_98F1_424c_859D_A53D18A2A420"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000041__AF9D_485d_9BCF_3D8B63FAF114" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000042__AF9D_485d_9BCF_3D8B63FAF114" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000045__AF9D_485d_9BCF_3D8B63FAF114" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000046__AF9D_485d_9BCF_3D8B63FAF114" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_85FF96EF_A67C_435f_9E20_C13ABC67A776" name="Materialundersøkelse" visibility="public">
@@ -156,6 +156,16 @@
 					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000012_AACA_4795_8A60_6DE44FB92E7B" value="1"/>
 					<type xmi:idref="EAJava_CharacterString"/>
 				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_5F75D640_8833_4103_AAC9_7175BB06212E" name="dokument" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000013_8833_4103_AAC9_7175BB06212E" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000014_8833_4103_AAC9_7175BB06212E" value="1"/>
+					<type xmi:idref="EAJava_Document"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_51D2134B_A9FF_4126_876F_11149A4B821D" name="depiction" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000015_A9FF_4126_876F_11149A4B821D" value="0"/>
+					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000016_A9FF_4126_876F_11149A4B821D" value="-1"/>
+					<type xmi:idref="EAJava_Image"/>
+				</ownedAttribute>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_D3C2DEDB_218A_4143_A3E5_FDE3F237FECB" visibility="public">
 				<memberEnd xmi:idref="EAID_dstC2DEDB_218A_4143_A3E5_FDE3F237FECB"/>
@@ -169,18 +179,18 @@
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_AF6AFE7E_B0C8_4472_A080_77B25CD9B4CD" name="Skade" visibility="public">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_F71BB3D8_4626_4bbb_B870_DFB92E6D11AF" name="Beskrivelse" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000013_4626_4bbb_B870_DFB92E6D11AF" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000014_4626_4bbb_B870_DFB92E6D11AF" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000017_4626_4bbb_B870_DFB92E6D11AF" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000018_4626_4bbb_B870_DFB92E6D11AF" value="1"/>
 					<type xmi:idref="EAJava_CharacterString"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_F05E5925_CB77_46f2_8EF7_61963121F9BA" name="depiction" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000015_CB77_46f2_8EF7_61963121F9BA" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000016_CB77_46f2_8EF7_61963121F9BA" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000019_CB77_46f2_8EF7_61963121F9BA" value="0"/>
+					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000020_CB77_46f2_8EF7_61963121F9BA" value="-1"/>
 					<type xmi:idref="EAJava_Image"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B8435715_6E4D_4d19_B10A_D70A41E8E13E" name="dokument" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000017_6E4D_4d19_B10A_D70A41E8E13E" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000018_6E4D_4d19_B10A_D70A41E8E13E" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000021_6E4D_4d19_B10A_D70A41E8E13E" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000022_6E4D_4d19_B10A_D70A41E8E13E" value="1"/>
 					<type xmi:idref="EAJava_Document"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst5E9C39_C430_4efe_B0B2_7D063F020B76" visibility="public" association="EAID_D25E9C39_C430_4efe_B0B2_7D063F020B76" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="none">
@@ -209,8 +219,8 @@
 				<memberEnd xmi:idref="EAID_src69C536_0C34_41f1_BD38_C9C680F673E4"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src69C536_0C34_41f1_BD38_C9C680F673E4" name="Skadetype" visibility="public" association="EAID_2769C536_0C34_41f1_BD38_C9C680F673E4" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_75FD9FBE_2FB8_4465_8439_76D1B676A025"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000019__0C34_41f1_BD38_C9C680F673E4" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000020__0C34_41f1_BD38_C9C680F673E4" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000023__0C34_41f1_BD38_C9C680F673E4" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000024__0C34_41f1_BD38_C9C680F673E4" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_2A2C0A2B_820C_487f_A385_F260E4A3F196" visibility="public">
@@ -225,8 +235,8 @@
 				<memberEnd xmi:idref="EAID_srcDA9905_6C93_404a_94B0_BF1C038A7F16"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcDA9905_6C93_404a_94B0_BF1C038A7F16" name="Skadegrad" visibility="public" association="EAID_3ADA9905_6C93_404a_94B0_BF1C038A7F16" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_37464BEE_4854_4d6c_810F_FEDDAC8E0BE0"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000021__6C93_404a_94B0_BF1C038A7F16" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000022__6C93_404a_94B0_BF1C038A7F16" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000025__6C93_404a_94B0_BF1C038A7F16" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000026__6C93_404a_94B0_BF1C038A7F16" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_5521BA30_498F_4fea_8CC1_A86AD613ACA3" visibility="public">
@@ -234,8 +244,8 @@
 				<memberEnd xmi:idref="EAID_src21BA30_498F_4fea_8CC1_A86AD613ACA3"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src21BA30_498F_4fea_8CC1_A86AD613ACA3" name="Skadeutvikling" visibility="public" association="EAID_5521BA30_498F_4fea_8CC1_A86AD613ACA3" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_FB21CD0B_BE9B_417d_95B5_A6F0E202AD2E"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000023__498F_4fea_8CC1_A86AD613ACA3" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000024__498F_4fea_8CC1_A86AD613ACA3" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000027__498F_4fea_8CC1_A86AD613ACA3" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000028__498F_4fea_8CC1_A86AD613ACA3" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_78132DDB_DAE3_4e55_A1EB_30D7913901EE" visibility="public">
@@ -253,24 +263,24 @@
 				<memberEnd xmi:idref="EAID_src7B21A5_607A_485e_A567_7A25F7AF4100"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src7B21A5_607A_485e_A567_7A25F7AF4100" name="Skadeårsak" visibility="public" association="EAID_E47B21A5_607A_485e_A567_7A25F7AF4100" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_ED38D3DC_9343_41c3_AC0D_1AF0ED01FC36"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000025__607A_485e_A567_7A25F7AF4100" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000026__607A_485e_A567_7A25F7AF4100" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000029__607A_485e_A567_7A25F7AF4100" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000030__607A_485e_A567_7A25F7AF4100" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_CC8298BF_2937_48e6_B4CC_CB4F0DE5C957" name="Skadebeskrivelse" visibility="public">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_1F875EC2_48A7_4ad5_B902_5A68B6CF1248" name="Beskrivelse" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000027_48A7_4ad5_B902_5A68B6CF1248" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000028_48A7_4ad5_B902_5A68B6CF1248" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000031_48A7_4ad5_B902_5A68B6CF1248" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000032_48A7_4ad5_B902_5A68B6CF1248" value="1"/>
 					<type xmi:idref="EAJava_CharacterString"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_75371FE7_82C4_4844_869F_B9061FB7F4E4" name="dokument" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000029_82C4_4844_869F_B9061FB7F4E4" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000030_82C4_4844_869F_B9061FB7F4E4" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000033_82C4_4844_869F_B9061FB7F4E4" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000034_82C4_4844_869F_B9061FB7F4E4" value="1"/>
 					<type xmi:idref="EAJava_Document"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_9DF510D1_62BF_4954_B1BD_43C55874CA75" name="depiction" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000031_62BF_4954_B1BD_43C55874CA75" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000032_62BF_4954_B1BD_43C55874CA75" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000035_62BF_4954_B1BD_43C55874CA75" value="0"/>
+					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000036_62BF_4954_B1BD_43C55874CA75" value="-1"/>
 					<type xmi:idref="EAJava_Image"/>
 				</ownedAttribute>
 			</packagedElement>
@@ -284,8 +294,8 @@
 				<memberEnd xmi:idref="EAID_srcD90ADF_BF63_4f44_9F86_3555335962BF"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcD90ADF_BF63_4f44_9F86_3555335962BF" name="Konsekvensgrad" visibility="public" association="EAID_02D90ADF_BF63_4f44_9F86_3555335962BF" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_78FD087C_2DAC_448a_ACED_73970934D88E"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000033__BF63_4f44_9F86_3555335962BF" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000034__BF63_4f44_9F86_3555335962BF" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000037__BF63_4f44_9F86_3555335962BF" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000038__BF63_4f44_9F86_3555335962BF" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_2FCA5046_F956_4036_B6FE_F60A978F891E" visibility="public">
@@ -293,8 +303,8 @@
 				<memberEnd xmi:idref="EAID_srcCA5046_F956_4036_B6FE_F60A978F891E"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcCA5046_F956_4036_B6FE_F60A978F891E" name="Konsekvenstype" visibility="public" association="EAID_2FCA5046_F956_4036_B6FE_F60A978F891E" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false" aggregation="composite">
 					<type xmi:idref="EAID_0123BD8E_2EFB_4c58_A5DA_4428BD19D74A"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000035__F956_4036_B6FE_F60A978F891E" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000036__F956_4036_B6FE_F60A978F891E" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000039__F956_4036_B6FE_F60A978F891E" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000040__F956_4036_B6FE_F60A978F891E" value="1"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_60AE696E_A893_480a_9715_5752C14C2EF9" name="Skred" visibility="public">
@@ -305,13 +315,13 @@
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_374AD309_925A_4044_BAD4_FFC967B1DBBB" name="Tiltak" visibility="public" isAbstract="true">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_AA0D0CFD_D2A7_41e7_A618_6933FF0ACBF5" name="Beskrivelse" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000037_D2A7_41e7_A618_6933FF0ACBF5" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000038_D2A7_41e7_A618_6933FF0ACBF5" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000041_D2A7_41e7_A618_6933FF0ACBF5" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000042_D2A7_41e7_A618_6933FF0ACBF5" value="1"/>
 					<type xmi:idref="EAJava_CharacterString"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_81B7BD74_602F_4cd0_8CB9_12E22BD4AD83" name="dokument" visibility="public" isStatic="false" isReadOnly="false" isDerived="false" isOrdered="false" isUnique="true" isDerivedUnion="false">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000039_602F_4cd0_8CB9_12E22BD4AD83" value="1"/>
-					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000040_602F_4cd0_8CB9_12E22BD4AD83" value="1"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000043_602F_4cd0_8CB9_12E22BD4AD83" value="1"/>
+					<upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000044_602F_4cd0_8CB9_12E22BD4AD83" value="1"/>
 					<type xmi:idref="EAJava_Document"/>
 				</ownedAttribute>
 			</packagedElement>
@@ -932,6 +942,36 @@
 						<tags/>
 						<xrefs/>
 					</attribute>
+					<attribute xmi:idref="EAID_5F75D640_8833_4103_AAC9_7175BB06212E" name="dokument" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="125" ea_guid="{5F75D640-8833-4103-AAC9-7175BB06212E}"/>
+						<properties type="Document" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="1"/>
+						<stereotype/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
+					<attribute xmi:idref="EAID_51D2134B_A9FF_4126_876F_11149A4B821D" name="depiction" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="126" ea_guid="{51D2134B-A9FF-4126-876F-11149A4B821D}"/>
+						<properties type="Image" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="2"/>
+						<stereotype/>
+						<bounds lower="0" upper="*"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
 				</attributes>
 				<links>
 					<Association xmi:id="EAID_94F87743_747F_4b8c_8475_FF959769D9DC" start="EAID_5A8F252C_B305_423e_A8DC_10BD6AA82D3F" end="EAID_D99E0C88_4FE1_4629_85A3_606BADBB15F0"/>
@@ -979,7 +1019,7 @@
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="1"/>
 						<stereotype/>
-						<bounds lower="1" upper="1"/>
+						<bounds lower="0" upper="*"/>
 						<options/>
 						<style/>
 						<styleex value="volatile=0;"/>
@@ -1062,7 +1102,7 @@
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="2"/>
 						<stereotype/>
-						<bounds lower="1" upper="1"/>
+						<bounds lower="0" upper="*"/>
 						<options/>
 						<style/>
 						<styleex value="volatile=0;"/>
