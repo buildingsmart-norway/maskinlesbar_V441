@@ -838,6 +838,11 @@ utføres spesialinspeksjon."""@no ;
   rdf:type owl:Class ;
   rdfs:label "Inspeksjon enligt V441"@no ;
   rdfs:subClassOf :Inspeksjon ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Skadebeskrivelser ;
+    ] ;
   owl:disjointUnionOf (
       :Enkelinspeksjon
       :Hovedinspeksjon
@@ -2372,6 +2377,11 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty foaf:depiction ;
     ] ;
+.
+:Skadebeskrivelser
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Inspeksjon_V441 ;
+  rdfs:range :Skadebeskrivelse ;
 .
 :Skadegrad
   rdf:type owl:Class ;
