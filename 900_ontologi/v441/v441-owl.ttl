@@ -964,6 +964,15 @@ Ved spesialinspeksjon av overflatebelegg på stål bør FROSIO-inspektør nivå 
 benyttes. Dette gjelder spesielt dersom det skal vurderes omfattende vedlikeholdsarbeider."""@no ;
   rdfs:label "Kontroll overflatebelegg"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
+  owl:disjointUnionOf (
+      :MEK_test
+      :Tykkelse_overflatebelegg_stal
+      :Heft_overflatebelegg_stal
+      :Visuell_inspeksjon_overflatebelegg
+      :Overmalbarhet_gammelt_belegg
+      :Kontroll_saltmengde_klorider
+      :Inntrengningsdybde_vannavvisende_impregnering_betong
+    ) ;
 .
 :Kontroll_saltmengde_klorider
   rdf:type owl:Class ;
@@ -1508,6 +1517,21 @@ Flere av materialundersøkelsene som utføres på betong krever at det bores hul
 betongen. Se håndbok R211 Feltundersøkelse om hvordan disse skal repareres."""@no ;
   rdfs:label "Materialundersøkelser, betong"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
+  owl:disjointUnionOf (
+      :Impulse_Response
+      :Strukturanalyse
+      :Opphugning_korrosjonsbedommelse
+      :Armeringslokalisering_betongoverdekning
+      :Fasthetsbestemmelse
+      :Korrosjonsundersokelse_EKP
+      :Maling_karbonatiseringsdybde
+      :Ultralyd
+      :Maling_rissvidder
+      :Spennkabelkontroll
+      :Maling_kloridinnhold
+      :Impact_Echo
+      :Termokamera
+    ) ;
 .
 :Materialundersokelse_stal
   rdf:type owl:Class ;
@@ -1516,6 +1540,19 @@ inspeksjon av bruer og bruelementer av stål. Mange av disse materialundersøkel
 firmaer med spesialkompetanse, og noen utfyllende beskrivelse vil ikke bli gitt her."""@no ;
   rdfs:label "Materialundersøkelser, stål"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
+  owl:disjointUnionOf (
+      :Nagle_skruekontroll
+      :Positiv_Material_Identifikasjon_PMI
+      :Magnetpulverkontroll
+      :Fiberoptikk
+      :Virvelstromproving
+      :Godstykkelsesmaling_ultralyd
+      :Momentkontroll_skruer
+      :Sveisekontroll
+      :Rontgenkontroll
+      :Penetrant
+      :Ultralydkontroll
+    ) ;
 .
 :Materialundersokelse_stein
   rdf:type owl:Class ;
@@ -1543,6 +1580,14 @@ prøvetaking og analyse
 NS 3512, Måling av fukt i trekonstruksjoner"""@no ;
   rdfs:label "Materialundersøkelser, tre"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
+  owl:disjointUnionOf (
+      :Proving_syl
+      :Ratedrill
+      :Elektrisk_fuktmaler
+      :Kjerneprove
+      :Kontroll_spennkraft
+      :Hammer
+    ) ;
 .
 :Mekanisk_skade
   rdf:type :Skade_pa_tre ;
@@ -1712,6 +1757,13 @@ ISO 8501-1"""@no ;
   rdf:type owl:Class ;
   rdfs:label "Oppmålinger"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
+  owl:disjointUnionOf (
+      :Maling_sporslitasje
+      :Maling_pilhoyder
+      :Nivellement
+      :Maling_slitelagstykkelse
+      :Maling_horisontalavstander_forskyvninger
+    ) ;
 .
 :Oppmaling_av_skader
   rdf:type owl:Class ;
@@ -1732,6 +1784,14 @@ Omfanget av disse målingene og undersøkelsene må vurderes i hvert enkelt tilf
 Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøkelser, slik at de utføres målrettet. Dette av hensyn til kostnader, men også av utseendemessige årsaker for de destruktive målemetodene. Ved utboring av kjerner må det tas hensyn til eventuelle konstruktive og bestandighetsmessige svekkelser av det elementet som undersøkes. For enkelte bruer kan det være igangsatt spesielle rutiner for oppmåling (måleprogram), materialundersøkelser og/eller instrumentert overvåkning. Dette vil framgå av tiltaksplanen i Brutus. Flere av oppmålingene og materialundersøkelsene krever spesielle rutiner og ekstra kvalitetssikring. Ofte kreves det også spesialkompetanse og spesialutstyr. Dette gjelder alltid for montasje av instrumentert overvåkning."""@no ;
   rdfs:label "oppmålinger/ materialundersøkelser"@no ;
   rdfs:subClassOf :Root ;
+  owl:disjointUnionOf (
+      :Materialundersokelse_stein
+      :Oppmaling
+      :Kontroll_overflatebelegg
+      :Materialundersokelse_betong
+      :Materialundersokelse_stal
+      :Materialundersokelse_tre
+    ) ;
 .
 :Opprensk_eller_opprydding_over_og_under_vann
   rdf:type owl:Class ;
