@@ -841,6 +841,11 @@ utføres spesialinspeksjon."""@no ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Sarbarheter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty :Skadebeskrivelser ;
     ] ;
   owl:disjointUnionOf (
@@ -848,6 +853,11 @@ utføres spesialinspeksjon."""@no ;
       :Hovedinspeksjon
       :Spesialinspeksjon
     ) ;
+.
+:InspeksjonenUtford
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:subPropertyOf :Utford ;
 .
 :Inspeksjonsbeskrivelse
   rdf:type owl:DatatypeProperty ;
@@ -2132,6 +2142,11 @@ NS-EN ISO 17636-2:2013"""@no ;
   rdfs:label "Påkjørsel"@no ;
   rdfs:subClassOf :Sarbarhet ;
 .
+:Sarbarheter
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Inspeksjon_V441 ;
+  rdfs:range :Sarbarhet ;
+.
 :Sarbarhetsbeskrivelse
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Sarbarhet ;
@@ -2823,6 +2838,14 @@ NS-EN ISO 19285"""@no ;
   :kode "5.7.09" ;
   rdfs:label "Undergraving av fundamenter, sårbar Flom"@no ;
   rdfs:subClassOf :ROS_analyse ;
+.
+:Utford
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Date when activity was finalized"@en ;
+  rdfs:comment "Dato når aktiviteten ble utført"@no ;
+  rdfs:label "Executed"@en ;
+  rdfs:label "Utførd"@no ;
+  rdfs:range xsd:date ;
 .
 :Utfore_materialundersokelse_ved_en_spesialinspeksjon
   rdf:type owl:Class ;
