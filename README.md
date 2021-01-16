@@ -8,8 +8,8 @@ Implementasjonen er basert på lenkede data og semantisk web.
 Dette er et prosjekt bestilt av Statens vegvesen og blir gjennomført i regi av Teknisk Rom i buildingSMART Norge.
 Prosjektet har følgende leveranser:
 
-1) Utvikle og publisere en maskinlesbar datamodell av håndbok V441 på semantisk web format, en såkalt ontologi
-Utviklingen er basert på prinsipper som ble utviklet og beskrevet en "Modelling and Linking Guide" i prosjektet Interlink https://www.roadotl.eu og videreutviklingen av denne guiden i CEN 442 WG4 TG3.  
+1) Utvikle og publisere en maskinlesbar datamodell av håndbok V441 på semantisk web format, en såkalt ontologi.
+Utviklingen er basert på prinsipper som ble utviklet og beskrevet i en "Modelling and Linking Guide" i prosjektet Interlink https://www.roadotl.eu og videreutviklingen av denne guiden i CEN 442 WG4 TG3.  
 
 2) Tilgengeliggjøre et SPARQL-endepunkt for V441 ontologien
 
