@@ -1,4 +1,4 @@
-# maskinlesbar_V441
+# maskinlesbar Håndbok V441
 Dette prosjektet utvikler en første versjon av en maskinlesbar implementasjon av v441 - Bruinspeksjon https://www.vegvesen.no/_attachment/69833/binary/1356118?fast_title=H%C3%A5ndbok+V441+Bruinspeksjon.pdf
 
 Implementasjonen er basert på lenkede data og semantisk web.
