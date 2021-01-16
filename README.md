@@ -13,16 +13,16 @@ Utviklingen er basert på prinsipper som ble utviklet og beskrevet i en "Modelli
 
 2) Tilgengeliggjøre et SPARQL-endepunkt for V441 ontologien
 
-3) Gjennomføre [openLAB : Interoperate] for å få testet ut ontologien i bruk i ulike programvareløsninger og samtidig markedsføre både teknologien og det utviklede ontologien. 
+3) Gjennomføre [openLAB : Interoperate] for å få testet ut ontologien i bruk i ulike programvareløsninger og samtidig markedsføre både teknologien og den utviklede ontologien. 
 [openLAB : Interoperate] gjennomføres i perioden 20. januar til 17. februar 2021.
 
 
 ## Hvordan delta og være informert
-Arbeidet foregår i en prosjektgruppe ledet av Teknisk Rom i buildingSMART Norge
+Arbeidet foregår i en prosjektgruppe ledet av Teknisk Rom i buildingSMART Norge.
 
-Programvareleverandører og andre interessenter er invitert med i **[openLAB : Interoperate]**. Dette er en "workshop" over en måned der deltakerne blir utfordret til å løse tekniske utfordringer basert på V441 ontologien samtidig som de får gratis teknisk support for implementasjon og testing av ontologien. Det hele vi avsluttes med en samling der de ulike deltakerne presenterer hva de har laget og beste bidrag blir premiert.
+Programvareleverandører og andre interessenter er invitert med i **[openLAB : Interoperate]**. Dette er en "workshop" over en måned der deltakerne blir utfordret til å løse tekniske utfordringer basert på V441 ontologien samtidig som de får gratis teknisk support for implementasjon og testing av ontologien. Det hele vi avsluttes med en samling der de ulike deltakerne presenterer hva de har laget. Det beste bidraget blir premiert.
 
-NB: På wiki-sidene på denne GitHub-siten, er det lagt inn masse nyttig teknisk informasjon og veiledning om hvordan ontologiene skal benyttes.
+NB: På wiki-sidene på denne GitHub-siten, er det lagt inn mye nyttig teknisk informasjon og veiledning om hvordan ontologiene skal benyttes.
 
 
 ## Hvordan bidra i GitHub
