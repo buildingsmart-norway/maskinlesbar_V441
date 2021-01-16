@@ -20,7 +20,7 @@ Utviklingen er basert på prinsipper som ble utviklet og beskrevet i en "Modelli
 ## Hvordan delta og være informert
 Arbeidet foregår i en prosjektgruppe ledet av Teknisk Rom i buildingSMART Norge.
 
-Programvareleverandører og andre interessenter er invitert med i **[openLAB : Interoperate]**. Dette er en "workshop" over en måned der deltakerne blir utfordret til å løse tekniske utfordringer basert på V441 ontologien samtidig som de får gratis teknisk support for implementasjon og testing av ontologien. Det hele vi avsluttes med en samling der de ulike deltakerne presenterer hva de har laget. Det beste bidraget blir premiert.
+Programvareleverandører og andre interessenter er invitert med i **[openLAB : Interoperate]**. Dette er en "workshop" over en måned der deltakerne blir utfordret til å løse tekniske oppgaver basert på V441 ontologien samtidig som de får gratis teknisk support for implementasjon og testing av ontologien. Det hele avsluttes med en samling der de ulike deltakerne presenterer hva de har laget. Det beste bidraget blir premiert.
 
 NB: På wiki-sidene på denne GitHub-siten, er det lagt inn mye nyttig teknisk informasjon og veiledning om hvordan ontologiene skal benyttes.
 
