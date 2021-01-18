@@ -1,8 +1,8 @@
-# baseURI: http://rdf.vegdata.no/V441/v441-owl
+# baseURI: http://rdf.vegdata.no/bridge/v441/v441-owl
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://xmlns.com/foaf/0.1/
 
-@prefix : <http://rdf.vegdata.no/V441/v441-owl#> .
+@prefix : <http://rdf.vegdata.no/bridge/v441/v441-owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -24,7 +24,7 @@ vann:preferredNamespaceUri
   rdfs:isDefinedBy vann: ;
   rdfs:label "Preferred Namespace Uri"@en ;
 .
-<http://rdf.vegdata.no/V441/v441-owl>
+<http://rdf.vegdata.no/bridge/v441/v441-owl>
   rdf:type owl:Ontology ;
   dc:creator :SVV ;
   dc:creator :bSINorway ;
@@ -52,6 +52,16 @@ vann:preferredNamespaceUri
   rdf:type :Materialfeil ;
   :kode "25"^^xsd:int ;
   rdfs:label "Alkalireaktivt tilslag"@no ;
+.
+:AlternativStrategi
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Tiltak ;
+  rdfs:range :Tiltak ;
+.
+:AnbefaltTidpunkt
+  rdf:type rdf:Property ;
+  rdfs:domain :Tiltak ;
+  rdfs:range xsd:date ;
 .
 :Annen_eller_ukjent
   rdf:type owl:Class ;
@@ -286,6 +296,16 @@ Håndbok R211 Feltundersøkelser"""@no ;
       :Broyteskade
       :Folgeskade
     ) ;
+.
+:Brunavn
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:range xsd:string ;
+.
+:Brunummer
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:range xsd:string ;
 .
 :Daglige_driftsoppgaver_pa_bevegelige_bruer
   rdf:type owl:Class ;
@@ -817,7 +837,32 @@ utføres spesialinspeksjon."""@no ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Brunavn ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Brunummer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Prosjektidentifikasjon ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty foaf:maker ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :InspeksjonenStartet ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :InspeksjonenUtford ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -826,8 +871,18 @@ utføres spesialinspeksjon."""@no ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Vaerforhold ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty :Inspeksjonsbeskrivelse ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Sammendrag ;
     ] ;
   owl:disjointUnionOf (
       :GenerellInspeksjon_R610
@@ -853,6 +908,11 @@ utføres spesialinspeksjon."""@no ;
       :Hovedinspeksjon
       :Spesialinspeksjon
     ) ;
+.
+:InspeksjonenStartet
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:subPropertyOf :Utford ;
 .
 :InspeksjonenUtford
   rdf:type owl:DatatypeProperty ;
@@ -1069,6 +1129,11 @@ Henvisninger
 Håndbok R211 Feltundersøkelser"""@no ;
   rdfs:label "Korrosjonsundersøkelse (EKP)"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
+.
+:Kostnadsoverslag
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Tiltak ;
+  rdfs:range xsd:string ;
 .
 :Krakelering_eller_hull
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
@@ -1964,6 +2029,11 @@ NS-EN ISO 17636-2:2013"""@no ;
       :Mangelfullt_regelverk
     ) ;
 .
+:Prosjektidentifikasjon
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:range xsd:string ;
+.
 :Proving_syl
   rdf:type owl:Class ;
   rdfs:comment """Hensikt
@@ -2084,6 +2154,11 @@ NS-EN ISO 17636-2:2013"""@no ;
   foaf:homepage <https://www.vegvesen.no/> ;
   foaf:name "Norwegian Public Roads Administration"@en ;
   foaf:name "Statens Vegvesen"@no ;
+.
+:Sammendrag
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:range xsd:string ;
 .
 :Sarbarhet
   rdf:type owl:Class ;
@@ -2671,7 +2746,22 @@ Henvisninger"""@no ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :AlternativStrategi ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :AnbefaltTidpunkt ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty :HarDokumentTiltak ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty :Kostnadsoverslag ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2921,6 +3011,11 @@ NS-EN ISO 19285"""@no ;
 :V441Lokasjon
   rdf:type owl:Class ;
   rdfs:subClassOf :Lokasjon ;
+.
+:Vaerforhold
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Inspeksjon ;
+  rdfs:range xsd:string ;
 .
 :Vedlikehold
   rdf:type owl:Class ;

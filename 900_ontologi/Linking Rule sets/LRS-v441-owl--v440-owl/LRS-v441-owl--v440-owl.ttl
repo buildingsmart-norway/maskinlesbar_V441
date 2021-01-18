@@ -1,13 +1,11 @@
-# baseURI: http://rdf.vegdata.no/V441/LRS-v441-owl--v440-owl
+# baseURI: http://rdf.vegdata.no/bridge/v441/lrs-v441-owl--v440-owl
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://rdf.vegdata.no/V440/v440-brudata-owl
 # imports: http://rdf.vegdata.no/V440/v440-owl
-# imports: http://rdf.vegdata.no/V441/v441-owl
+# imports: http://rdf.vegdata.no/bridge/v441/v441-owl
 # imports: http://xmlns.com/foaf/0.1/
-# prefix: LRS-v441-owl--v440-owl
 
-@prefix : <http://rdf.vegdata.no/V441/LRS-v441-owl--v440-owl#> .
-@prefix LRS-v441-owl--v440-owl: <http://rdf.vegdata.no/V441/LRS-v441-owl--v440-owl#> .
+@prefix : <http://rdf.vegdata.no/bridge/v441/lrs-v441-owl--v440-owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -16,7 +14,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix v440-brudata-owl: <http://rdf.vegdata.no/V440/v440-brudata-owl#> .
 @prefix v440-owl: <http://rdf.vegdata.no/V440/v440-owl#> .
-@prefix v441-owl: <http://rdf.vegdata.no/V441/v441-owl#> .
+@prefix v441-owl: <http://rdf.vegdata.no/bridge/v441/v441-owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -32,28 +30,28 @@ vann:preferredNamespaceUri
   rdfs:isDefinedBy vann: ;
   rdfs:label "Preferred Namespace Uri"@en ;
 .
-<http://rdf.vegdata.no/V441/LRS-v441-owl--v440-owl>
+<http://rdf.vegdata.no/bridge/v441/lrs-v441-owl--v440-owl>
   rdf:type owl:Ontology ;
-  dc:creator LRS-v441-owl--v440-owl:SVV ;
-  dc:creator LRS-v441-owl--v440-owl:bSINorway ;
+  dc:creator :SVV ;
+  dc:creator :bSINorway ;
   dc:title "Hb V441" ;
   dcterms:abstract "Ontology linking V441 with V440{@en} " ;
   dcterms:created "2020-10-30" ;
-  vann:preferredNamespacePrefix "LRS-v441--v440" ;
-  vann:preferredNamespaceUri "http://rdf.vegdata.no/V441/LRS-v441-owl--v440-owl" ;
+  vann:preferredNamespacePrefix "lrs-v441--v440" ;
+  vann:preferredNamespaceUri "http://rdf.vegdata.no/bridge/v441/lrs-v441-owl--v440-owl" ;
   owl:imports dc: ;
   owl:imports <http://rdf.vegdata.no/V440/v440-brudata-owl> ;
   owl:imports <http://rdf.vegdata.no/V440/v440-owl> ;
-  owl:imports <http://rdf.vegdata.no/V441/v441-owl> ;
+  owl:imports <http://rdf.vegdata.no/bridge/v441/v441-owl> ;
   owl:imports foaf: ;
   owl:versionInfo "0.1" ;
 .
-LRS-v441-owl--v440-owl:ConcernsElement
+:AvserElement
   rdf:type owl:ObjectProperty ;
   rdfs:domain v441-owl:Elementlokasjon ;
   rdfs:range v440-owl:Byggverkselement ;
 .
-LRS-v441-owl--v440-owl:avserElementType
+:AvserElementType
   rdf:type owl:ObjectProperty ;
   rdfs:domain v441-owl:V441Lokasjon ;
   rdfs:range owl:Class ;
@@ -62,14 +60,14 @@ v441-owl:Elementlokasjon
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty LRS-v441-owl--v440-owl:ConcernsElement ;
+      owl:onProperty :AvserElement ;
     ] ;
 .
 v441-owl:V441Lokasjon
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty LRS-v441-owl--v440-owl:avserElementType ;
+      owl:onProperty :AvserElementType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
