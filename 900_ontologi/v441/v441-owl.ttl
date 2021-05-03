@@ -41,6 +41,7 @@ vann:preferredNamespaceUri
 :Akselererende_utvikling
   rdf:type :Skadeutvikling ;
   :kode "-" ;
+  rdfs:label "Accelerating development"@en ;
   rdfs:label "Akselererende utvikling"@no ;
 .
 :Aktuelle_oppmalinger_materialundersokelser
@@ -51,6 +52,7 @@ vann:preferredNamespaceUri
 :Alkalireaktivt_tilslag
   rdf:type :Materialfeil ;
   :kode "25"^^xsd:int ;
+  rdfs:label "Alkali reactive aggregates"@en ;
   rdfs:label "Alkalireaktivt tilslag"@no ;
 .
 :AlternativStrategi
@@ -67,6 +69,7 @@ vann:preferredNamespaceUri
   rdf:type owl:Class ;
   :kode "90"^^xsd:int ;
   rdfs:label "Annen / ukjent"@no ;
+  rdfs:label "Other / unknown"@en ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Annen_eller_ukjent_arsak
@@ -76,11 +79,13 @@ vann:preferredNamespaceUri
   rdf:type :Annen_eller_ukjent ;
   :kode "90" ;
   rdfs:label "Annen/ukjent skadeårsak"@no ;
+  rdfs:label "Other / unknown cause of damage"@en ;
 .
 :Annen_skade_eller_mangel
   rdf:type owl:Class ;
   :kode "90"^^xsd:int ;
   rdfs:label "Annen skade / mangel"@no ;
+  rdfs:label "Other damage / deficiency"@en ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
       :Annen_skade_eller_mangel_Ikke_spesifisert
@@ -90,65 +95,76 @@ vann:preferredNamespaceUri
   rdf:type :Annen_skade_eller_mangel ;
   :kode "90"^^xsd:int ;
   rdfs:label "Annen skade eller mangel, ikke spesifisert"@no ;
+  rdfs:label "Other damage or defect, not specified"@en ;
 .
 :Annet_tiltak__Driftstiltak
   rdf:type owl:Class ;
   :kode "5.1.99" ;
   rdfs:label "Annet tiltak - Driftstiltak"@no ;
+  rdfs:label "Other measures - operating measures"@en ;
   rdfs:subClassOf :Driftstiltak ;
 .
 :Annet_tiltak__Innmaling_eller_Oppmaling
   rdf:type owl:Class ;
   :kode "5.8.99" ;
   rdfs:label "Annet tiltak - innmåling/oppmåling"@no ;
+  rdfs:label "Other measures - Surveying"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Annet_tiltak__ROS_analyse
   rdf:type owl:Class ;
   :kode "5.7.99" ;
   rdfs:label "Annet tiltak - ROS-analyse"@no ;
+  rdfs:label "Other measures - ROS analysis"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Annet_tiltak__Vedlikehold
   rdf:type owl:Class ;
   :kode "5.2.99" ;
   rdfs:label "Annet tiltak - Vedlikehold"@no ;
+  rdfs:label "Other measures - Maintenance"@en ;
   rdfs:subClassOf :Vedlikehold ;
 .
 :Annet_tiltak__fornyelse
   rdf:type owl:Class ;
   :kode "5.3.99" ;
   rdfs:label "Annet tiltak - fornyelse"@no ;
+  rdfs:label "Other measures - renovation"@en ;
   rdfs:subClassOf :Fornyelse ;
 .
 :Annet_tiltak__forsterking
   rdf:type owl:Class ;
   :kode "5.4.99" ;
   rdfs:label "Annet tiltak - forsterking"@no ;
+  rdfs:label "Other measures - reinforcement"@en ;
   rdfs:subClassOf :Forsterkning ;
 .
 :Annet_tiltak__kontrollberegning
   rdf:type owl:Class ;
   :kode "5.6.99" ;
   rdfs:label "Annet tiltak - kontrollberegning - kontroll bæreevne"@no ;
+  rdfs:label "Other measures - control calculation - control loading capacity"@en ;
   rdfs:subClassOf :Kontrollberegning ;
 .
 :Annet_tiltak__materialundersokelse
   rdf:type owl:Class ;
   :kode "5.9.99" ;
   rdfs:label "Annet tiltak - materialundersøkelse"@no ;
+  rdfs:label "Other measures - material examination"@en ;
   rdfs:subClassOf :Materialundersokelse ;
 .
 :Annet_tiltak__ombygging
   rdf:type owl:Class ;
   :kode "5.5.99" ;
   rdfs:label "Annet tiltak - ombygging"@no ;
+  rdfs:label "Other measures - reconstruction"@en ;
   rdfs:subClassOf :Ombygging ;
 .
 :Armeringskorrosjon
   rdf:type :Skade_pa_betong ;
   :kode "36"^^xsd:int ;
   rdfs:label "Armeringskorrosjon"@no ;
+  rdfs:label "Reinforcement corrosion"@en ;
 .
 :Armeringslokalisering_betongoverdekning
   rdf:type owl:Class ;
@@ -180,27 +196,32 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "5.8.03" ;
   rdfs:label "Asfalttykkelse må kartlegges"@no ;
+  rdfs:label "Asphalt thickness must be mapped"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Avflaking
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "75"^^xsd:int ;
   rdfs:label "Avflaking"@no ;
+  rdfs:label "flaking"@en ;
 .
 :Avskalling
   rdf:type :Skade_pa_betong ;
   :kode "35"^^xsd:int ;
   rdfs:label "Avskalling"@no ;
+  rdfs:label "Peeling"@en ;
 .
 :Avtagende_utvikling
   rdf:type :Skadeutvikling ;
   :kode "-" ;
   rdfs:label "Avtagende utvikling"@no ;
+  rdfs:label "Decreasing development"@en ;
 .
 :Avvik_fra_standard
   rdf:type :Prosjekteringsfeil ;
   :kode "12"^^xsd:int ;
   rdfs:label "Avvik fra standard (den standard som gjaldt da brua ble bygd)"@no ;
+  rdfs:label "Deviations from the standard (the standard that existed when the bridge was built)"@en ;
 .
 :Bareevne
   rdf:type owl:Class ;
@@ -214,6 +235,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "60"^^xsd:int ;
   rdfs:label "Belastning"@no ;
+  rdfs:label "Load"@en ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Islast
@@ -234,26 +256,31 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type :Materialuavhengig_skade ;
   :kode "12"^^xsd:int ;
   rdfs:label "Bevegelse"@no ;
+  rdfs:label "Movement"@en ;
 .
 :Biologisk_angrep
   rdf:type :Miljoangrep ;
   :kode "55"^^xsd:int ;
+  rdfs:label "Biological attack (mushroom, pile worms etc.)"@en ;
   rdfs:label "Biologisk angrep (sopp, pelemark, osv.)"@no ;
 .
 :Blaering_eller_paddehatter
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "74" ;
+  rdfs:label "Blistering"@en ;
   rdfs:label "Blæring (paddehatter)"@no ;
 .
 :Bom
   rdf:type :Skade_pa_betong ;
   :kode "34"^^xsd:int ;
+  rdfs:label "Barrier"@en ;
   rdfs:label "Bom"@no ;
 .
 :Brann
   rdf:type :Ulykkeslast ;
   :kode "76" ;
   rdfs:label "Brann"@no ;
+  rdfs:label "Fire"@en ;
 .
 :BrannOgExplosjon
   rdf:type owl:Class ;
@@ -267,28 +294,33 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "5.5.01" ;
   rdfs:label "Breddeutvidelse"@no ;
+  rdfs:label "Widening"@en ;
   rdfs:subClassOf :Ombygging ;
 .
 :Broyteskade
   rdf:type :Bruksskade ;
   :kode "83" ;
   rdfs:label "Brøyteskade"@no ;
+  rdfs:label "Snow removal damage"@en ;
 .
 :Brua_stenges_ved_flom_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.06" ;
   rdfs:label "Brua stenges ved flom, sårbar Flom"@no ;
+  rdfs:label "The bridge is closed by flooding, vulnerable floods"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Brudd
   rdf:type :Materialuavhengig_skade ;
   :kode "15"^^xsd:int ;
+  rdfs:label "Break"@en ;
   rdfs:label "Brudd"@no ;
 .
 :Bruksskade
   rdf:type owl:Class ;
   :kode "80"^^xsd:int ;
   rdfs:label "Bruksskade"@no ;
+  rdfs:label "Use damage"@en ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Normal_nedbrytning_eller_slitasje
@@ -311,12 +343,14 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "5.1.03" ;
   rdfs:label "Daglige driftsoppgaver på bevegelige bruer"@no ;
+  rdfs:label "Daily operation tasks on movable bridges"@en ;
   rdfs:subClassOf :Driftstiltak ;
 .
 :Deformasjon
   rdf:type :Materialuavhengig_skade ;
   :kode "13"^^xsd:int ;
   rdfs:label "Deformasjon"@no ;
+  rdfs:label "Deformation"@en ;
 .
 :Driftstiltak
   rdf:type owl:Class ;
@@ -332,6 +366,7 @@ Driftstiltak kan omfatte:
 Bruinspektøren kontrollerer at dette er utført som forutsatt.
 Driftstiltak utføres av driftsentreprenøren i henhold til håndbok R610 Standard for drift og vedlikehold av riksveger."""@no ;
   rdfs:label "Driftstiltak"@no ;
+  rdfs:label "Operating measures"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Rengjoring_av_de_forskjellige_elementene_pa_brua
@@ -346,6 +381,7 @@ Driftstiltak utføres av driftsentreprenøren i henhold til håndbok R610 Standa
   rdf:type :Ulykkeslast ;
   :kode "75" ;
   rdfs:label "Eksplosjon"@no ;
+  rdfs:label "Explosion"@en ;
 .
 :Elektrisk_fuktmaler
   rdf:type owl:Class ;
@@ -368,6 +404,7 @@ erfaringsmessig liten påvirkning. Fuktigheten bør registreres i flere dybder, 
   rdf:type owl:Class ;
   :kode "5.7.05" ;
   rdfs:label "Elva har gått opp i brudekket, sårbar Flom"@no ;
+  rdfs:label "The river has gone up in the bridge deck, vulnerable floods"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Enkelinspeksjon
@@ -382,17 +419,20 @@ Fundamenter i vann kontrolleres i den grad det er mulig uten bruk av dykker. Det
 :Erosjon
   rdf:type :Skade_i_grunnen ;
   :kode "22"^^xsd:int ;
+  rdfs:label "Erosion"@en ;
   rdfs:label "Erosjon"@no ;
 .
 :Eventuelle_svekkelser_av_bruelementer_f_eks_redusert_stal_eller_armeringstverrsnitt_pga_korrosjon
   rdf:type owl:Class ;
   :kode "5.6.02" ;
   rdfs:label "Eventuelle svekkelser av bruelementer, f.eks. redusert stål-/armeringstverrsnitt pga. korrosjon"@no ;
+  rdfs:label "Weakening of bridge elements, for example reduced steel / reinforcing cross section caused by corrosion"@en ;
   rdfs:subClassOf :Kontrollberegning ;
 .
 :Eventuelle_tilleggslaster_f_eks_fra_alkalireaksjoner_i_betong_eller_okt_asfalttykkelse
   rdf:type owl:Class ;
   :kode "5.6.01" ;
+  rdfs:label "Additional loads, for example of alkali reactions in concrete or increased asphalt thickness"@en ;
   rdfs:label "Eventuelle tilleggslaster, f.eks. fra alkalireaksjoner i betong eller økt asfalttykkelse"@no ;
   rdfs:subClassOf :Kontrollberegning ;
 .
@@ -463,27 +503,32 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Feil_i_beregninger
   rdf:type :Prosjekteringsfeil ;
   :kode "14"^^xsd:int ;
+  rdfs:label "Errors in calculations"@en ;
   rdfs:label "Feil i beregninger"@no ;
 .
 :Feil_materialvalg
   rdf:type :Prosjekteringsfeil ;
   :kode "13"^^xsd:int ;
   rdfs:label "Feil materialvalg"@no ;
+  rdfs:label "Wrong material selection"@en ;
 .
 :Feil_utforming
   rdf:type :Prosjekteringsfeil ;
   :kode "15"^^xsd:int ;
   rdfs:label "Feil utforming"@no ;
+  rdfs:label "Wrong design"@en ;
 .
 :Feil_utstopning
   rdf:type :Utforelsesfeil ;
   :kode "33"^^xsd:int ;
+  rdfs:label "Error in casting"@en ;
   rdfs:label "Feil utstøpning"@no ;
 .
 :Feilplassert_armering
   rdf:type :Utforelsesfeil ;
   :kode "32"^^xsd:int ;
   rdfs:label "Feilplassert armering"@no ;
+  rdfs:label "Misplaced reinforcement"@en ;
 .
 :Fiberoptikk
   rdf:type owl:Class ;
@@ -501,15 +546,18 @@ Henvisning"""@no ;
   rdf:type :Ulykkeslast ;
   :kode "73" ;
   rdfs:label "Flom"@no ;
+  rdfs:label "Flood"@en ;
 .
 :Folgeskade
   rdf:type :Bruksskade ;
   :kode "82" ;
+  rdfs:label "Consequential damage (eg. deformation of superstructure caused by settlement, water marks caused by leak / moisture stress)"@en ;
   rdfs:label "Følgeskade (f.eks. deformasjon av overbygning pga. setning, misfarging pga. lekkasje/fuktbelastning)"@no ;
 .
 :For_tidlig_belastning
   rdf:type :Utforelsesfeil ;
   :kode "36"^^xsd:int ;
+  rdfs:label "For early loading (before the concrete has gained the prescribed strength)"@en ;
   rdfs:label "For tidlig belastning (før betongen har fått den foreskrevne fastheten)"@no ;
 .
 :Fornyelse
@@ -517,6 +565,7 @@ Henvisning"""@no ;
   :kode "5.3"^^xsd:double ;
   rdfs:comment "Man tar ut restlevetiden av eksisterende bru og ny bru vurderes."@no ;
   rdfs:label "Fornyelse"@no ;
+  rdfs:label "Renewal"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Annet_tiltak__fornyelse
@@ -526,6 +575,7 @@ Henvisning"""@no ;
 :Forskyvning_i_ror_pga_flom_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.08" ;
+  rdfs:label "Displacement tube occasion. floods, vulnerable floods"@en ;
   rdfs:label "Forskyvning i rør pga. flom, sårbar Flom"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
@@ -550,6 +600,7 @@ Henvisning"""@no ;
   rdfs:comment """Tiltak som øker bæreevnen for ei bru eller et element, skadet eller ikke skadet, i forhold til opprinnelige bæreevne.
 Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde tilsier at det er behov for det eller dersom det avdekkes mangler, f.eks. prosjekteringsfeil."""@no ;
   rdfs:label "Forsterkning"@no ;
+  rdfs:label "Reinforcement"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Tiltak_som_oker_baereevnen_for_ei_bru_eller_et_element__skadet_eller_ikke_skadet
@@ -560,6 +611,7 @@ Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde ti
   rdf:type :Skade_pa_betong ;
   :kode "32"^^xsd:int ;
   rdfs:label "Forvitring"@no ;
+  rdfs:label "Weathering"@en ;
 .
 :Framkommelighet
   rdf:type owl:Class ;
@@ -573,6 +625,7 @@ Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde ti
 :Frostangrep
   rdf:type :Miljoangrep ;
   :kode "51"^^xsd:int ;
+  rdfs:label "Frost attacks"@en ;
   rdfs:label "Frostangrep"@no ;
 .
 :GenerellInspeksjon_R610
@@ -600,6 +653,7 @@ Henvisning"""@no ;
 :Grunnarbeider_etter_erosjon_undergraving
   rdf:type owl:Class ;
   :kode "5.2.01.01" ;
+  rdfs:label "Earthworks after erosion, undermining etc."@en ;
   rdfs:label "Grunnarbeider etter erosjon, undergraving osv."@no ;
   rdfs:subClassOf :Tiltak_for_a_rette_pa_akutte_skader_eller_tiltak_som_ikke_kan_planlegges_pa_lang_sikt ;
 .
@@ -607,6 +661,7 @@ Henvisning"""@no ;
   rdf:type :Bruksskade ;
   :kode "84" ;
   rdfs:label "Hærverk"@no ;
+  rdfs:label "Vandalism"@en ;
 .
 :Hammer
   rdf:type owl:Class ;
@@ -775,11 +830,13 @@ Henvisninger"""@no ;
   rdf:type :Skadeutvikling ;
   :kode "-" ;
   rdfs:label "Ingen utvikling"@no ;
+  rdfs:label "No development"@en ;
 .
 :Innmaling_av_brua_og_grunnen
   rdf:type owl:Class ;
   :kode "5.8.01" ;
   rdfs:label "Innmåling av brua og grunnen"@no ;
+  rdfs:label "Surveying of the bridge and the ground"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Innmaling_eller_Oppmaling
@@ -792,6 +849,7 @@ Innmåling/ oppmåling kan omfatte:
 - Asfalttykkelse må kartlegges
 - Oppmåling av skader"""@no ;
   rdfs:label "Innmåling / Oppmåling"@no ;
+  rdfs:label "Surveying"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Oppmaling_av_skader
@@ -805,10 +863,12 @@ Innmåling/ oppmåling kan omfatte:
   rdf:type :Skade_i_grunnen ;
   :kode "21" ;
   rdfs:label "Innsnevring"@no ;
+  rdfs:label "Narrowing"@en ;
 .
 :Innstopte_klorider
   rdf:type :Materialfeil ;
   :kode "26"^^xsd:int ;
+  rdfs:label "Embedded chlorides"@en ;
   rdfs:label "Innstøpte klorider"@no ;
 .
 :Inntrengningsdybde_vannavvisende_impregnering_betong
@@ -934,31 +994,37 @@ utføres spesialinspeksjon."""@no ;
 :Islast
   rdf:type :Belastning ;
   :kode "63"^^xsd:int ;
+  rdfs:label "Ice load"@en ;
   rdfs:label "Islast"@no ;
 .
 :Jevn_utvikling
   rdf:type :Skadeutvikling ;
   :kode "-" ;
   rdfs:label "Jevn utvikling"@no ;
+  rdfs:label "Steady development"@en ;
 .
 :Jord_eller_snoskred
   rdf:type :Ulykkeslast ;
   :kode "74" ;
   rdfs:label "Jord-/snøskred"@no ;
+  rdfs:label "Landslide / avalanche"@en ;
 .
 :Jordtrykk
   rdf:type :Belastning ;
   :kode "62"^^xsd:int ;
+  rdfs:label "Ground pressure"@en ;
   rdfs:label "Jordtrykk"@no ;
 .
 :Karbonatisering
   rdf:type :Miljoangrep ;
   :kode "53"^^xsd:int ;
+  rdfs:label "Carbonation"@en ;
   rdfs:label "Karbonatisering"@no ;
 .
 :Kjemisk_angrep
   rdf:type :Miljoangrep ;
   :kode "56"^^xsd:int ;
+  rdfs:label "Chemical attack (acids etc.)."@en ;
   rdfs:label "Kjemisk angrep (syrer osv.)"@no ;
 .
 :Kjerneprove
@@ -977,11 +1043,13 @@ hensikt."""@no ;
 :Kloridangrep
   rdf:type :Miljoangrep ;
   :kode "52"^^xsd:int ;
+  rdfs:label "Chloride attack"@en ;
   rdfs:label "Kloridangrep"@no ;
 .
 :Kodeliste
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Code list"@en ;
   rdfs:label "Kodeliste"@no ;
   rdfs:subClassOf :Root ;
   owl:disjointUnionOf (
@@ -996,6 +1064,7 @@ hensikt."""@no ;
 :Konsekvensgrad
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Degree of consequence"@en ;
   rdfs:label "Konsekvensgrad"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:oneOf (
@@ -1008,6 +1077,7 @@ hensikt."""@no ;
 :Konsekvenstype
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Consequence type"@en ;
   rdfs:label "Konsekvenstype"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:oneOf (
@@ -1020,12 +1090,14 @@ hensikt."""@no ;
 :Kontroll_av_karbonatisering_fasthet_og_klorider
   rdf:type owl:Class ;
   :kode "5.9.01" ;
+  rdfs:label "Control of carbonation, strength and chlorides"@en ;
   rdfs:label "Kontroll av karbonatisering, fasthet og klorider"@no ;
   rdfs:subClassOf :Materialundersokelse ;
 .
 :Kontroll_eller_service_av_utstyr
   rdf:type owl:Class ;
   :kode "5.1.05" ;
+  rdfs:label "Inspection / maintenance of equipment"@en ;
   rdfs:label "Kontroll/service av utstyr"@no ;
   rdfs:subClassOf :Driftstiltak ;
 .
@@ -1091,6 +1163,7 @@ En kontroll av bruas bæreevne må inkludere:
 Basert på beregningene gjøres en ny vurdering av konsekvens og eventuelle videre tiltak.
 «Mye riss» er et symptom på enten nedbrytning eller overbelasning og kan vanskelig inngå som parameter i beregningene."""@no ;
   rdfs:label "Kontrollberegning"@no ;
+  rdfs:label "Recalculation"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Annet_tiltak__kontrollberegning
@@ -1101,6 +1174,7 @@ Basert på beregningene gjøres en ny vurdering av konsekvens og eventuelle vide
 :Korrosjon
   rdf:type :Skade_pa_stal ;
   :kode "42"^^xsd:int ;
+  rdfs:label "Corrosion"@en ;
   rdfs:label "Korrosjon"@no ;
 .
 :Korrosjonsundersokelse_EKP
@@ -1138,37 +1212,44 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Krakelering_eller_hull
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "73" ;
+  rdfs:label "Crackling / holes"@en ;
   rdfs:label "Krakelering/hull"@no ;
 .
 :Lavt_rekkverk_sarbar_for_Trafikksikkerhet
   rdf:type owl:Class ;
   :kode "5.7.01" ;
   rdfs:label "Lavt rekkverk, sårbar for Trafikksikkerhet"@no ;
+  rdfs:label "Low railings, vulnerable to traffic security"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Lekkasje_eller_fuktbelastning
   rdf:type :Materialuavhengig_skade ;
   :kode "17" ;
+  rdfs:label "Leak / moisture load"@en ;
   rdfs:label "Lekkasje/fuktbelastning"@no ;
 .
 :Liten_eller_skadet_overdekning
   rdf:type :Skade_pa_betong ;
   :kode "31" ;
   rdfs:label "Liten/skadet overdekning"@no ;
+  rdfs:label "Small / damaged covering"@en ;
 .
 :Liten_konsekvens_Ikke_behov_for_tiltak
   rdf:type :Konsekvensgrad ;
   :kode "1"^^xsd:int ;
   rdfs:label "Liten konsekvens. Ikke behov for tiltak"@no ;
+  rdfs:label "Small consequence. No need for action"@en ;
 .
 :Liten_skade
   rdf:type :Skadegrad ;
   :kode "1"^^xsd:int ;
   rdfs:label "Liten skade"@no ;
+  rdfs:label "Small damage"@en ;
 .
 :Lokasjon
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Location"@en ;
   rdfs:label "Lokasjon"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -1184,11 +1265,13 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Lokasjonsbeskrivelse
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Lokasjon ;
+  rdfs:label "Description of location"@en ;
   rdfs:subPropertyOf :Beskrivelse ;
 .
 :Lose_skruer_eller_nagler
   rdf:type :Skade_pa_stal ;
   :kode "41"^^xsd:int ;
+  rdfs:label "Loose screws / nails"@en ;
   rdfs:label "Løse skruer/nagler"@no ;
 .
 :MEK_test
@@ -1458,11 +1541,13 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
   rdf:type owl:Class ;
   :kode "5.3.01" ;
   rdfs:label "Man tar ut restlevetiden av eksisterende bru og ny bru vurderes."@no ;
+  rdfs:label "Take out the remaining service life of the existing bridge and a new bridge to be considered."@en ;
   rdfs:subClassOf :Fornyelse ;
 .
 :Mangel
   rdf:type owl:Class ;
   :kode "80"^^xsd:int ;
+  rdfs:label "Deficiency"@en ;
   rdfs:label "Mangel"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -1474,21 +1559,25 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 :Mangelfullt_regelverk
   rdf:type :Prosjekteringsfeil ;
   :kode "11"^^xsd:int ;
+  rdfs:label "Inadequate or missing regulations"@en ;
   rdfs:label "Mangelfullt regelverk"@no ;
 .
 :Manglende_bearbeiding
   rdf:type :Utforelsesfeil ;
   :kode "34"^^xsd:int ;
+  rdfs:label "Lack of processing"@en ;
   rdfs:label "Manglende bearbeiding"@no ;
 .
 :Manglende_del
   rdf:type :Mangel ;
   :kode "82"^^xsd:int ;
   rdfs:label "Manglende del"@no ;
+  rdfs:label "Missing part"@en ;
 .
 :Manglende_drift_eller_vedlikehold
   rdf:type owl:Class ;
   :kode "40"^^xsd:int ;
+  rdfs:label "Lack of operation / maintenance"@en ;
   rdfs:label "Manglende drift/vedlikehold"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -1499,31 +1588,37 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
   rdf:type :Manglende_drift_eller_vedlikehold ;
   :kode "40"^^xsd:int ;
   rdfs:label "Manglende drift/vedlikehold"@no ;
+  rdfs:label "Missing operation / maintenance"@en ;
 .
 :Manglende_herdetiltak
   rdf:type :Utforelsesfeil ;
   :kode "35"^^xsd:int ;
+  rdfs:label "Lack of hardening measures"@en ;
   rdfs:label "Manglende herdetiltak"@no ;
 .
 :Manglende_opprydding_eller_fjerning
   rdf:type :Mangel ;
   :kode "83"^^xsd:int ;
   rdfs:label "Manglende opprydding/fjerning"@no ;
+  rdfs:label "Missing clean-up / removal"@en ;
 .
 :Manglende_rengjoring
   rdf:type :Mangel ;
   :kode "81"^^xsd:int ;
   rdfs:label "Manglende rengjøring"@no ;
+  rdfs:label "Missing cleaning"@en ;
 .
 :Manglende_sikkerhetsgjerde_over_utlop_sarbar_Trafikksikkerhet
   rdf:type owl:Class ;
   :kode "5.7.02" ;
   rdfs:label "Manglende sikkerhetsgjerde over utløp, sårbar Trafikksikkerhet"@no ;
+  rdfs:label "Missing security fence over discharge, vulnerable traffic security"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Materialfeil
   rdf:type owl:Class ;
   :kode "20"^^xsd:int ;
+  rdfs:label "Material error"@en ;
   rdfs:label "Materialfeil"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -1538,26 +1633,31 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 :Materialfeil_fasthet
   rdf:type :Materialfeil ;
   :kode "22"^^xsd:int ;
+  rdfs:label "Material error, firmness"@en ;
   rdfs:label "Materialfeil, fasthet"@no ;
 .
 :Materialfeil_laminering
   rdf:type :Materialfeil ;
   :kode "23"^^xsd:int ;
+  rdfs:label "Material error, laminating"@en ;
   rdfs:label "Materialfeil, laminering"@no ;
 .
 :Materialfeil_oppsprekking
   rdf:type :Materialfeil ;
   :kode "24"^^xsd:int ;
+  rdfs:label "Material error, cracking"@en ;
   rdfs:label "Materialfeil, oppsprekking"@no ;
 .
 :Materialfeil_sammensetning
   rdf:type :Materialfeil ;
   :kode "21"^^xsd:int ;
+  rdfs:label "Material error, composition (eg. incorrect proportioning of concrete)"@en ;
   rdfs:label "Materialfeil, sammensetning (f.eks. feil proporsjonering av betong)"@no ;
 .
 :Materialuavhengig_skade
   rdf:type owl:Class ;
   :kode "10"^^xsd:int ;
+  rdfs:label "Material independent damage"@en ;
   rdfs:label "Materialuavhengig skade"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -1578,6 +1678,7 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 Eksempel på tiltak Materialundersøkelse
 - Kontroll av karbonatisering, fasthet og klorider
 - Utføre materialundersøkelse ved en spesialinspeksjon"""@no ;
+  rdfs:label "Material inspection"@en ;
   rdfs:label "Materialundersøkelse"@no ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
@@ -1672,21 +1773,25 @@ NS 3512, Måling av fukt i trekonstruksjoner"""@no ;
 :Mekanisk_skade
   rdf:type :Skade_pa_tre ;
   :kode "61"^^xsd:int ;
+  rdfs:label "Mechanical damage"@en ;
   rdfs:label "Mekanisk skade"@no ;
 .
 :Middels_konsekvens__Vurder_om_tiltak_skal_registreres_i_Brutus
   rdf:type :Konsekvensgrad ;
   :kode "2"^^xsd:int ;
+  rdfs:label "Medium consequence. Consider whether measures should be recorded in Brutus"@en ;
   rdfs:label "Middels konsekvens. Vurder om tiltak skal registreres i Brutus"@no ;
 .
 :Middels_skade
   rdf:type :Skadegrad ;
   :kode "2"^^xsd:int ;
+  rdfs:label "Medium damage"@en ;
   rdfs:label "Middels skade"@no ;
 .
 :Miljoangrep
   rdf:type owl:Class ;
   :kode "50"^^xsd:int ;
+  rdfs:label "Environmental damage"@en ;
   rdfs:label "Miljøangrep"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -1701,6 +1806,7 @@ NS 3512, Måling av fukt i trekonstruksjoner"""@no ;
 :Misfarging
   rdf:type :Materialuavhengig_skade ;
   :kode "18" ;
+  rdfs:label "Discoloration"@en ;
   rdfs:label "Misfarging"@no ;
 .
 :Momentkontroll_skruer
@@ -1719,6 +1825,7 @@ Henvisning"""@no ;
 :Monteringsfeil
   rdf:type :Utforelsesfeil ;
   :kode "37"^^xsd:int ;
+  rdfs:label "Installation error"@en ;
   rdfs:label "Monteringsfeil"@no ;
 .
 :Nagle_skruekontroll
@@ -1758,11 +1865,13 @@ Håndbok N400 Bruprosjektering"""@no ;
 :Normal_nedbrytning_eller_slitasje
   rdf:type :Bruksskade ;
   :kode "81" ;
+  rdfs:label "Normal degradation / wear (the wear layer, surface treatment, etc.)"@en ;
   rdfs:label "Normal nedbrytning/slitasje (av slitelag, overflatebehandling, osv.)"@no ;
 .
 :Okning_av_frihoyder
   rdf:type owl:Class ;
   :kode "5.5.03" ;
+  rdfs:label "Increase of free height"@en ;
   rdfs:label "Økning av frihøyder"@no ;
   rdfs:subClassOf :Ombygging ;
 .
@@ -1778,6 +1887,7 @@ Ombygging kan omfatte:
 - Utskifting av hele overbygningen
 - Utskifting eller ombygging av underbygning"""@no ;
   rdfs:label "Ombygging"@no ;
+  rdfs:label "Rebuilding"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Pahengning_av_gangbaner
@@ -1849,6 +1959,7 @@ ISO 8501-1"""@no ;
   rdf:type owl:Class ;
   :kode "5.8.04" ;
   rdfs:label "Oppmåling av skader"@no ;
+  rdfs:label "Surveying of damages"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Oppmaling_materialundersokelse
@@ -1876,6 +1987,7 @@ Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøke
 :Opprensk_eller_opprydding_over_og_under_vann
   rdf:type owl:Class ;
   :kode "5.1.02" ;
+  rdfs:label "Clean-up above and below water level"@en ;
   rdfs:label "Opprensk/opprydding over og under vann"@no ;
   rdfs:subClassOf :Driftstiltak ;
 .
@@ -1883,24 +1995,28 @@ Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøke
   rdf:type owl:Class ;
   :kode "5.2.02.02" ;
   rdfs:label "Overflatebehandling av betong"@no ;
+  rdfs:label "Surface treatment of concrete"@en ;
   rdfs:subClassOf :Planlagte_tiltak_for_a_opprettholde_bruenes_standard ;
 .
 :Overflatebehandling_av_stal
   rdf:type owl:Class ;
   :kode "5.2.02.01" ;
   rdfs:label "Overflatebehandling av stål"@no ;
+  rdfs:label "Surface treatment of steel"@en ;
   rdfs:subClassOf :Planlagte_tiltak_for_a_opprettholde_bruenes_standard ;
 .
 :Overflatebehandling_av_tre
   rdf:type owl:Class ;
   :kode "5.2.02.03" ;
   rdfs:label "Overflatebehandling av tre"@no ;
+  rdfs:label "Surface treatment of wood"@en ;
   rdfs:subClassOf :Planlagte_tiltak_for_a_opprettholde_bruenes_standard ;
 .
 :Overlast_slitelag
   rdf:type :Belastning ;
   :kode "68"^^xsd:int ;
   rdfs:label "Overlast slitelag"@no ;
+  rdfs:label "Overload wear layer"@en ;
 .
 :Overmalbarhet_gammelt_belegg
   rdf:type owl:Class ;
@@ -1932,17 +2048,20 @@ ASTM D4752:10 MEK Test"""@no ;
 :Pahengning_av_gangbaner
   rdf:type owl:Class ;
   :kode "5.5.02" ;
+  rdfs:label "Attached walkways"@en ;
   rdfs:label "Påhengning av gangbaner"@no ;
   rdfs:subClassOf :Ombygging ;
 .
 :Pakjorsel
   rdf:type :Ulykkeslast ;
   :kode "71" ;
+  rdfs:label "Collision"@en ;
   rdfs:label "Påkjørsel"@no ;
 .
 :Pakjort_og_reparert_flere_ganger_sarbar_Pakjorsel
   rdf:type owl:Class ;
   :kode "5.7.03" ;
+  rdfs:label "Hit and repaired several times, vulnerable collision"@en ;
   rdfs:label "Påkjørt og reparert flere ganger, sårbar Påkjørsel"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
@@ -1950,6 +2069,7 @@ ASTM D4752:10 MEK Test"""@no ;
   rdf:type :Ulykkeslast ;
   :kode "72" ;
   rdfs:label "Påsegling"@no ;
+  rdfs:label "Ship collision"@en ;
 .
 :Penetrant
   rdf:type owl:Class ;
@@ -1978,6 +2098,7 @@ NS-EN ISO 3452-5"""@no ;
 - Overflatebehandling av tre
 - Slitelag- og membranarbeider"""@no ;
   rdfs:label "Planlagte tiltak for å opprettholde bruenes standard"@no ;
+  rdfs:label "Planned measures to maintain the bridges standard"@en ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
       :Overflatebehandling_av_stal
@@ -1994,6 +2115,7 @@ NS-EN ISO 3452-5"""@no ;
 - Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer
 - Reparasjon av skader på bru- og kaiutstyr"""@no ;
   rdfs:label "Planlagte tiltak som utføres for å gjenopprette et skadet elements funksjonsdyktighet"@no ;
+  rdfs:label "Planned measures taken to recover a damaged element functioning"@en ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
       :Reparasjon_av_skader_pa_elementer_av_stal_stein_tre_og_evt_andre_materialer
@@ -2019,6 +2141,7 @@ NS-EN ISO 17636-2:2013"""@no ;
 :Prosjekteringsfeil
   rdf:type owl:Class ;
   :kode "10"^^xsd:int ;
+  rdfs:label "Design error"@en ;
   rdfs:label "Prosjekteringsfeil"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -2059,6 +2182,7 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
 - Forskyvning i rør pga. flom, sårbar Flom
 - Undergraving av fundamenter, sårbar Flom"""@no ;
   rdfs:label "ROS analyse"@no ;
+  rdfs:label "ROS analysis"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Manglende_sikkerhetsgjerde_over_utlop_sarbar_Trafikksikkerhet
@@ -2076,12 +2200,14 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
 :Rasutsatt_bru_sarbar_Skred_eller_ras
   rdf:type owl:Class ;
   :kode "5.7.04" ;
+  rdfs:label "Bridge susceptible to landslides, vulnerable avalanches / landslides"@en ;
   rdfs:label "Rasutsatt bru, sårbar Skred/ras"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Rate_eller_nedbrytning
   rdf:type :Skade_pa_tre ;
   :kode "62" ;
+  rdfs:label "Rot / decay"@en ;
   rdfs:label "Råte/nedbrytning"@no ;
 .
 :Ratedrill
@@ -2097,6 +2223,7 @@ inne i tverrsnittet oppdages."""@no ;
 :Rengjoring_av_de_forskjellige_elementene_pa_brua
   rdf:type owl:Class ;
   :kode "5.1.01" ;
+  rdfs:label "Cleaning of the different elements of the bridge."@en ;
   rdfs:label "Rengjøring av de forskjellige elementene på brua."@no ;
   rdfs:subClassOf :Driftstiltak ;
 .
@@ -2104,29 +2231,34 @@ inne i tverrsnittet oppdages."""@no ;
   rdf:type owl:Class ;
   :kode "5.1.04" ;
   rdfs:label "Renovasjon"@no ;
+  rdfs:label "Renovation"@en ;
   rdfs:subClassOf :Driftstiltak ;
 .
 :Reparasjon_av_betongskader_over_eller_under_vann
   rdf:type owl:Class ;
   :kode "5.2.03.01" ;
+  rdfs:label "Repair of damaged concrete above / below water level"@en ;
   rdfs:label "Reparasjon av betongskader over/under vann"@no ;
   rdfs:subClassOf :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet ;
 .
 :Reparasjon_av_skader_pa_bru_og_kaiutstyr
   rdf:type owl:Class ;
   :kode "5.2.03.03" ;
+  rdfs:label "Repair of damaged bridge and quay equipment"@en ;
   rdfs:label "Reparasjon av skader på bru- og kaiutstyr"@no ;
   rdfs:subClassOf :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet ;
 .
 :Reparasjon_av_skader_pa_elementer_av_stal_stein_tre_og_evt_andre_materialer
   rdf:type owl:Class ;
   :kode "5.2.03.02" ;
+  rdfs:label "Repair of damaged elements of steel, stone, wood and possible or other materials"@en ;
   rdfs:label "Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer"@no ;
   rdfs:subClassOf :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet ;
 .
 :Riss_eller_sprekk
   rdf:type :Materialuavhengig_skade ;
   :kode "14"^^xsd:int ;
+  rdfs:label "Crack / fissures"@en ;
   rdfs:label "Riss/sprekk"@no ;
 .
 :Rontgenkontroll
@@ -2146,6 +2278,7 @@ NS-EN ISO 17636-2:2013"""@no ;
 :Root
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Root object for v441"@en ;
   rdfs:label "Rotobjekt for v441"@no ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -2165,6 +2298,7 @@ NS-EN ISO 17636-2:2013"""@no ;
   :kode "-" ;
   rdfs:comment "En sårbarhet er en egenskap ved brua eller omgivelsene som kan påvirke bruas funksjonalitet og sikkerhet. Slike sårbarheter registreres i Brutus når det ikke vurderes som en skade. Det kan også knyttes et tiltak til sårbarheten. Slike tiltak prioriteres sammen med andre registrerte tiltak i Brutus."@no ;
   rdfs:label "Sårbarhet"@no ;
+  rdfs:label "Vulnerability"@en ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2231,10 +2365,12 @@ NS-EN ISO 17636-2:2013"""@no ;
   rdf:type :Materialuavhengig_skade ;
   :kode "11"^^xsd:int ;
   rdfs:label "Setning"@no ;
+  rdfs:label "Settlement"@en ;
 .
 :Setningsmaling_av_pilarer_sarbar_baereevne
   rdf:type owl:Class ;
   :kode "5.8.02" ;
+  rdfs:label "Measaures of settlement of pillars, vulnerable loading capacity"@en ;
   rdfs:label "Setningsmåling av pilarer, sårbar bæreevne"@no ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
@@ -2251,6 +2387,7 @@ For å ha en ensartet måte å beskrive skader på, brukes definerte skadetyper 
 Alle registrerte skader og tilhørende vurderinger knyttes til de ulike bruelementene.
 For hjelp til å bestemme skadegrad og skadekonsekvens, se kapittel 6 Beskrivelse av skadetyper og vedlegg V1 Eksempelsamling til skadetyper.
 Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være aktuelt å lage en utvidet rapport for mer detaljert beskrivelse, se vedlegg V3 Utvidet inspeksjonsrapport."""@no ;
+  rdfs:label "Damage"@en ;
   rdfs:label "Skade"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -2307,6 +2444,7 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_i_grunnen
   rdf:type owl:Class ;
   :kode "20"^^xsd:int ;
+  rdfs:label "Damage in the ground (substructure)"@en ;
   rdfs:label "Skade i grunnen"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2318,11 +2456,13 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_i_grunnen_ikke_spesifisert
   rdf:type :Skade_i_grunnen ;
   :kode "20"^^xsd:int ;
+  rdfs:label "Damage in the ground"@en ;
   rdfs:label "Skade i grunnen"@no ;
 .
 :Skade_pa_betong
   rdf:type owl:Class ;
   :kode "30"^^xsd:int ;
+  rdfs:label "Damage to concrete"@en ;
   rdfs:label "Skade på betong"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2338,11 +2478,13 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_pa_overflatebehandling
   rdf:type :Materialuavhengig_skade ;
   :kode "16"^^xsd:int ;
+  rdfs:label "Damage to the surface"@en ;
   rdfs:label "Skade på overflatebehandling"@no ;
 .
 :Skade_pa_slitelag_eller_fuktisolasjon
   rdf:type owl:Class ;
   :kode "70"^^xsd:int ;
+  rdfs:label "Damage to wear layer / moisture insulation"@en ;
   rdfs:label "Skade på slitelag / fuktisolasjon"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2356,6 +2498,7 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_pa_stal
   rdf:type owl:Class ;
   :kode "40"^^xsd:int ;
+  rdfs:label "Damage to steel"@en ;
   rdfs:label "Skade på stål"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2368,6 +2511,7 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_pa_stein
   rdf:type owl:Class ;
   :kode "50"^^xsd:int ;
+  rdfs:label "Damage to rock"@en ;
   rdfs:label "Skade på stein"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2378,6 +2522,7 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_pa_tre
   rdf:type owl:Class ;
   :kode "60"^^xsd:int ;
+  rdfs:label "Damage to wood"@en ;
   rdfs:label "Skade på tre"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2388,26 +2533,31 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_som_kan_oke_vedlikeholdskostnadene
   rdf:type :Konsekvenstype ;
   :kode "V" ;
+  rdfs:label "Damage that may increase maintenance costs"@en ;
   rdfs:label "Skade som kan øke vedlikeholdskostnadene"@no ;
 .
 :Skade_som_kan_pavirke_baereevnen
   rdf:type :Konsekvenstype ;
   :kode "B" ;
+  rdfs:label "Damage that may affect the loading capacity"@en ;
   rdfs:label "Skade som kan påvirke bæreevnen"@no ;
 .
 :Skade_som_kan_pavirke_miljo_eller_estetikk
   rdf:type :Konsekvenstype ;
   :kode "M" ;
+  rdfs:label "Damage that may affect environmental / aesthetic"@en ;
   rdfs:label "Skade som kan påvirke miljø/estetikk"@no ;
 .
 :Skade_som_kan_pavirke_trafikksikkerheten
   rdf:type :Konsekvenstype ;
   :kode "T" ;
+  rdfs:label "Damage that may affect traffic safety"@en ;
   rdfs:label "Skade som kan påvirke trafikksikkerheten"@no ;
 .
 :Skadearsak
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Damage reason / origin"@en ;
   rdfs:label "Skadeårsak"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:disjointUnionOf (
@@ -2445,6 +2595,7 @@ Under er det listet opp noen eksempler på primærskader og mulige følgeskader:
 - Lekkasje/fuktbelastning kan i mange tilfeller føre til misfarging.
 - Liten/skadet overdekning vil ofte føre til armeringskorrosjon og avskalling.
 Det er viktig å være klar over denne sammenhengen mellom primærskader og følgeskader både ved bedømmelse av skader og ved bestemmelse av reparasjonsmetode. I de fleste tilfeller må primærskaden avdekkes for å kunne utarbeide en egnet reparasjonsbeskrivelse. Reparasjoner rettet kun mot følgeskader blir sjelden vellykkede."""@no ;
+  rdfs:label "Damage description "@en ;
   rdfs:label "Skadebeskrivelse"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -2476,6 +2627,7 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 :Skadegrad
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Damage degree"@en ;
   rdfs:label "Skadegrad"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:oneOf (
@@ -2489,6 +2641,7 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
   rdf:type owl:Class ;
   :kode "-" ;
   rdfs:comment "Skadekonsekvens består av konsekvenstype og konsekvensgrad og benyttes sammen for å angi konsekvensen skaden har for hele brua, omgivelsene og brukerne av brua. En skadetype kan ha flere skadekonsekvenser."@no ;
+  rdfs:label "Consequence of damage "@en ;
   rdfs:label "Skadekonsekvens"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -2505,6 +2658,7 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 :Skadetype
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Damage type"@en ;
   rdfs:label "Skadetype"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:disjointUnionOf (
@@ -2522,6 +2676,7 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 :Skadeutvikling
   rdf:type owl:Class ;
   :kode "-" ;
+  rdfs:label "Damage development"@en ;
   rdfs:label "Skadeutvikling"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:oneOf (
@@ -2545,11 +2700,13 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
   rdf:type :Skade_pa_stal ;
   :kode "43"^^xsd:int ;
   rdfs:label "Slitasje/gnisning"@no ;
+  rdfs:label "Wear / friction"@en ;
 .
 :Slitelag_og_membranarbeider
   rdf:type owl:Class ;
   :kode "5.2.02.04" ;
   rdfs:label "Slitelag- og membranarbeider"@no ;
+  rdfs:label "Wear layer and membrane works"@en ;
   rdfs:subClassOf :Planlagte_tiltak_for_a_opprettholde_bruenes_standard ;
 .
 :Spennkabelkontroll
@@ -2600,36 +2757,43 @@ En spesialinspeksjon kan også resultere i statiske beregninger for å kontrolle
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "71" ;
   rdfs:label "Sporslitasje"@no ;
+  rdfs:label "Track wear"@en ;
 .
 :Stillassetning
   rdf:type :Utforelsesfeil ;
   :kode "31"^^xsd:int ;
+  rdfs:label "Scaffolding settlement"@en ;
   rdfs:label "Stillassetning"@no ;
 .
 :Stopesar
   rdf:type :Skade_pa_betong ;
   :kode "33"^^xsd:int ;
+  rdfs:label "Casting wounds"@en ;
   rdfs:label "Støpesår"@no ;
 .
 :Stor_konsekvens_Bruforvalter_eller_oppdragsgiver_kontaktes_umiddelbart
   rdf:type :Konsekvensgrad ;
   :kode "4"^^xsd:int ;
+  rdfs:label "Large consequence. Bridge maintainer / client shall be contacted immediately"@en ;
   rdfs:label "Stor konsekvens. Bruforvalter/oppdragsgiver kontaktes umiddelbart."@no ;
 .
 :Stor_skade
   rdf:type :Skadegrad ;
   :kode "3"^^xsd:int ;
+  rdfs:label "Large damage"@en ;
   rdfs:label "Stor skade"@no ;
 .
 :Stor_vannforing_ved_flom_og_fare_for_erosjon_under_fundamenter_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.07" ;
+  rdfs:label "Large water flow by flooding and risk of erosion below foundations, vulnerable floods"@en ;
   rdfs:label "Stor vannføring ved flom og fare for erosjon under fundamenter, sårbar Flom"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Stromlast
   rdf:type :Belastning ;
   :kode "64"^^xsd:int ;
+  rdfs:label "Power load"@en ;
   rdfs:label "Strømlast"@no ;
 .
 :Strukturanalyse
@@ -2696,6 +2860,7 @@ NS-EN 480-11"""@no ;
   rdf:type :Skadegrad ;
   :kode "4"^^xsd:int ;
   rdfs:label "Svært stor skade"@no ;
+  rdfs:label "Very large damage"@en ;
 .
 :Sveisekontroll
   rdf:type owl:Class ;
@@ -2712,12 +2877,14 @@ Henvisning"""@no ;
 :Svinn_eller_kryp
   rdf:type :Belastning ;
   :kode "67"^^xsd:int ;
+  rdfs:label "Shrinkage / creep"@en ;
   rdfs:label "Svinn/kryp"@no ;
 .
 :Temperatur
   rdf:type :Belastning ;
   :kode "66"^^xsd:int ;
   rdfs:label "Temperatur"@no ;
+  rdfs:label "Temperature"@en ;
 .
 :Termokamera
   rdf:type owl:Class ;
@@ -2741,6 +2908,7 @@ Henvisninger"""@no ;
   rdf:type owl:Class ;
   :kode "-" ;
   rdfs:comment "På bakgrunn av inspeksjonen og tilstand på brua kan bruinspektøren foreslå ett eller flere tiltak. Se kapittel 3.5.2 Konsekvensgrad for når tiltak beskrives. Tiltakene registreres i Brutus og vil senere være grunnlag for innspill til budsjettarbeidet."@no ;
+  rdfs:label "Measures"@en ;
   rdfs:label "Tiltak"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -2788,6 +2956,7 @@ Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding 
 - Grunnarbeider etter erosjon, undergraving osv.
 - Utskifting av skadede elementer av betong, stål, stein, tre eller annet materiale
 - Utskifting av skadet bru- og kaiutstyr"""@no ;
+  rdfs:label "Measures to repair the acute injury or measures that can not be planned for the long term"@en ;
   rdfs:label "Tiltak for å rette på akutte skader eller tiltak som ikke kan planlegges på lang sikt"@no ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
@@ -2799,6 +2968,7 @@ Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding 
 :Tiltak_som_oker_baereevnen_for_ei_bru_eller_et_element__skadet_eller_ikke_skadet
   rdf:type owl:Class ;
   :kode "5.4.01" ;
+  rdfs:label "Measures that increase the load capacity of a bridge or an element, damaged or nor damaged"@en ;
   rdfs:label "Tiltak som øker bæreevnen for ei bru eller et element, skadet eller ikke skadet"@no ;
   rdfs:subClassOf :Forsterkning ;
 .
@@ -2810,11 +2980,13 @@ Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding 
 :Tradbrudd
   rdf:type :Skade_pa_stal ;
   :kode "44"^^xsd:int ;
+  rdfs:label "Strand break"@en ;
   rdfs:label "Trådbrudd"@no ;
 .
 :Trafikklast
   rdf:type :Belastning ;
   :kode "61"^^xsd:int ;
+  rdfs:label "Traffic Load"@en ;
   rdfs:label "Trafikklast"@no ;
 .
 :Trafikksikkerhet
@@ -2865,6 +3037,7 @@ NS-EN ISO 2360 Måling av beleggtykkelse – Amplitudesensitiv virvelstrømsmeto
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "72" ;
   rdfs:label "Ujevnhet"@no ;
+  rdfs:label "Unevenness"@en ;
 .
 :Ultralyd
   rdf:type owl:Class ;
@@ -2912,6 +3085,7 @@ NS-EN ISO 19285"""@no ;
 :Ulykkeslast
   rdf:type owl:Class ;
   :kode "70"^^xsd:int ;
+  rdfs:label "Accident load"@en ;
   rdfs:label "Ulykkeslast"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -2927,6 +3101,7 @@ NS-EN ISO 19285"""@no ;
   rdf:type owl:Class ;
   :kode "5.7.09" ;
   rdfs:label "Undergraving av fundamenter, sårbar Flom"@no ;
+  rdfs:label "Undermining of foundations, vulnerable floods"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Utford
@@ -2940,12 +3115,14 @@ NS-EN ISO 19285"""@no ;
 :Utfore_materialundersokelse_ved_en_spesialinspeksjon
   rdf:type owl:Class ;
   :kode "5.9.02" ;
+  rdfs:label "Performing material examination by a special inspection"@en ;
   rdfs:label "Utføre materialundersøkelse ved en spesialinspeksjon"@no ;
   rdfs:subClassOf :Materialundersokelse ;
 .
 :Utforelsesfeil
   rdf:type owl:Class ;
   :kode "30"^^xsd:int ;
+  rdfs:label "Construction error"@en ;
   rdfs:label "Utførelsesfeil"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -2961,45 +3138,53 @@ NS-EN ISO 19285"""@no ;
 :Utglidning
   rdf:type :Skade_pa_stein ;
   :kode "51"^^xsd:int ;
+  rdfs:label "Slipping"@en ;
   rdfs:label "Utglidning"@no ;
 .
 :Utluting
   rdf:type :Miljoangrep ;
   :kode "54"^^xsd:int ;
+  rdfs:label "Leaching (leaching of the lime in concrete, seen as lime precipitation)"@en ;
   rdfs:label "Utluting (utvasking av kalken i betong, sees som kalkutfelling)"@no ;
 .
 :Utrasing
   rdf:type :Skade_pa_stein ;
   :kode "52"^^xsd:int ;
+  rdfs:label "Sliding"@en ;
   rdfs:label "Utrasing"@no ;
 .
 :Utskifting_av_brudekker
   rdf:type owl:Class ;
   :kode "5.5.04" ;
+  rdfs:label "Replacement of bridge decks"@en ;
   rdfs:label "Utskifting av brudekker"@no ;
   rdfs:subClassOf :Ombygging ;
 .
 :Utskifting_av_hele_overbygningen
   rdf:type owl:Class ;
   :kode "5.5.05" ;
+  rdfs:label "Replacement of the entire superstructure"@en ;
   rdfs:label "Utskifting av hele overbygningen"@no ;
   rdfs:subClassOf :Ombygging ;
 .
 :Utskifting_av_skadede_elementer_av_betong_stal_stein_tre_eller_annet_materiale
   rdf:type owl:Class ;
   :kode "5.2.01.02" ;
+  rdfs:label "Replacement of damaged elements of concrete, steel, stone, wood or other materials"@en ;
   rdfs:label "Utskifting av skadede elementer av betong, stål, stein, tre eller annet materiale"@no ;
   rdfs:subClassOf :Tiltak_for_a_rette_pa_akutte_skader_eller_tiltak_som_ikke_kan_planlegges_pa_lang_sikt ;
 .
 :Utskifting_av_skadet_bru_og_kaiutstyr
   rdf:type owl:Class ;
   :kode "5.2.01.03" ;
+  rdfs:label "Replacement of damaged bridge and quay equipment"@en ;
   rdfs:label "Utskifting av skadet bru- og kaiutstyr"@no ;
   rdfs:subClassOf :Tiltak_for_a_rette_pa_akutte_skader_eller_tiltak_som_ikke_kan_planlegges_pa_lang_sikt ;
 .
 :Utskifting_eller_ombygging_av_underbygning
   rdf:type owl:Class ;
   :kode "5.5.06" ;
+  rdfs:label "Replacement or reconstruction of the substructure"@en ;
   rdfs:label "Utskifting eller ombygging av underbygning"@no ;
   rdfs:subClassOf :Ombygging ;
 .
@@ -3007,6 +3192,7 @@ NS-EN ISO 19285"""@no ;
   rdf:type :Skade_pa_betong ;
   :kode "37"^^xsd:int ;
   rdfs:label "Utvasking"@no ;
+  rdfs:label "Washout"@en ;
 .
 :V441Lokasjon
   rdf:type owl:Class ;
@@ -3037,6 +3223,7 @@ fuger, lager osv.
 - Reparasjon av betongskader over/under vann
 - Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer
 - Reparasjon av skader på bru- og kaiutstyr"""@no ;
+  rdfs:label "Maintenance"@en ;
   rdfs:label "Vedlikehold"@no ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
@@ -3049,12 +3236,14 @@ fuger, lager osv.
 :Vesentlige_konsekvens_Forslag_til_tiltak_registreres_i_Brutus_Inspeksjonsintervall_ma_vurderes
   rdf:type :Konsekvensgrad ;
   :kode "3"^^xsd:int ;
+  rdfs:label "Significant consequence. Proposed actions shall be recorded in Brutus. Inspection interval must be considered"@en ;
   rdfs:label "Vesentlige konsekvens. Forslag til tiltak registreres i Brutus. Inspeksjonsintervall må vurderes."@no ;
 .
 :Vindlast
   rdf:type :Belastning ;
   :kode "65"^^xsd:int ;
   rdfs:label "Vindlast"@no ;
+  rdfs:label "Wind load"@en ;
 .
 :Virvelstromproving
   rdf:type owl:Class ;
