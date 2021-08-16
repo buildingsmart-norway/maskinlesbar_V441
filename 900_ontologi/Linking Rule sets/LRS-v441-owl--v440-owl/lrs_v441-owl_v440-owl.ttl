@@ -34,14 +34,14 @@ v441-owl:Elementlokasjon
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty :AvserElement ;
+      owl:onProperty :ReferererElement ;
     ] ;
 .
 v441-owl:V441Lokasjon
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty :AvserElementType ;
+      owl:onProperty :ReferererElementType ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -65,13 +65,17 @@ v441-owl:V441Lokasjon
   owl:imports foaf: ;
   owl:versionInfo "0.1" ;
 .
-:AvserElement
+:ReferererElement
   rdf:type owl:ObjectProperty ;
   rdfs:domain v441-owl:Elementlokasjon ;
+  rdfs:label "Refererer til element"@no ;
+  rdfs:label "Refers to element"@en ;
   rdfs:range v440-owl:Byggverkselement ;
 .
-:AvserElementType
+:ReferererElementType
   rdf:type owl:ObjectProperty ;
   rdfs:domain v441-owl:V441Lokasjon ;
+  rdfs:label "Refererer til elementtype"@no ;
+  rdfs:label "Refers to element type"@en ;
   rdfs:range owl:Class ;
 .

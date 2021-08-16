@@ -14,15 +14,11 @@
 
 vann:preferredNamespacePrefix
   rdf:type owl:AnnotationProperty ;
-  rdfs:comment "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en ;
   rdfs:isDefinedBy vann: ;
-  rdfs:label "Preferred Namespace Prefix"@en ;
 .
 vann:preferredNamespaceUri
   rdf:type owl:AnnotationProperty ;
-  rdfs:comment "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en ;
   rdfs:isDefinedBy vann: ;
-  rdfs:label "Preferred Namespace Uri"@en ;
 .
 <http://rdf.vegdata.no/bridge/v441/core/v441-owl>
   rdf:type owl:Ontology ;
@@ -30,10 +26,10 @@ vann:preferredNamespaceUri
   dc:creator :bSINorway ;
   dc:title "Hb V441" ;
   dcterms:abstract "Ontologi som representerer innehållet i Håndbok V441"@no ;
-  dcterms:abstract "Ontology representing the content and structure of Handbook V441 {@no} " ;
+  dcterms:abstract "Ontology representing the content and structure of Handbook V441"@en ;
   dcterms:created "2020-10-30" ;
   vann:preferredNamespacePrefix "v441" ;
-  vann:preferredNamespaceUri "http://www.vegvesen.no/def/test/v440-owl" ;
+  vann:preferredNamespaceUri "http://rdf.vegdata.no/bridge/v441/core/v441-owl" ;
   owl:imports dc: ;
   owl:imports foaf: ;
   owl:versionInfo "0.1" ;
@@ -47,6 +43,8 @@ vann:preferredNamespaceUri
 :Aktuelle_oppmalinger_materialundersokelser
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Aktuelle oppmalinger og materialundersokelser"@no ;
+  rdfs:label "Relevant measurements and material surveys"@en ;
   rdfs:range :Oppmaling_materialundersokelse ;
 .
 :Alkalireaktivt_tilslag
@@ -58,6 +56,8 @@ vann:preferredNamespaceUri
 :AlternativStrategi
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Tiltak ;
+  rdfs:label "Alternativ strategi"@no ;
+  rdfs:label "Alternative strategy"@en ;
   rdfs:range :Tiltak ;
 .
 :AnbefaltTidpunkt
@@ -101,21 +101,21 @@ vann:preferredNamespaceUri
   rdf:type owl:Class ;
   :kode "5.1.99" ;
   rdfs:label "Annet tiltak - Driftstiltak"@no ;
-  rdfs:label "Other measures - operating measures"@en ;
+  rdfs:label "Other measures - operational measures"@en ;
   rdfs:subClassOf :Driftstiltak ;
 .
 :Annet_tiltak__Innmaling_eller_Oppmaling
   rdf:type owl:Class ;
   :kode "5.8.99" ;
   rdfs:label "Annet tiltak - innmåling/oppmåling"@no ;
-  rdfs:label "Other measures - Surveying"@en ;
+  rdfs:label "Other measures - Survey"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Annet_tiltak__ROS_analyse
   rdf:type owl:Class ;
   :kode "5.7.99" ;
   rdfs:label "Annet tiltak - ROS-analyse"@no ;
-  rdfs:label "Other measures - ROS analysis"@en ;
+  rdfs:label "Other measures - Risk Assessment analysis"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Annet_tiltak__Vedlikehold
@@ -129,7 +129,7 @@ vann:preferredNamespaceUri
   rdf:type owl:Class ;
   :kode "5.3.99" ;
   rdfs:label "Annet tiltak - fornyelse"@no ;
-  rdfs:label "Other measures - renovation"@en ;
+  rdfs:label "Other measures - Renewal"@en ;
   rdfs:subClassOf :Fornyelse ;
 .
 :Annet_tiltak__forsterking
@@ -143,7 +143,7 @@ vann:preferredNamespaceUri
   rdf:type owl:Class ;
   :kode "5.6.99" ;
   rdfs:label "Annet tiltak - kontrollberegning - kontroll bæreevne"@no ;
-  rdfs:label "Other measures - control calculation - control loading capacity"@en ;
+  rdfs:label "Other measures - Quality check calculation - Check of load bearing capacity"@en ;
   rdfs:subClassOf :Kontrollberegning ;
 .
 :Annet_tiltak__materialundersokelse
@@ -168,28 +168,8 @@ vann:preferredNamespaceUri
 .
 :Armeringslokalisering_betongoverdekning
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Finne armeringens beliggenhet og måle armeringens overdekning.
-Måling av overdekning kan være aktuelt i følgende tilfeller:
-- Ved mistanke om feilplassert armering, f.eks. ved manglende bruk av monteringsstenger
-- For kartlegging av risiko for armeringskorrosjon, f.eks. i kloridpåkjente elementer eller
-elementer hvor det allerede er påvist lokal korrosjon
-- For kartlegging av reparasjonsomfang ved pågående armeringskorrosjon
-Gjennomføring
-Målt overdekning sammenholdes med målte kloridprofiler og/eller karbonatiseringsdybder.
-Hovedinspeksjon
-Ved mistanke om feilplassert armering eller armeringskorrosjon utføres stikkprøvekontroll av
-overdekning. Dersom mistanke bekreftes kan eventuelt omfanget utvides.
-Spesialinspeksjon
-Overdekningsmålinger utføres i henhold til spesiell beskrivelse.
-Fordeler og ulemper
-Metoden er enkel, ikke-destruktiv og hurtig slik at en kan kontrollere store områder på kort tid. En
-ulempe er at tett armering og armering i bunter og/eller flere lag kan resultere i feilaktige resultater.
-Overdekningsmålingene må derfor jevnlig kalibreres mot direkte målt overdekning etter innboring
-til armering.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Armeringslokalisering - overdekningsmålinger"@no ;
+  rdfs:label "Armeringslokalisering betongoverdekning"@no ;
+  rdfs:label "Reinforcing localization - concrete cover"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Asfalttykkelse_ma_kartlegges
@@ -203,7 +183,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "75"^^xsd:int ;
   rdfs:label "Avflaking"@no ;
-  rdfs:label "flaking"@en ;
+  rdfs:label "Flaking"@en ;
 .
 :Avskalling
   rdf:type :Skade_pa_betong ;
@@ -215,7 +195,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type :Skadeutvikling ;
   :kode "-" ;
   rdfs:label "Avtagende utvikling"@no ;
-  rdfs:label "Decreasing development"@en ;
+  rdfs:label "Declining/diminishing development"@en ;
 .
 :Avvik_fra_standard
   rdf:type :Prosjekteringsfeil ;
@@ -225,17 +205,15 @@ Håndbok R211 Feltundersøkelser"""@no ;
 .
 :Bareevne
   rdf:type owl:Class ;
-  rdfs:comment """Brua er sårbar for overbelastning, f.eks.
-- En gangbru som ikke er dimensjonert for biltrafikk kan ha sårbar bæreevne dersom brua mangler fysisk hindring og har adkomst for kjøretøy
-- Lette brukonstruksjoner kan ha mindre kapasitet mot overbelastning fordi trafikklasten utgjør en større del av bruas totalbelastning enn den gjør for en tyngre brukonstruksjon."""@no ;
   rdfs:label "Bæreevne"@no ;
+  rdfs:label "Load bearing capacity"@en ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :Belastning
   rdf:type owl:Class ;
   :kode "60"^^xsd:int ;
   rdfs:label "Belastning"@no ;
-  rdfs:label "Load"@en ;
+  rdfs:label "Loading"@en ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Islast
@@ -250,6 +228,8 @@ Håndbok R211 Feltundersøkelser"""@no ;
 .
 :Beskrivelse
   rdf:type owl:DatatypeProperty ;
+  rdfs:label "Beskrivelse"@no ;
+  rdfs:label "Description"@en ;
   rdfs:range xsd:string ;
 .
 :Bevegelse
@@ -273,8 +253,8 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Bom
   rdf:type :Skade_pa_betong ;
   :kode "34"^^xsd:int ;
-  rdfs:label "Barrier"@en ;
   rdfs:label "Bom"@no ;
+  rdfs:label "Boom / Barrier"@en ;
 .
 :Brann
   rdf:type :Ulykkeslast ;
@@ -284,10 +264,8 @@ Håndbok R211 Feltundersøkelser"""@no ;
 .
 :BrannOgExplosjon
   rdf:type owl:Class ;
-  rdfs:comment """Brua kan være sårbar for brann f.eks.
-- Tynne tverrsnitt, liten overdekning, brennbare konstruksjonsmaterialer
-- Lekkasje av brennbar væske ned i lukket drenering Dersom brua er sårbar for brann må man være spesielt oppmerksom på lagring av brennbare materialer, nærhet til bygninger eller lekkasje av brennbare væsker."""@no ;
-  rdfs:label "Brann og explosjon"@no ;
+  rdfs:label "Brann og eksplosjon"@no ;
+  rdfs:label "Fire and explosion"@en ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :Breddeutvidelse
@@ -307,7 +285,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "5.7.06" ;
   rdfs:label "Brua stenges ved flom, sårbar Flom"@no ;
-  rdfs:label "The bridge is closed by flooding, vulnerable floods"@en ;
+  rdfs:label "The bridge is closed due to  flooding, Flood vulnurability"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Brudd
@@ -320,7 +298,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:Class ;
   :kode "80"^^xsd:int ;
   rdfs:label "Bruksskade"@no ;
-  rdfs:label "Use damage"@en ;
+  rdfs:label "Useage damage"@en ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Normal_nedbrytning_eller_slitasje
@@ -332,11 +310,15 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Brunavn
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Bridge name"@en ;
+  rdfs:label "Brunavn"@no ;
   rdfs:range xsd:string ;
 .
 :Brunummer
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Bridge number"@en ;
+  rdfs:label "Brunummer"@no ;
   rdfs:range xsd:string ;
 .
 :Daglige_driftsoppgaver_pa_bevegelige_bruer
@@ -355,18 +337,8 @@ Håndbok R211 Feltundersøkelser"""@no ;
 :Driftstiltak
   rdf:type owl:Class ;
   :kode "5.1"^^xsd:double ;
-  rdfs:comment """Gjennomføring av planlagte oppgaver som er nødvendig for at brua skal fungere som forutsatt.
-Sikre at brua fungerer slik den er tiltenkt, dvs. sørge for at den er åpen og tilgjengelig for trafikantene.
-Driftstiltak kan omfatte:
-- Rengjøring av de forskjellige elementene på brua.
-- Opprensk/opprydding over og under vann
-- Daglige driftsoppgaver på bevegelige bruer
-- Renovasjon
-- Kontroll/service av utstyr
-Bruinspektøren kontrollerer at dette er utført som forutsatt.
-Driftstiltak utføres av driftsentreprenøren i henhold til håndbok R610 Standard for drift og vedlikehold av riksveger."""@no ;
   rdfs:label "Driftstiltak"@no ;
-  rdfs:label "Operating measures"@en ;
+  rdfs:label "Operating measures "@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Rengjoring_av_de_forskjellige_elementene_pa_brua
@@ -385,34 +357,26 @@ Driftstiltak utføres av driftsentreprenøren i henhold til håndbok R610 Standa
 .
 :Elektrisk_fuktmaler
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle treets fuktighet
-Gjennomføring
-Treets fuktighet kan måles ved treets elektriske resistans. Instrumentet må justeres for temperatur
-og treslag. Justeringskurver for impregnering finnes per i dag ikke. Generelt kan saltimpregnering
-forventes å minke resistansen noe slik at resultatet blir noe høyere enn reell fuktighet. Kreosot gir
-erfaringsmessig liten påvirkning. Fuktigheten bør registreres i flere dybder, eksempelvis 0.5, 2 og
-5 cm. Det bør unngås å måle over en limfuge."""@no ;
-  rdfs:label "Elektrisk fuktmåler"@no ;
+  rdfs:label "Electric moisture meter"@en ;
+  rdfs:label "Elektrisk fuktmaler"@no ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
 :Elementlokasjon
   rdf:type owl:Class ;
+  rdfs:label "Elementlokasjon"@no ;
+  rdfs:label "Location of element"@en ;
   rdfs:subClassOf :Lokasjon ;
 .
 :Elva_har_gatt_opp_i_brudekket_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.05" ;
   rdfs:label "Elva har gått opp i brudekket, sårbar Flom"@no ;
-  rdfs:label "The river has gone up in the bridge deck, vulnerable floods"@en ;
+  rdfs:label "The river has rised up to the bridge deck, Flood vulnurability"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Enkelinspeksjon
   rdf:type owl:Class ;
-  rdfs:comment """Enkelinspeksjon utføres for å avdekke om det er synlige skader som på kort sikt påvirker eller kan påvirke bruenes bæreevne, trafikksikkerhet, vedlikehold eller miljøet/estetikk.
-Som et minimum registreres skader og/eller andre forhold der det blir vurdert at tiltak må gjennomføres før neste enkel- eller hovedinspeksjon.
-Enkelinspeksjon omfatter en enkel visuell kontroll av alle elementer over vann uten bruk av tilkomstutstyr. Det betyr at på større bruer må de fleste elementene inspiseres på avstand. Det bør imidlertid brukes kikkert der det er nødvendig å se nærmere på detaljer.
-Fundamenter i vann kontrolleres i den grad det er mulig uten bruk av dykker. Det utføres vanligvis ikke oppmålinger eller materialundersøkelser ved enkelinspeksjon. Inspektøren kan likevel ha med måleutstyr, som rissviddemåler, tommestokk, målebånd og skyvelær."""@no ;
+  rdfs:label "Basic inspection"@en ;
   rdfs:label "Enkelinspeksjon"@no ;
   rdfs:subClassOf :Inspeksjon_V441 ;
 .
@@ -425,79 +389,21 @@ Fundamenter i vann kontrolleres i den grad det er mulig uten bruk av dykker. Det
 :Eventuelle_svekkelser_av_bruelementer_f_eks_redusert_stal_eller_armeringstverrsnitt_pga_korrosjon
   rdf:type owl:Class ;
   :kode "5.6.02" ;
+  rdfs:label "Any weakening of bridge elements, ex. reduced steel / reinforcing cross section caused by corrosion"@en ;
   rdfs:label "Eventuelle svekkelser av bruelementer, f.eks. redusert stål-/armeringstverrsnitt pga. korrosjon"@no ;
-  rdfs:label "Weakening of bridge elements, for example reduced steel / reinforcing cross section caused by corrosion"@en ;
   rdfs:subClassOf :Kontrollberegning ;
 .
 :Eventuelle_tilleggslaster_f_eks_fra_alkalireaksjoner_i_betong_eller_okt_asfalttykkelse
   rdf:type owl:Class ;
   :kode "5.6.01" ;
-  rdfs:label "Additional loads, for example of alkali reactions in concrete or increased asphalt thickness"@en ;
+  rdfs:label "Additional loads, ex. of alkaline reactions in concrete or increased asphalt thickness"@en ;
   rdfs:label "Eventuelle tilleggslaster, f.eks. fra alkalireaksjoner i betong eller økt asfalttykkelse"@no ;
   rdfs:subClassOf :Kontrollberegning ;
 .
 :Fasthetsbestemmelse
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Bestemme trykk- og/eller strekkfasthet for herdet betong dersom det f. eks. er mistanke om
-undermåls betong eller ukjent betongfasthet.
-Betongfasthet er sjelden lavere enn det som er lagt til grunn ved dimensjonering. Behov for
-fasthetsbestemmelse ved rutinemessige inspeksjoner er som regel ikke til stede.
-Spesialinspeksjon
-Fasthetsbestemmelse kan være aktuelt dersom bæreevnen er for lav slik at en verifikasjon av
-virkelig trykkfasthet kan gi beregningsmessig gevinst.
-Heftprøver kan være aktuelt der det er behov for å kontrollere betongens strekkfasthet i forkant av
-en betongrehabilitering eller overflatebehandling.
-Trykkfastheten kan bestemmes ved:
-- Trykkprøving av utborede kjerner
-- Slaghammer (feltmetode)
-- CAPO-test/LOK-test (feltmetode)
-Overflatestrekkfasthet av betongen kan bestemmes ved:
-- Heftprøving
-Trykkprøving av utborede kjerner
-Gjennomføring
-Se henvisninger
-Trykkfasthetsprøving av utborede kjerner kan kombineres med følgende prøving:
-- E-modul
-- Densitet
-- Elektrisk motstand
-Fordeler og ulemper
-Metoden gir en nøyaktig verdi for betongtrykkfastheten i den aktuelle kjernen. Trykkprøving krever
-kostbart utstyr og er tidkrevende. Metoden er destruktiv, man må være forsiktig ved utboring slik at
-ikke armering skades. Kjerneboring i spennarmerte bruelementer utføres kun i helt spesielle tilfeller.
-Henvisninger
-Håndbok R210 Laboratorieundersøkelser
-Håndbok R211 Feltundersøkelser
-NS-EN 12504-1
-Slaghammer
-Gjennomføring
-Se henvisninger
-Fordeler og ulemper
-Metoden er svært rask, enkel og billig i bruk. Resultatet fra målingene vil være svært unøyaktige
-på grunn av alle usikkerhetsfaktorene. Verdiene kan imidlertid brukes for å få et bilde av hvordan
-trykkfastheten varierer i de ulike elementene. Metoden gir bare verdier for betongoverflaten.
-Henvisninger
-Håndbok R210 Laboratorieundersøkelser
-Håndbok R211 Feltundersøkelser
-NS-EN 12504-2
-CAPO-test/LOK-test
-Gjennomføring
-Boring av hull i betongoverflaten for montering av ekspanderende dybel som trekkes til brudd.
-Uttrekkskraften måles og konverteres til trykkfasthet.
-Fordeler og ulemper
-En destruktiv feltmetode som gir et tilstrekkelig nøyaktig resultat på stedet.
-Henvisninger
-Håndbok R211 Feltundersøkelser
-NS-EN 12504-3
-Heftprøving
-Gjennomføring
-Se henvisninger
-Fordeler og ulemper
-Nøyaktigheten i måleresultatet avhenger av hvor godt den beskrevne prosedyren er fulgt.
-Erfaringsmessig er metoden ømfintlig for små avvik eller variasjon i prøvingsutførelsen.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
   rdfs:label "Fasthetsbestemmelse"@no ;
+  rdfs:label "Strength determination"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Feil_i_beregninger
@@ -532,13 +438,7 @@ Håndbok R211 Feltundersøkelser"""@no ;
 .
 :Fiberoptikk
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Avdekke skader (korrosjon, sprekker o.l.) i lukkede eller vanskelig tilgjengelige elementer av stål.
-Gjennomføring
-Se håndbok R762 Prosesskode 2.
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning"""@no ;
+  rdfs:label "Fiber optics"@en ;
   rdfs:label "Fiberoptikk"@no ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
@@ -557,13 +457,12 @@ Henvisning"""@no ;
 :For_tidlig_belastning
   rdf:type :Utforelsesfeil ;
   :kode "36"^^xsd:int ;
-  rdfs:label "For early loading (before the concrete has gained the prescribed strength)"@en ;
   rdfs:label "For tidlig belastning (før betongen har fått den foreskrevne fastheten)"@no ;
+  rdfs:label "Premature loading (before the concrete has gained the prescribed strength)"@en ;
 .
 :Fornyelse
   rdf:type owl:Class ;
   :kode "5.3"^^xsd:double ;
-  rdfs:comment "Man tar ut restlevetiden av eksisterende bru og ny bru vurderes."@no ;
   rdfs:label "Fornyelse"@no ;
   rdfs:label "Renewal"@en ;
   rdfs:subClassOf :Tiltak ;
@@ -575,30 +474,34 @@ Henvisning"""@no ;
 :Forskyvning_i_ror_pga_flom_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.08" ;
-  rdfs:label "Displacement tube occasion. floods, vulnerable floods"@en ;
+  rdfs:label "Displacement of pipes due to flood, Flood vulnurability"@en ;
   rdfs:label "Forskyvning i rør pga. flom, sårbar Flom"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :ForslagTilTiltak
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Forslag til tiltak"@no ;
+  rdfs:label "Proposed action"@en ;
   rdfs:range :Tiltak ;
 .
 :ForslagTilTiltakSarbarhet
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Sarbarhet ;
+  rdfs:label "Forslag til tiltak for sårbarhet"@no ;
+  rdfs:label "Proposed actions for vulnerability"@en ;
   rdfs:subPropertyOf :ForslagTilTiltak ;
 .
 :ForslagTilTiltakSkade
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Forslag til tiltak for skade"@no ;
+  rdfs:label "Proposed actions for damage"@en ;
   rdfs:subPropertyOf :ForslagTilTiltak ;
 .
 :Forsterkning
   rdf:type owl:Class ;
   :kode "5.4"^^xsd:double ;
-  rdfs:comment """Tiltak som øker bæreevnen for ei bru eller et element, skadet eller ikke skadet, i forhold til opprinnelige bæreevne.
-Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde tilsier at det er behov for det eller dersom det avdekkes mangler, f.eks. prosjekteringsfeil."""@no ;
   rdfs:label "Forsterkning"@no ;
   rdfs:label "Reinforcement"@en ;
   rdfs:subClassOf :Tiltak ;
@@ -615,10 +518,7 @@ Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde ti
 .
 :Framkommelighet
   rdf:type owl:Class ;
-  rdfs:comment """Framkommeligheten kan bli redusert ved f.eks.
-- Behov for innsnevring av gang- eller kjørebanen i forbindelse med vedlikeholdsarbeid
-- Manglende omkjøringsmulighet ved ulykke eller bruvedlikehold
-- Smalere vegbredde på brua enn på veg inn mot brua"""@no ;
+  rdfs:label "Accessibility"@en ;
   rdfs:label "Framkommelighet"@no ;
   rdfs:subClassOf :Sarbarhet ;
 .
@@ -630,30 +530,20 @@ Forsterkninger utføres når aksellaster skal heves, økning av trafikkmengde ti
 .
 :GenerellInspeksjon_R610
   rdf:type owl:Class ;
-  rdfs:comment """Generell inspeksjon utføres i samsvar med håndbok R610 Standard for drift og vedlikehold av
-riksveger. Generell inspeksjon omfatter rutinemessig inspeksjon for å overvåke vegnettets funksjon
-og utføres av driftsentreprenøren. Generell inspeksjon beskrives ikke i denne håndboken."""@no ;
-  rdfs:label "Generell inspeksjon"@no ;
+  rdfs:label "General inspection R610"@en ;
+  rdfs:label "Generell inspeksjon R610"@no ;
   rdfs:subClassOf :Inspeksjon ;
 .
 :Godstykkelsesmaling_ultralyd
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle godstykkelser på stål når direkte måling ikke er mulig, f. eks. når bare den ene siden av stålet er
-tilgjengelig. Metoden kan være aktuell f.eks. på korrugerte stålrør og spuntvegger.
-Gjennomføring
-Det vises til kapittel 1.3.5 Penetrant. Eventuelle korrosjonsprodukter på motsatt side reflekterer ikke
-lydimpulsene. Det er derfor effektiv tykkelse som måles.
-Kontrollen utføres av firmaer med spesialkompetanse.
-Fordeler og ulemper
-Henvisning"""@no ;
-  rdfs:label "Godstykkelsesmåling med ultralyd"@no ;
+  rdfs:label "Godstykkelsesmåling - ultralyd"@no ;
+  rdfs:label "Thickness Measurement - ultrasonic"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Grunnarbeider_etter_erosjon_undergraving
   rdf:type owl:Class ;
   :kode "5.2.01.01" ;
-  rdfs:label "Earthworks after erosion, undermining etc."@en ;
+  rdfs:label "Earthworks after erosion, excavation etc."@en ;
   rdfs:label "Grunnarbeider etter erosjon, undergraving osv."@no ;
   rdfs:subClassOf :Tiltak_for_a_rette_pa_akutte_skader_eller_tiltak_som_ikke_kan_planlegges_pa_lang_sikt ;
 .
@@ -665,165 +555,151 @@ Henvisning"""@no ;
 .
 :Hammer
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Lytte etter indre densitetsforskjeller for å avdekke om det er råte.
-Gjennomføring
-Slå med hammer mot overflaten for å avdekke hul lyd som indikerer nedbrutt tre."""@no ;
+  rdfs:label "Hammer"@en ;
   rdfs:label "Hammer"@no ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
 :HarDokument
   rdf:type owl:ObjectProperty ;
+  rdfs:label "Document"@en ;
+  rdfs:label "Dokument"@no ;
   rdfs:range foaf:Document ;
 .
 :HarDokumentInspeksjon
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Document for inspection"@en ;
+  rdfs:label "Dokument for inspeksjon"@no ;
   rdfs:subPropertyOf :HarDokument ;
 .
 :HarDokumentSarbarhet
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Sarbarhet ;
+  rdfs:label "Document for vulnerability"@en ;
+  rdfs:label "Dokument for sårbarhet"@no ;
   rdfs:subPropertyOf :HarDokument ;
 .
 :HarDokumentSkade
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Document for damage"@en ;
+  rdfs:label "Dokument for skade"@no ;
   rdfs:subPropertyOf :HarDokument ;
 .
 :HarDokumentSkadebeskrivelse
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skadebeskrivelse ;
+  rdfs:label "Document for damage description"@en ;
+  rdfs:label "Dokument for skadebeskrivelse"@no ;
   rdfs:subPropertyOf :HarDokument ;
 .
 :HarDokumentTiltak
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Tiltak ;
+  rdfs:label "Document for action"@en ;
+  rdfs:label "Dokument for tiltak"@no ;
   rdfs:subPropertyOf :HarDokument ;
 .
 :HarFolgeskader
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skadebeskrivelse ;
+  rdfs:label "Følgeskader"@no ;
+  rdfs:label "Subsequent damages"@en ;
   rdfs:range :Skade ;
   rdfs:subPropertyOf :HarSkade ;
 .
 :HarKonsekvensgrad
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skadekonsekvens ;
+  rdfs:label "Degree of consequence"@en ;
+  rdfs:label "Kosekvensgrad"@no ;
   rdfs:range :Konsekvensgrad ;
 .
 :HarKonsekvenstype
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skadekonsekvens ;
+  rdfs:label "Consequence type"@en ;
+  rdfs:label "Konsekvenstype"@no ;
   rdfs:range :Konsekvenstype ;
 .
 :HarLokasjon
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Location"@en ;
+  rdfs:label "Lokasjon"@no ;
   rdfs:range :Lokasjon ;
 .
 :HarPrimarskade
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skadebeskrivelse ;
+  rdfs:label "Primary damage"@en ;
+  rdfs:label "Primærskade"@no ;
   rdfs:range :Skade ;
   rdfs:subPropertyOf :HarSkade ;
 .
 :HarSkade
   rdf:type owl:ObjectProperty ;
+  rdfs:label "Damage"@en ;
+  rdfs:label "Skade"@no ;
   rdfs:range :Skade ;
 .
 :HarSkadearsak
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Cause of damage"@en ;
+  rdfs:label "Skadeårsak"@no ;
   rdfs:range :Skadearsak ;
 .
 :HarSkadegrad
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Grade of damage"@en ;
+  rdfs:label "Skadegrad"@no ;
   rdfs:range :Skadegrad ;
 .
 :HarSkadekonsekvens
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Consequence of damage"@en ;
+  rdfs:label "Skadekonsekvens"@no ;
   rdfs:range :Skadekonsekvens ;
 .
 :HarSkadetype
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Skadetype"@no ;
+  rdfs:label "Type of damage"@en ;
   rdfs:range :Skadetype ;
 .
 :HarSkadeutvikling
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Skade ;
+  rdfs:label "Development of damage"@en ;
+  rdfs:label "Skadeutvikling"@no ;
   rdfs:range :Skadeutvikling ;
 .
 :Heft_overflatebelegg_stal
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle overflatebeleggets heft internt mellom malingslagene, til metallisering og til stål.
-Gjennomføring
-Heft måles i henhold til NS-EN ISO 4624 Pull-off test (avtrekkstest). Heft for termisk sprøytet sink målt
-under produksjon skal være minst 5 MPa og for maling minst 5 MPa.
-Alternativt kan heft måles med gittersnitt i henhold til NS-EN ISO 2409. Denne metoden er ikke mulig
-å bruke på sinkbelegg.
-Metoden er destruktiv og skal ikke brukes unødvendig. Områder hvor avtrekk har vært utført skal
-overflatebehandles på nytt i henhold til prosedyrer gitt i håndbok R762 Prosesskode 2.
-Hovedinspeksjon
-Vedheft måles vanligvis ikke ved hovedinspeksjon.
-Spesialinspeksjon
-Test av heft er i hovedsak aktuell ved spesialinspeksjoner.
-Fordeler og ulemper
-Begge målingene kan gjerne benyttes fordi de belaster belegget ulikt og er derfor delvis
-komplementære. Avtrekkstest belaster belegget oppover og vertikalt fra overflata. Gittersnitt belaster
-belegget sideveis og parallelt med overflata.
-Testmetoden er destruktiv og må derfor vurderes opp mot planlagt reparasjon av overflatebelegg.
-Henvisning
-Håndbok R762 Prosesskode 2
-NS-EN ISO 4624 Prøving av vedheftingsevne ved avtrekk
-NS-EN ISO 2409 Gittersnittprøving"""@no ;
-  rdfs:label "Heft mellom overflatebelegg og stål (Vedheft av overflatebelegg)"@no ;
+  rdfs:label "Adhesion surface coating steel"@en ;
+  rdfs:label "Heft overflatebelegg stål"@no ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Hovedinspeksjon
   rdf:type owl:Class ;
-  rdfs:comment """Hovedinspeksjon omfatter en nær visuell kontroll av hele brua for å kontrollere at alle elementer fyller sin funksjon. Ved f.eks. store ensartede stål- og betongflater, hvor man med sikkerhet kan oppdage forventede skader fra større avstand, kan det velges ut et representativt område på det aktuelle elementet for nær visuell kontroll.
-Ved behov utføres oppmålinger/materialundersøkelser for å supplere den visuelle kontrollen, se vedlegg V2 Metoder oppmålinger/ materialundersøkelser.
-Hovedinspeksjon utføres for å registrere tilstanden til alle elementer på brua, og kontrollere at den fyller sin funksjon. Videre beskrives eventuelle behov for tiltak med tilhørende kostnadsoverslag for tiltakene.
-Hovedinspeksjonen danner grunnlag for å supplere eller justere inspeksjonsplan og tiltaksplan."""@no ;
   rdfs:label "Hovedinspeksjon"@no ;
+  rdfs:label "Main inspection"@en ;
   rdfs:subClassOf :Inspeksjon_V441 ;
 .
 :Impact_Echo
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Bestemme platetykkelse. Lokalisere delaminering, sprekker, dybde av overflatesprekker og blærer.
-Gjennomføring
-Som for Impulse Respons
-Fordeler og ulemper
-Som for Impulse Respons
-Henvisninger"""@no ;
   rdfs:label "Impact Echo"@no ;
+  rdfs:label "Impact echo"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Impulse_Response
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Oppdage delaminering, hulrom o.l. på oversiden av et brudekke eller på pilar.
-Gjennomføring
-Håndholdt hammer koblet til måleinstrument sender en liten trykkbølge gjennom betongen. En
-svingehastighetsmåler plassert nær slagpunktet måler amplituden på responsbølgen. Hammer
-og måler er koblet til en bærbar PC som lagrer og prosesserer signalene. Programvaren beregner
-bølgens mobilitet i betongen som funksjon av frekvensen. Områder med lav mobilitet indikerer
-homogen betong og områder med høy mobilitet indikerer riss eller delaminering.
-Basert på plottet over undersøkt areal kan man verifisere resultatet med å ta ut kjerneprøver av
-betongen.
-Spesialinspeksjon
-Vil kun være aktuell å bruke i forbindelse med spesialinspeksjon.
-Fordeler og ulemper
-Ikke-destruktiv metode for rask kartlegging av store arealer. Krever uttak av kjerneprøver for
-verifisering av resultatene.
-Henvisninger"""@no ;
-  rdfs:label "Impulse Response"@no ;
+  rdfs:label "Impulse response"@en ;
+  rdfs:label "Impulse response"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Ingen_utvikling
@@ -842,14 +718,8 @@ Henvisninger"""@no ;
 :Innmaling_eller_Oppmaling
   rdf:type owl:Class ;
   :kode "5.8"^^xsd:double ;
-  rdfs:comment """Det kan være nødvendig å supplere den visuelle kontrollen med innmåling/oppmålinger når det er behov for ekstra oppfølging og/eller avdekke skjulte skader
-Innmåling/ oppmåling kan omfatte:
-- Innmåling av brua og grunnen
-- Setningsmåling av pilarer, sårbar bæreevne
-- Asfalttykkelse må kartlegges
-- Oppmåling av skader"""@no ;
   rdfs:label "Innmåling / Oppmåling"@no ;
-  rdfs:label "Surveying"@en ;
+  rdfs:label "Survey"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Oppmaling_av_skader
@@ -873,25 +743,13 @@ Innmåling/ oppmåling kan omfatte:
 .
 :Inntrengningsdybde_vannavvisende_impregnering_betong
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle inntrengningsdybden av vannavvisende impregnering på betong.
-Gjennomføring
-Inntrengningsdybde måles ved å bore ut kjerneprøver med minimum 60 mm diameter, splitte
-kjernene, tørke dem i 50-60 oC og bruke vann som indikator. En prøve består av 3 kjerner.
-Inntrengningsdybde avleses med risslupe på alle 6 kjernehalvdeler.
-Fordeler og ulemper
-Testmetoden er destruktiv og må derfor vurderes opp mot planlagt reparasjon av overflatebelegg.
-Henvisning
-NS-EN 1062-3 Bestemmelse av vanngjennomtrengningsgrad (permeabilitet)"""@no ;
-  rdfs:label "Inntrengningsdybde vannavvisende impregnering på betong"@no ;
+  rdfs:label "Inntrengningsdybde vannavvisende impregnering betong"@no ;
+  rdfs:label "The penetration depth - water repellent impregnating concrete"@en ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Inspeksjon
   rdf:type owl:Class ;
-  rdfs:comment """Inspeksjonstypene gjenspeiler grundigheten og frekvensen for inspeksjonene som utføres.
-De rutinemessige inspeksjonene er generell inspeksjon, enkelinspeksjon og hovedinspeksjon, og
-utføres i hele brua sin levetid. Ved ekstraordinær hendelse eller behov for grundigere undersøkelser
-utføres spesialinspeksjon."""@no ;
+  rdfs:label "Inspection"@en ;
   rdfs:label "Inspeksjon"@no ;
   rdfs:subClassOf :Root ;
   rdfs:subClassOf [
@@ -951,7 +809,8 @@ utføres spesialinspeksjon."""@no ;
 .
 :Inspeksjon_V441
   rdf:type owl:Class ;
-  rdfs:label "Inspeksjon enligt V441"@no ;
+  rdfs:label "Inspection V441"@en ;
+  rdfs:label "Inspeksjon V441"@no ;
   rdfs:subClassOf :Inspeksjon ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -972,22 +831,27 @@ utføres spesialinspeksjon."""@no ;
 :InspeksjonenStartet
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Inspection started"@en ;
+  rdfs:label "Inspeksjon startet"@no ;
   rdfs:subPropertyOf :Utford ;
 .
 :InspeksjonenUtford
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Inspection conducted"@en ;
+  rdfs:label "Inspeksjon utført"@no ;
   rdfs:subPropertyOf :Utford ;
 .
 :Inspeksjonsbeskrivelse
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Inspection description"@en ;
+  rdfs:label "Inspeksjonsbeskrivelse"@no ;
   rdfs:subPropertyOf :Beskrivelse ;
 .
 :Isgang
   rdf:type owl:Class ;
-  rdfs:comment """Brua kan være sårbar for isgang f.eks.
-- Tidlig flom i islagte elver"""@no ;
+  rdfs:label "Ice drift"@en ;
   rdfs:label "Isgang"@no ;
   rdfs:subClassOf :Sarbarhet ;
 .
@@ -1001,7 +865,7 @@ utføres spesialinspeksjon."""@no ;
   rdf:type :Skadeutvikling ;
   :kode "-" ;
   rdfs:label "Jevn utvikling"@no ;
-  rdfs:label "Steady development"@en ;
+  rdfs:label "Uniform development"@en ;
 .
 :Jord_eller_snoskred
   rdf:type :Ulykkeslast ;
@@ -1029,14 +893,7 @@ utføres spesialinspeksjon."""@no ;
 .
 :Kjerneprove
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Nærmere undersøkelse av treets tilstand.
-Gjennomføring
-Det kan enten tas en enkel prøve i overflaten eller en tynn lang prøve kan tas for å undersøke indre
-snitt. Videre undersøkelse kan omfatte visuell inspeksjon på stedet, undersøkelse under mikroskop,
-tynnskiving av prøving, treets anatomi mm.
-Type kjerneprøve avhenger av prøvens hensikt. Videre laboratorieundersøkelse avhenger av prøvens
-hensikt."""@no ;
+  rdfs:label "Core sample"@en ;
   rdfs:label "Kjerneprøve"@no ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
@@ -1090,7 +947,7 @@ hensikt."""@no ;
 :Kontroll_av_karbonatisering_fasthet_og_klorider
   rdf:type owl:Class ;
   :kode "5.9.01" ;
-  rdfs:label "Control of carbonation, strength and chlorides"@en ;
+  rdfs:label "Control of carbonation, firmness and chlorides"@en ;
   rdfs:label "Kontroll av karbonatisering, fasthet og klorider"@no ;
   rdfs:subClassOf :Materialundersokelse ;
 .
@@ -1103,13 +960,8 @@ hensikt."""@no ;
 .
 :Kontroll_overflatebelegg
   rdf:type owl:Class ;
-  rdfs:comment """I det følgende er det gitt en beskrivelse av de undersøkelser som kan være aktuelle ved kontroll av
-overflatebelegg på betong, stål og tre.
-Overflatebeleggets tykkelse og heft skal dokumenteres i byggefasen. For øvrig er dette
-undersøkelser som utføres ved spesialinspeksjoner.
-Ved spesialinspeksjon av overflatebelegg på stål bør FROSIO-inspektør nivå 3, eller tilsvarende
-benyttes. Dette gjelder spesielt dersom det skal vurderes omfattende vedlikeholdsarbeider."""@no ;
-  rdfs:label "Kontroll overflatebelegg"@no ;
+  rdfs:label "Control - surface coatings"@en ;
+  rdfs:label "Kontroll - overflatebelegg"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
   owl:disjointUnionOf (
       :MEK_test
@@ -1123,47 +975,21 @@ benyttes. Dette gjelder spesielt dersom det skal vurderes omfattende vedlikehold
 .
 :Kontroll_saltmengde_klorider
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontroll av saltmengde på konstruksjonen. Kan være aktuelt for å avdekke behov for periodisk
-vasking og behjelpelig i prosjektering av vedlikehold.
-Gjennomføring
-Kontroll utføres i henhold til ISO 8502-06 (Ekstraksjon av løselige forurensinger for analyse, Bresle
-metoden). NaCl mengde rapporteres i mg/m2.
-Hovedinspeksjon
-Ikke aktuelt ved hovedinspeksjon.
-Spesialinspeksjon
-Kontroll av saltmengde gjøres utgangspunktet kun ved spesialinspeksjon.
-Fordeler og ulemper
-Dette er en ikke destruktiv metode for å måle konsentrasjon av klorider på en overflate.
-Henvisning
-ISO 8502-06 Ekstraksjon av løselige forurensinger for analyse, Bresle metoden"""@no ;
-  rdfs:label "Kontroll av saltmengde/klorider"@no ;
+  rdfs:label "Control - salt amount / chlorides"@en ;
+  rdfs:label "Kontroll - saltmengde klorider"@no ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Kontroll_spennkraft
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Registrere spennkraft
-Gjennomføring
-Stag trekkes ut og spennkraften måles når mutteren slipper ankerplaten. Måling bør gjøres i litt
-avstand fra bruenden, eksempelvis 4. stag fra kanten. Målt eller antatt stagtemperatur må registreres.
-Staget må ikke strammes etter måling, men slippes tilbake slik at staget forblir representativt for
-øvrige stag. Staget bør samtidig kontrolleres for korrosjon ved ankerplaten.
-En må holde seg på siden og ikke bak staget ved prøving på grunn av fare for brudd i staget."""@no ;
-  rdfs:label "Kontroll av spennkraft"@no ;
+  rdfs:label "Control - tension"@en ;
+  rdfs:label "Kontroll - spennkraft"@no ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
 :Kontrollberegning
   rdf:type owl:Class ;
   :kode "5.6"^^xsd:double ;
-  rdfs:comment """Tiltaket utføres når det er påvist skader, feil eller mangler som kan ha betydning for bruas bæreevne.
-En kontroll av bruas bæreevne må inkludere:
-- Eventuelle tilleggslaster, f.eks. fra alkalireaksjoner i betong eller økt asfalttykkelse
-- Eventuelle svekkelser av bruelementer, f.eks. redusert stål-/armeringstverrsnitt pga. korrosjon
-Basert på beregningene gjøres en ny vurdering av konsekvens og eventuelle videre tiltak.
-«Mye riss» er et symptom på enten nedbrytning eller overbelasning og kan vanskelig inngå som parameter i beregningene."""@no ;
   rdfs:label "Kontrollberegning"@no ;
-  rdfs:label "Recalculation"@en ;
+  rdfs:label "Quality Control Calculations"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Annet_tiltak__kontrollberegning
@@ -1179,47 +1005,28 @@ Basert på beregningene gjøres en ny vurdering av konsekvens og eventuelle vide
 .
 :Korrosjonsundersokelse_EKP
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle armeringens elektrokjemiske potensiale (EKP) og tilhørende motstand for å vurdere
-sannsynligheten for at det foregår armeringskorrosjon.
-Gjennomføring
-EKP-målinger utføres dersom det er mistanke om skjult armeringskorrosjon.
-Hovedinspeksjon
-EKP-målinger utføres normalt ikke i forbindelse med hovedinspeksjon. Behov vurderes ved
-hovedinspeksjoner med utgangspunkt i visuelle observasjoner og resultater fra måling av
-karbonatiseringsdybder og kloridinnhold.
-Spesialinspeksjon
-EKP-målinger utføres i henhold til spesiell beskrivelse. EKP-målinger skal kalibreres med visuell
-observasjon av armeringens korrosjonsgrad etter opphugninger. Overdekning, se kapittel 1.2.1,
-karbonatiseringsdybde, se kapittel 1.2.3 og kloridinnhold, se kapittel 1.2.4 bør også måles ved
-opphugning. Det bør stilles krav til måletetthet (rutenett) ved EKP-måling.
-Fordeler og ulemper
-Metoden er enkel, ikke-destruktiv og relativ hurtig slik at man kan kontrollere store områder.
-Metoden kan gi et godt bilde av armeringens tilstand i øyeblikket. Korrosjonsfare kan oppdages i en
-tidlig fase før det har oppstått synlige skader. Personell med spesialkompetanse må benyttes både
-til feltarbeid og til tolkning av resultatene. Metoden registrerer ikke korrosjonshastighet. Ulemper er
-kostnad og tilgjengelig utstyr.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Korrosjonsundersøkelse (EKP)"@no ;
+  rdfs:label "Corrosion analysis - EKP"@en ;
+  rdfs:label "Korrosjonsundersøkelse EKP"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Kostnadsoverslag
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Tiltak ;
+  rdfs:label "Cost estimate"@en ;
+  rdfs:label "Kostnadsoverslag"@no ;
   rdfs:range xsd:string ;
 .
 :Krakelering_eller_hull
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "73" ;
-  rdfs:label "Crackling / holes"@en ;
+  rdfs:label "Cleft / holes"@en ;
   rdfs:label "Krakelering/hull"@no ;
 .
 :Lavt_rekkverk_sarbar_for_Trafikksikkerhet
   rdf:type owl:Class ;
   :kode "5.7.01" ;
   rdfs:label "Lavt rekkverk, sårbar for Trafikksikkerhet"@no ;
-  rdfs:label "Low railings, vulnerable to traffic security"@en ;
+  rdfs:label "Low railings, Traffic security vulnurability"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Lekkasje_eller_fuktbelastning
@@ -1266,6 +1073,8 @@ Håndbok R211 Feltundersøkelser"""@no ;
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Lokasjon ;
   rdfs:label "Description of location"@en ;
+  rdfs:label "Location description"@en ;
+  rdfs:label "Lokasjonsbeskrivelse"@no ;
   rdfs:subPropertyOf :Beskrivelse ;
 .
 :Lose_skruer_eller_nagler
@@ -1276,272 +1085,63 @@ Håndbok R211 Feltundersøkelser"""@no ;
 .
 :MEK_test
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Å kartlegge om overflatebehandlingen er tilstrekkelig herdet, samt den motstandsevne mot
-løsemidler. Utfall av testen vil også angi kompabilitet med enkelte malingssystem.
-Gjennomføring
-Hovedinspeksjon
-Ikke aktuelt ved hovedinspeksjon.
-Spesialinspeksjon
-MEK-test benyttes i utgangspunktet kun ved spesialinspeksjon med bakgrunn i planlagt
-vedlikehold. Kan også benyttes for å undersøke om maling har herdet tilstrekkelig.
-Fordeler og ulemper
-Kan resulterer i at maling blir fjernet evt tykkelsen på belegget blir redusert, og må derfor vurderes
-opp mot planlagt reparasjon av overflatebelegg.
-Henvisning
-ASTM D4752"""@no ;
-  rdfs:label "MEK-test"@no ;
+  rdfs:label "MEK test"@en ;
+  rdfs:label "MEK test"@no ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Magnetpulverkontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Avdekke sprekker i stål som ikke kan oppdages ved visuell kontroll.
-Gjennomføring
-Sprekkbildet bør dokumenteres ved hjelp av skisser eller fotografier. Både gjennomgående
-sprekker og sprekker i overflaten avtegnes. Kontrollen gir ikke noe mål på hvor dype sprekkene er.
-Overflatebehandlingen må fjernes før kontrollen utføres.
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 17638:2016"""@no ;
+  rdfs:label "Inspection - magnetic powder"@en ;
   rdfs:label "Magnetpulverkontroll"@no ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Maling_horisontalavstander_forskyvninger
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle bevegelser av f.eks. landkar, pilarer, overbygning, etc.
-Gjennomføring
-Bevegelser sees ofte på lagre og fugeåpninger og måles med tommestokk evt. med hjelp av et lite
-vater. Bevegelse av pilarer kan måles ved hjelp av lodd og loddesnor eller ved hjelp av landmålingsutstyr
-eller mer avansert laserskanningsutstyr. Måling av bevegelser skal knyttes til en temperaturregistrering.
-Når bevegelser skal følges opp over tid skal det monteres bolter som målingene utføres
-mellom. For å fastslå hvilke deler som beveger seg kan det f.eks. benyttes en totalstasjon.
-Fordeler og ulemper
-Enkelt tiltak kan gjøres for å måle bevegelse der en har et nært referansepunkt. Men de enkle
-metodene gir ingen funn dersom antatt referansepunkt også beveger seg.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Måling av horisontalavstand/ forskyvning"@no ;
+  rdfs:label "Measurement - horizontal distances offsets"@en ;
+  rdfs:label "Måling - horisontalavstander forskyvninger"@no ;
   rdfs:subClassOf :Oppmaling ;
 .
 :Maling_karbonatiseringsdybde
   rdf:type owl:Class ;
-  rdfs:comment """Karbonatisering vil føre til armeringskorrosjon dersom karbonatiseringsfronten når armeringen.
-Karbonatisering av betong går raskest i tørt klima (innlandsstrøk) og/eller i områder med forurensing
-fra trafikk og industri.
-Karbonatisering er normalt ikke et problem når betongen er av god kvalitet og overdekningen er
-større enn 30 mm.
-Hensikt
-Vurdere sannsynlighet for armeringskorrosjon som følge av karbonatisering av betongen.
-Måling av karbonatiseringsdybde er aktuelt i følgende tilfeller:
-- Eldre slakkarmerte bjelkebruer med tett armeringsføring i underkant bjelke og eventuelt
-utstøpt med finsats
-- Elementer med liten overdekning (10-30 mm)
-- Elementer hvor det er synlig korroderende armering
-- Elementer med porøs og dårlig betong
-- Ved opphugninger og ved uttak av kloridprofiler.
-Gjennomføring
-Hovedinspeksjon
-Når det er mistanke om karbonatisering, utføres stikkprøvekontroll. Omfanget av kontrollen må
-kunne avgjøre om karbonatisering er et problem for den aktuelle brua eller ikke. Dersom mistanke
-bekreftes kan omfanget utvides, i tillegg bør det utføres måling av overdekning slik at fordeling av
-overdekning og karbonatisering kan kartlegges. Alternativt beskrives spesialinspeksjon.
-Spesialinspeksjon
-Måling av karbonatiseringsdybder utføres i henhold til spesiell beskrivelse.
-Fordeler og ulemper
-Metoden er enkel, men krever hugging eller boring i konstruksjonen.
-Henvisninger
-Håndbok R210 Laboratorieundersøkelser
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Måling av karbonatiseringsdybde"@no ;
+  rdfs:label "Measurement - carbonation depth"@en ;
+  rdfs:label "Måling - karbonatiseringsdybde"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Maling_kloridinnhold
   rdf:type owl:Class ;
-  rdfs:comment """Kloridinntrengning vil forårsake armeringskorrosjon dersom kloridkonsentrasjonen i nivå med
-armeringen blir for høy. Grensen for kritisk kloridinnhold kan variere fra konstruksjon til konstruksjon.
-Det må derfor tas hensyn til dette i vurderingen av hvilket kloridinnhold som kan være skadelig for
-den enkelte konstruksjon.
-Følgende forhold har betydning for korrosjonshastigheten og må sees i sammenheng med registrert
-kloridinnhold:
-- Betongens tetthet mot oksygentransport (betongkvalitet, overdekningens tykkelse)
-- Betongens elektrokjemiske egenskaper (variasjon i betongkvalitet, høyt fuktinnhold, variasjon
-i fuktinnhold, mulige makroceller).
-Klorider kan komme inn i betongen fra tre ulike kilder:
-- Betongens delmaterialer (innstøpte klorider)
-- Tinesalter
-- Sjøvann, i marint klima
-Innstøpte klorider
-Innstøpte klorider finnes i eldre bruer pga. bruk av sjøvann, kloridholdig tilslag eller kloridholdig
-akselerator. Bruk av sjøvann og sjøgrabbet tilslag ble tidligere akseptert og finnes i flere eldre bruer
-langs kysten.
-Kalsiumklorid (CaCl2) ble fram til ca. 1990 brukt som herdeakselerator, spesielt av betongelementindustrien,
-for å frigjøre formene raskt for ny støp. Slike elementer finnes bl.a. i underkant av brudekker
-på stålplatebærere hvor brudekket delvis er prefabrikkert.
-Innstøpte klorider vil gi en flat kloridprofil dypt inn i betongen. Kloridprofilet kan overlagres av klorider
-som trenger inn i betongen utenfra. Det vil også påvirkes av karbonatisering ved at betongens evne
-til å binde klorider reduseres. Kloridprofilet får da lav verdi i karbonatisert betong og en pukkel med
-høyere konsentrasjon i forkant av karbonatiseringsfronten før konsentrasjonen flater ut på innstøpt
-nivå.
-Tinesalter
-Klorider fra tinesalter eller strøsand iblandet salt vil kunne trenge inn i brudekker fra oversiden
-dersom brua ikke er utstyrt med fuktisolering. Kantdrager og undersiden av brudekker langs bruas
-sidekanter er utsatte områder. Det samme er fugekonstruksjoner, søyler på overgangsbruer, landkar
-og kulvertvegger i avstand 0-2 m fra veg, lokale områder under vannavløp, svanker hvor vann blir
-stående.
-Marint klima
-Utsatte områder på kystbruer i betong er beskrevet i kapittel 1.2.14 Materialundersøkelser på
-kystbruer i betong.
-Hensikt
-Vurdere fare for armeringskorrosjon pga kloridinntrenging eller finne skadeårsak.
-Gjennomføring
-Kloridinnholdet bestemmes på prøver av betongstøv. Betongstøvet kan tildannes ved direkte
-utboring fra konstruksjonen (i ulike dybder fra overflata), eller mer nøyaktig ved utboring av
-betongkjerner og etterfølgende fresing av betongstøv i tynne sjikt.
-Det kan også være aktuelt å bore ut en prøve med dybde inntil 200-300 mm for å sjekke om det er
-innstøpte klorider.
-Metoder
-Valg av metode kloridanalyse (felt eller laboratorium) avhenger først og fremst av kravet til
-nøyaktighet og kostnader.
-Feltmetoder
-De vanligste feltmetodene er RCT (Rapid Chloride Test). Denne metoden er mindre nøyaktig enn
-laboratoriemetodene, men vil i de fleste tilfeller ha tilstrekkelig nøyaktighet dersom de kontrolleres
-mot referansestøv eller laboratoriemetoder.
-Laboratoriemetoder
-Når det er krav om stor nøyaktighet på analyseresultatene må det benyttes laboratoriemetoder.
-Borstøv tildannes da normalt fra utborede betongkjerner som freses til støv i ønskede intervaller.
-Hovedinspeksjon
-Ved mistanke om pågående kloridinitiert armeringskorrosjon (f.eks. ved synlig korrosjonsprodukter,
-avskallinger og korroderende armering på betongoverflaten), utføres måling av
-kloridinnhold.
-Stikkprøvebaserte kloridmålinger, med oppfølging over tid, bør også utføres på elementer som er
-spesielt utsatt for kloridbelastning, enten fra tinesalter eller sjøvann.
-Måling av overdekning og karbonatiseringsdybde bør utføres samtidig som det bores ut støv for
-kloridmåling.
-Spesialinspeksjon
-Måling av kloridinnhold utføres i henhold til spesiell beskrivelse. Målingene kombineres med
-overdekningsmålinger og eventuelt EKP-målinger.
-Fordeler og ulemper
-Begge metodene er destruktive. Feltmetodene er enklere og billigere å utføre mens
-laboratoriemetodene er mer nøyaktige og kostbare.
-Henvisninger
-Håndbok R211 Feltundersøkelser
-Håndbok R210 Laboratorieundersøkelser
-NS 3671"""@no ;
-  rdfs:label "Måling av kloridinnhold"@no ;
+  rdfs:label "Measurement - chloride content"@en ;
+  rdfs:label "Måling - kloridinnhold"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Maling_pilhoyder
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontrollere lasten i hengestengene.
-Gjennomføring
-Pilhøyden måles med en snor (evt. en pianotråd) som vist i figur V1-2. I enden av snoren henges et
-lodd eller det brukes en fjærvekt. Den vertikale avstanden fra den midterste hengestangen opp til
-den stramme snoren (pilhøyden) måles. Prosedyren gjentas for alle hengestengene, på begge sider
-av brua. Pilhøyden er normalt den samme over hele brua, men kan variere noe inn mot tårnene på
-grunn av avstanden mellom siste hengestang og tårn og oppskruing av avstivningsbærerne. Det er
-viktig at brua ikke er belastet med trafikk eller lift når målingene utføres.
-Fordeler og ulemper
-Pilhøyde vil variere noe ut fra temperatur.
-Henvisninger"""@no ;
-  rdfs:label "Måling av pilhøyder"@no ;
+  rdfs:label "Measurement - arrow height"@en ;
+  rdfs:label "Måling - pilhøyder"@no ;
   rdfs:subClassOf :Oppmaling ;
 .
 :Maling_rissvidder
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kartlegge rissvidder og opprissingsgrad, eventuelt med tanke på oppfølging over tid. Ved
-alkalireaksjoner kan rissviddemålinger benyttes til estimering av ekspansjon, samt ved gjentatte
-målinger over tid, estimering av ekspansjonshastighet.
-Måling av rissvidder kan være aktuelt i følgende tilfeller:
-- Elementer med et rissmønster som indikerer pågående alkalireaksjoner i betongen.
-- Elementer der det er påvist/dokumentert alkalireaksjoner i betongen.
-- Elementer med tydelige belastningsriss.
-- Elementer med grove enkeltriss.
-Gjennomføring
-Rissvidder kan måles ved bruk av risslinjal, med eller uten lupe. Alternativt kan det benyttes spesiallupe
-med innebygd linjal og lys. I de fleste tilfeller gir måling med risslinjal tilstrekkelig nøyaktighet.
-Ved etablering av rissmålelinjer skal disse markeres på konstruksjonen med nødvendig antall
-bolter (minimum start/slutt), på en slik måte at de kan finnes igjen for repeterende målinger over tid.
-Lokalitet av rissmålelinjer velges med bakgrunn i forventede variasjoner i:
-- Fuktpåkjenning
-- Betongkvalitet
-- Lastsituasjon og armeringsføring
-Lokalitet av målepunkt og målelinjer skal angis iht håndbok V441 Bruinspeksjon kapittel 3.1
-Alle riss som krysser rissmålelinjene skal måles i krysningspunktet riss/målelinje. Dersom risset ikke
-lar seg måle akkurat i krysningspunktet (f.eks. pga. uregelmessigheter i overflaten), skal rissvidden
-måles så nær krysningspunktet som mulig. Alle enkeltmålinger identifiseres innenfor hver 10 cm
-langs målelinja og noteres i eget skjema.
-Rissviddemålingene rapporteres med enkeltmålinger. Ved systematiske rissmålinger over definerte
-målelinjer skal det i tillegg beregnes og rapporteres en rissindeks, antall riss og maksimum/minimum
-målte rissvidder.
-Temperatur og værforhold ved måling skal registreres. Ved repeterende målinger over tid bør
-følgende tilstrebes:
-- Målingene gjennomføres i perioder med stabile natt-/dagtemperaturer
-- Målingene utføres ved faste tidspunkter på året, med noenlunde like værforhold, f.eks. tidlig
-vår og høst
-Rissmålelinjene fotograferes i nødvendig omfang/detaljeringsgrad, men minimum med ett foto pr. 60 cm.
-Hovedinspeksjon
-Ved mistanke om/påvist alkalireaksjoner etableres faste rissmålelinjer som kan benyttes til
-rissviddemålinger over tid.
-Spesialinspeksjon
-Rissviddemålinger utføres i henhold til spesiell beskrivelse.
-Fordeler og ulemper
-Metoden er enkel og ikke-destruktiv og gir viktig informasjon om rissomfang/opprissingsgrad, også
-som grunnlag for estimering av ekspansjonsomfang ved alkalireaksjoner. Metoden er basert på
-manuelle målinger og er personavhengig. I tillegg er rissviddemålinger ømfintlig for temperatur- og
-fuktforhold.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Måling av rissvidder i betong"@no ;
+  rdfs:label "Measurement - crack width"@en ;
+  rdfs:label "Måling - rissvidder"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Maling_slitelagstykkelse
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontrollere at slitelagstykkelse er i samsvar med forutsetningene.
-Gjennomføring
-Behovet for målinger vurderes i forbindelse med den visuelle kontrollen. Dersom det skal foretas
-målinger skal det foretas minst 3 målinger i senterlinjen og på hver side av brua pr. 100 m bru.
-Det skal som et minimum utføres 4 målinger pr. bru.
-Destruktiv testing gjøres med kjerneboring eller bormaskin. Fyll igjen hull med tettende masse,
-slik at ev. punktert membran forsegles.
-Ikke destruktiv testing kan utføres med f.eks. georadar.
-Måling av tykkelse på betongslitelag utføres som armeringslokalisering, se kapittel 1.2.1
-Armeringslokalisering - overdekningsmålinger.
-Fordeler og ulemper
-Det kan være utfordrende å finne overgang fra asfalt til betong ved bruk av bormaskin.
-Henvisninger
-Håndbok R211 Feltundersøkelser"""@no ;
-  rdfs:label "Måling av slitelagtykkelse"@no ;
+  rdfs:label "Measurement - wear layer thickness"@en ;
+  rdfs:label "Måling - slitelagstykkelse"@no ;
   rdfs:subClassOf :Oppmaling ;
 .
 :Maling_sporslitasje
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle dybden av spor i slitelag.
-Gjennomføring
-Ved behov for målinger av sporslitasje skal det som et minimum utføres rettholt i 2 snitt på brua, ett
-med minimumsslitasje og ett med maksimumsslitasje. For lange bruer (over 200 m) skal det utføres
-målinger i ett snitt for hver 100 m. Slitasjedybder skal registreres for hver 250 mm i tverretning.
-Dersom sporslitasjen er så stor at fuktisolasjonen eller brudekket er synlig skal dette avmerkes
-spesielt.
-Fordeler og ulemper
-Henvisninger
-Håndbok N200 Vegbygging (krav til maks sporslitasje)
-Håndbok R211 Feltundersøkelser
-Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks sporslitasje)"""@no ;
-  rdfs:label "Måling av sporslitasje"@no ;
+  rdfs:label "Measurement - trace wear"@en ;
+  rdfs:label "Måling - sporslitasje"@no ;
   rdfs:subClassOf :Oppmaling ;
 .
 :Man_tar_ut_restlevetiden_av_eksisterende_bru_og_ny_bru_vurderes
   rdf:type owl:Class ;
   :kode "5.3.01" ;
   rdfs:label "Man tar ut restlevetiden av eksisterende bru og ny bru vurderes."@no ;
-  rdfs:label "Take out the remaining service life of the existing bridge and a new bridge to be considered."@en ;
+  rdfs:label "Take out the remaining service life of the existing bridge and a new bridge is to be evaluated."@en ;
   rdfs:subClassOf :Fornyelse ;
 .
 :Mangel
@@ -1578,7 +1178,7 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
   rdf:type owl:Class ;
   :kode "40"^^xsd:int ;
   rdfs:label "Lack of operation / maintenance"@en ;
-  rdfs:label "Manglende drift/vedlikehold"@no ;
+  rdfs:label "Manglende drift / vedlikehold"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
       :Manglende_drift_eller_vedlikehold_ikke_spesifisert
@@ -1593,32 +1193,32 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 :Manglende_herdetiltak
   rdf:type :Utforelsesfeil ;
   :kode "35"^^xsd:int ;
-  rdfs:label "Lack of hardening measures"@en ;
+  rdfs:label "Lack of curing measures"@en ;
   rdfs:label "Manglende herdetiltak"@no ;
 .
 :Manglende_opprydding_eller_fjerning
   rdf:type :Mangel ;
   :kode "83"^^xsd:int ;
   rdfs:label "Manglende opprydding/fjerning"@no ;
-  rdfs:label "Missing clean-up / removal"@en ;
+  rdfs:label "lack of clean-up / removal"@en ;
 .
 :Manglende_rengjoring
   rdf:type :Mangel ;
   :kode "81"^^xsd:int ;
+  rdfs:label "Lack of cleaning"@en ;
   rdfs:label "Manglende rengjøring"@no ;
-  rdfs:label "Missing cleaning"@en ;
 .
 :Manglende_sikkerhetsgjerde_over_utlop_sarbar_Trafikksikkerhet
   rdf:type owl:Class ;
   :kode "5.7.02" ;
   rdfs:label "Manglende sikkerhetsgjerde over utløp, sårbar Trafikksikkerhet"@no ;
-  rdfs:label "Missing security fence over discharge, vulnerable traffic security"@en ;
+  rdfs:label "Missing security grate over drainage, Traffic security vulnurability"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Materialfeil
   rdf:type owl:Class ;
   :kode "20"^^xsd:int ;
-  rdfs:label "Material error"@en ;
+  rdfs:label "Material defect"@en ;
   rdfs:label "Materialfeil"@no ;
   rdfs:subClassOf :Skadearsak ;
   owl:oneOf (
@@ -1633,13 +1233,13 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 :Materialfeil_fasthet
   rdf:type :Materialfeil ;
   :kode "22"^^xsd:int ;
-  rdfs:label "Material error, firmness"@en ;
+  rdfs:label "Material error, yeild strength "@en ;
   rdfs:label "Materialfeil, fasthet"@no ;
 .
 :Materialfeil_laminering
   rdf:type :Materialfeil ;
   :kode "23"^^xsd:int ;
-  rdfs:label "Material error, laminating"@en ;
+  rdfs:label "Material error, lamination"@en ;
   rdfs:label "Materialfeil, laminering"@no ;
 .
 :Materialfeil_oppsprekking
@@ -1674,10 +1274,6 @@ Håndbok R610 Standard for drift og vedlikehold av riksveger (krav til maks spor
 :Materialundersokelse
   rdf:type owl:Class ;
   :kode "5.9"^^xsd:double ;
-  rdfs:comment """Det kan være nødvendig å supplere den visuelle kontrollen med materialundersøkelse når det er behov for ekstra oppfølging og/eller avdekke skjulte skader
-Eksempel på tiltak Materialundersøkelse
-- Kontroll av karbonatisering, fasthet og klorider
-- Utføre materialundersøkelse ved en spesialinspeksjon"""@no ;
   rdfs:label "Material inspection"@en ;
   rdfs:label "Materialundersøkelse"@no ;
   rdfs:subClassOf :Tiltak ;
@@ -1689,14 +1285,8 @@ Eksempel på tiltak Materialundersøkelse
 .
 :Materialundersokelse_betong
   rdf:type owl:Class ;
-  rdfs:comment """I det følgende er det gitt en beskrivelse av de materialundersøkelser som kan være aktuelle ved
-inspeksjon av bruer og bruelementer av betong.
-Når en skal vurdere tilstanden til en betongkonstruksjon er det viktig at de forskjellige
-materialundersøkelsene sees i sammenheng.
-Igjenstøping
-Flere av materialundersøkelsene som utføres på betong krever at det bores hull eller meisles sår i
-betongen. Se håndbok R211 Feltundersøkelse om hvordan disse skal repareres."""@no ;
-  rdfs:label "Materialundersøkelser, betong"@no ;
+  rdfs:label "Material analysis - concrete"@en ;
+  rdfs:label "Materialundersøkelse - betong"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
   owl:disjointUnionOf (
       :Impulse_Response
@@ -1716,10 +1306,8 @@ betongen. Se håndbok R211 Feltundersøkelse om hvordan disse skal repareres."""
 .
 :Materialundersokelse_stal
   rdf:type owl:Class ;
-  rdfs:comment """I det følgende er det gitt en beskrivelse av de materialundersøkelser som kan være aktuelle ved
-inspeksjon av bruer og bruelementer av stål. Mange av disse materialundersøkelsene utføres av
-firmaer med spesialkompetanse, og noen utfyllende beskrivelse vil ikke bli gitt her."""@no ;
-  rdfs:label "Materialundersøkelser, stål"@no ;
+  rdfs:label "Material analysis - steel"@en ;
+  rdfs:label "Materialundersøkelse - stål"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
   owl:disjointUnionOf (
       :Nagle_skruekontroll
@@ -1737,29 +1325,14 @@ firmaer med spesialkompetanse, og noen utfyllende beskrivelse vil ikke bli gitt 
 .
 :Materialundersokelse_stein
   rdf:type owl:Class ;
-  rdfs:comment """I det følgende er det gitt en beskrivelse av de materialundersøkelser som kan være aktuelle ved
-inspeksjon av bruer og bruelementer av stein.
-Henvisninger
-NS-EN 12371,Bestemmelse av frostmotstand
-NS-EN 12372, Bestemmelse av bøyefasthet ved konsentrert last
-NS-EN 13755, Bestemmelse av vannabsorbsjon ved atmosfærisk trykk
-NS-EN 1936, Bestemmelse av netto- og bruttodensitet, total og åpen porøsitet
-NS-EN 13161, Bestemmelse av bøyestrekkfasthet under konstant moment
-NS-EN 14580, Bestemmelse av statisk elastisitetskontroll"""@no ;
-  rdfs:label "Materialundersøkelser, stein"@no ;
+  rdfs:label "Material analysis - stone"@en ;
+  rdfs:label "Materialundersøkelse - stein"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
 .
 :Materialundersokelse_tre
   rdf:type owl:Class ;
-  rdfs:comment """I det følgende er det gitt en beskrivelse av de materialundersøkelser som kan være aktuelle ved
-inspeksjon av bruer og bruelementer av tre.
-Henvisninger
-NS-EN 351-2, Tre og trebaserte produkters holdbarhet – Heltre behandlet med
-trebeskyttelsesmiddel- Del 2: Veiledning i prøvetaking for analyse av behandlet trevirke.
-NS-EN 1014, Trebeskyttelsesmidler – Kreosot og kreosotimpregnert trevirke – Metoder for
-prøvetaking og analyse
-NS 3512, Måling av fukt i trekonstruksjoner"""@no ;
-  rdfs:label "Materialundersøkelser, tre"@no ;
+  rdfs:label "Material analysis - three"@en ;
+  rdfs:label "Materialundersøkelse - tre"@no ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
   owl:disjointUnionOf (
       :Proving_syl
@@ -1811,54 +1384,25 @@ NS 3512, Måling av fukt i trekonstruksjoner"""@no ;
 .
 :Momentkontroll_skruer
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontrollere tiltrekningsmomentet for skruer i friksjonsforbindelser.
-Gjennomføring
-Kontrollen kan også være aktuell å utføre ved spesialinspeksjon dersom det er mistanke om at
-skruene har mistet forspenningen.
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning"""@no ;
-  rdfs:label "Momentkontroll for skruer"@no ;
+  rdfs:label "Momentkontroll - skruer"@no ;
+  rdfs:label "Torque control - screws"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Monteringsfeil
   rdf:type :Utforelsesfeil ;
   :kode "37"^^xsd:int ;
-  rdfs:label "Installation error"@en ;
+  rdfs:label "Installation/assembly error"@en ;
   rdfs:label "Monteringsfeil"@no ;
 .
 :Nagle_skruekontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontrollere om nagler/skruer er løse og eventuelt har falt ut.
-Gjennomføring
-Sprekker i overflatebehandlingen i overgangen mellom skrue-/naglehodet og grunnmaterialet kan
-skyldes løse skruer/nagler. Ved å banke lett på den ene siden av naglehodet med en hammer mens
-man holder en finger på motsatt side av naglehodet i overgangen mot grunnmaterialet, kan man
-kjenne om naglen er løs.
-Fordeler og ulemper
-Henvisning"""@no ;
-  rdfs:label "Nagle- og skruekontroll"@no ;
+  rdfs:label "Nagle - screw control"@en ;
+  rdfs:label "Nagle - skruekontroll"@no ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Nivellement
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle setninger, bevegelser og deformasjoner samt følge opp eventuell utvikling over tid.
-Gjennomføring
-Behovet for nivellement på nye bruer er forskjellig fra eksisterende bruer. Kravet for nye bruer er gitt i
-håndbok N400 Bruprosjektering.
-For eksisterende bruer må behov for nivellement vurderes spesielt. Ved setninger, bevegelser
-eller deformasjoner skal det utføres nivellement. Det kan nivelleres direkte på elementet, dersom
-utviklingen skal følges opp over tid må det monteres nivelleringsbolter.
-Ved målinger på bruoverbygninger med mye tungtrafikk må vibrasjonens innvirkning på
-måleresultatene vurderes. Ved store vibrasjoner bør målingene enten utføres på et tidspunkt med lite
-trafikk eller så må brua stenges under målearbeidet.
-Fordeler og ulemper
-Henvisninger
-Håndbok R211 Feltundersøkelser
-Håndbok N400 Bruprosjektering"""@no ;
+  rdfs:label "Leveling"@en ;
   rdfs:label "Nivellement"@no ;
   rdfs:subClassOf :Oppmaling ;
 .
@@ -1871,23 +1415,15 @@ Håndbok N400 Bruprosjektering"""@no ;
 :Okning_av_frihoyder
   rdf:type owl:Class ;
   :kode "5.5.03" ;
-  rdfs:label "Increase of free height"@en ;
+  rdfs:label "Increase of height clearance"@en ;
   rdfs:label "Økning av frihøyder"@no ;
   rdfs:subClassOf :Ombygging ;
 .
 :Ombygging
   rdf:type owl:Class ;
   :kode "5.5"^^xsd:double ;
-  rdfs:comment """Tiltak som endrer en bru eller et bruelements funksjon, arealbruk eller standard for å bedre framkommelighet og/ eller trafikksikkerhet. Kan også være et alternativ til å utføre vedlikeholdstiltak der det er store skader.
-Ombygging kan omfatte:
-- Breddeutvidelse
-- Påhengning av gangbaner
-- Økning av frihøyder
-- Utskifting av brudekker
-- Utskifting av hele overbygningen
-- Utskifting eller ombygging av underbygning"""@no ;
   rdfs:label "Ombygging"@no ;
-  rdfs:label "Rebuilding"@en ;
+  rdfs:label "Reconstruction"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Pahengning_av_gangbaner
@@ -1901,51 +1437,14 @@ Ombygging kan omfatte:
 .
 :Opphugning_korrosjonsbedommelse
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kartlegge armeringens korrosjonstilstand samt registrere armeringstype, diameter og overdekning.
-I statisk påkjente områder kan det være aktuelt å måle tverrsnittsreduksjoner på kraftig korrodert
-armering.
-Gjennomføring
-I de fleste tilfeller er det tilstrekkelig at bredden av opphugningen er minimum overdekning pluss
-armeringsdiameter (o + d). Ca. 1/3 til 1/2 av armeringsjernets omkrets bør frilegges i en lengde av
-minimum 0,3 m.
-Armeringens rustgrad vurderes etter følgende skala:
-Rustgrad A Ståloverflate som stort sett er uten rust.
-Rustgrad B Ståloverflate har begynt å ruste og flasse av.
-Rustgrad C Hele/store deler av ståloverflate har overflaterust. Lite synlig groptæring.
-Rustgrad D Hele/store deler av ståloverflate har overflaterust. Synlige rustgroper er dannet i stor utstrekning.
-Hovedinspeksjon
-Opphugning for korrosjonsbedømmelse utføres normalt ikke. Kan imidlertid være aktuelt ved
-synlige korrosjonsskader (bom/avskallinger/korrosjonsutslag) for å vurdere/måle reduksjon av
-armeringstverrsnitt.
-Spesialinspeksjon
-Opphugning for korrosjonsbedømmelse i områder med synlige korrosjonsskader eller i områder
-hvor EKP-målinger indikerer skjult korrosjon.
-Dersom spesiell beskrivelse ikke sier noe annet, kan det i sammenhengende potensialmålte felt
-gjøres en opphugning ved hver av følgende lokaliseringer:
-- Ved de laveste potensialene
-- Ved de midlere potensialene
-- Ved de høyeste potensialene
-Når det gjøres opphugginger for å verifisere korrosjonstilstand utføres normalt også følgende andre
-undersøkelser:
-1. Måling av betongoverdekning – med covermeter og direkte med tommestokk
-2. Uttak av betongstøv for måling av kloridinnhold i ulike sjikt (sjiktene tilpasses
-armeringsoverdekningen)
-3. Måling av karbonatiseringsdybde
-Fordeler og ulemper
-Opphugging viser armeringens virkelige korrosjonstilstand og gir samtidig en kontroll på resultater
-fra andre materialundersøkelser. Metoden er destruktiv og bør bare benyttes i svært begrenset
-omfang.
-Henvisninger
-Håndbok R210 Laboratorieundersøkelser
-Håndbok R211 Feltundersøkelser
-ISO 8501-1"""@no ;
   rdfs:label "Opphugning for korrosjonsbedømmelse"@no ;
+  rdfs:label "Scrapping for corrosion assessment"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Oppmaling
   rdf:type owl:Class ;
-  rdfs:label "Oppmålinger"@no ;
+  rdfs:label "Oppmåling"@no ;
+  rdfs:label "Survey"@en ;
   rdfs:subClassOf :Oppmaling_materialundersokelse ;
   owl:disjointUnionOf (
       :Maling_sporslitasje
@@ -1959,21 +1458,13 @@ ISO 8501-1"""@no ;
   rdf:type owl:Class ;
   :kode "5.8.04" ;
   rdfs:label "Oppmåling av skader"@no ;
-  rdfs:label "Surveying of damages"@en ;
+  rdfs:label "Survey of damages"@en ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Oppmaling_materialundersokelse
   rdf:type owl:Class ;
-  rdfs:comment """For å få bedre grunnlag for å fastslå skadeomfang, skadeårsak, skadegrad og skadekonsekvens eller avdekke skjulte skader kan det være nødvendig å supplere den visuelle kontrollen med oppmålinger, materialundersøkelser og instrumentering.
-Omfanget av disse målingene og undersøkelsene må vurderes i hvert enkelt tilfelle og vil være avhengig av:
-- Inspeksjonstype
-- Brutype
-- Materialtype
-- Klimabelastning
-- Visuelle observasjoner
-- Forvaltningsstrategi for brua, eks. skal den skiftes ut
-Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøkelser, slik at de utføres målrettet. Dette av hensyn til kostnader, men også av utseendemessige årsaker for de destruktive målemetodene. Ved utboring av kjerner må det tas hensyn til eventuelle konstruktive og bestandighetsmessige svekkelser av det elementet som undersøkes. For enkelte bruer kan det være igangsatt spesielle rutiner for oppmåling (måleprogram), materialundersøkelser og/eller instrumentert overvåkning. Dette vil framgå av tiltaksplanen i Brutus. Flere av oppmålingene og materialundersøkelsene krever spesielle rutiner og ekstra kvalitetssikring. Ofte kreves det også spesialkompetanse og spesialutstyr. Dette gjelder alltid for montasje av instrumentert overvåkning."""@no ;
-  rdfs:label "oppmålinger/ materialundersøkelser"@no ;
+  rdfs:label "Measurement - material analysis"@en ;
+  rdfs:label "Oppmåling - materialundersøkelse"@no ;
   rdfs:subClassOf :Root ;
   owl:disjointUnionOf (
       :Materialundersokelse_stein
@@ -1987,7 +1478,7 @@ Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøke
 :Opprensk_eller_opprydding_over_og_under_vann
   rdf:type owl:Class ;
   :kode "5.1.02" ;
-  rdfs:label "Clean-up above and below water level"@en ;
+  rdfs:label "Clean-up above and below water surface"@en ;
   rdfs:label "Opprensk/opprydding over og under vann"@no ;
   rdfs:subClassOf :Driftstiltak ;
 .
@@ -2020,29 +1511,8 @@ Man må ha et realistisk bilde av behov og nytteverdi av målinger og undersøke
 .
 :Overmalbarhet_gammelt_belegg
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Fastslå om nytt planlagt belegg er kompatibelt med eksisterende belegg.
-Gjennomføring
-Overmalbarheten testes på et representativt prøvefelt. Prøvefelt utføres i henhold til prosedyrer gitt i
-håndbok R762 Prosesskode 2.
-Hovedinspeksjon
-Ikke aktuelt ved hovedinspeksjon.
-Spesialinspeksjon
-Overmalbarhet testes i utgangspunktet kun ved spesialinspeksjon med bakgrunn i planlagt
-vedlikehold.
-Fordeler og ulemper
-Test av overmalbarhet vil gi en god indikasjon på om to malingstyper er kompatibel. En test av
-overmalbarhet kombineres gjerne med test av salt/klorider, tykkelse og heft.
-Det vil i de fleste tilfeller kreve en mer omfattende rigging enn ved vanlig inspeksjonsarbeid for å
-gjennomføre denne testen under kontrollerte klimatiske forhold.
-Det er viktig at krav til forbehandling av gammelt belegg og at krav til klimatiske forhold følges.
-(Det kan også være hensiktsmessig å analysere prøver av gammelt overflatebelegg for sikkert å
-bestemme generisk type, evt. hvilke komponenter den består av (bly/kromat). Dette kan gjøres ved
-hjelp av MEK-test (se kapittel 1.4.5), eller ved å sende prøver av maling til analyse.)
-Henvisning
-Håndbok R762 Prosesskode 2
-ASTM D4752:10 MEK Test"""@no ;
-  rdfs:label "Overmalbarhet av gammelt belegg"@no ;
+  rdfs:label "Overmalbarhet - gammelt belegg"@no ;
+  rdfs:label "Overpaintability - old coatings"@en ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Pahengning_av_gangbaner
@@ -2061,7 +1531,7 @@ ASTM D4752:10 MEK Test"""@no ;
 :Pakjort_og_reparert_flere_ganger_sarbar_Pakjorsel
   rdf:type owl:Class ;
   :kode "5.7.03" ;
-  rdfs:label "Hit and repaired several times, vulnerable collision"@en ;
+  rdfs:label "Hit and repaired several times, Collision vulnurability"@en ;
   rdfs:label "Påkjørt og reparert flere ganger, sårbar Påkjørsel"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
@@ -2073,32 +1543,15 @@ ASTM D4752:10 MEK Test"""@no ;
 .
 :Penetrant
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Overflatekontroll som vil avdekke defekter som er åpne til overflaten.
-Gjennomføring
-Sprekkbildet bør dokumenteres ved hjelp av skisser eller fotografier. Sprekker i overflaten avtegnes.
-Kontrollen gir ikke noe mål på hvor dype sprekkene er.
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 3452-1
-NS-EN ISO 3452-2
-NS-EN ISO 3452-3
-NS-EN ISO 3452-4
-NS-EN ISO 3452-5"""@no ;
+  rdfs:label "Penetrant"@en ;
   rdfs:label "Penetrant"@no ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Planlagte_tiltak_for_a_opprettholde_bruenes_standard
   rdf:type owl:Class ;
   :kode "5.2.02" ;
-  rdfs:comment """Tiltakene utføres før det oppstår skader og ofte med regelmessige intervaller. Dette kan f.eks. være påføring av vannavvisende impregnering på betong ved regelmessige intervaller. Det kan også være tiltak som utføres etter forutgående vurdering av tilstanden, f.eks. overflatebehandling av betongbruer for å forebygge skader pga. karbonatisering og kloridinntrengning, overflatebehandling av stål, eller asfaltering når spordybden har nådd nivået som vedlikeholdsstandarden beskriver.
-- Overflatebehandling av stål
-- Overflatebehandling av betong
-- Overflatebehandling av tre
-- Slitelag- og membranarbeider"""@no ;
   rdfs:label "Planlagte tiltak for å opprettholde bruenes standard"@no ;
-  rdfs:label "Planned measures to maintain the bridges standard"@en ;
+  rdfs:label "Planned measures to uphold the bridge's standard"@en ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
       :Overflatebehandling_av_stal
@@ -2110,12 +1563,8 @@ NS-EN ISO 3452-5"""@no ;
 :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet
   rdf:type owl:Class ;
   :kode "5.2.03" ;
-  rdfs:comment """Det kan f.eks. være mekanisk reparasjon av betongskader, større oppretting/utskifting av rekkverk, fuger, lager osv.
-- Reparasjon av betongskader over/under vann
-- Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer
-- Reparasjon av skader på bru- og kaiutstyr"""@no ;
   rdfs:label "Planlagte tiltak som utføres for å gjenopprette et skadet elements funksjonsdyktighet"@no ;
-  rdfs:label "Planned measures taken to recover a damaged element functioning"@en ;
+  rdfs:label "Planned measures performed to restore the functionality of a damaged element"@en ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
       :Reparasjon_av_skader_pa_elementer_av_stal_stein_tre_og_evt_andre_materialer
@@ -2125,17 +1574,8 @@ NS-EN ISO 3452-5"""@no ;
 .
 :Positiv_Material_Identifikasjon_PMI
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Avdekke, innenfor en viss sikkerhetsmargin, materialets kjemiske sammensetning for grunnmateriale
-eller sveis.
-Gjennnomføring
-Se henvisning
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 17636-1:2013
-NS-EN ISO 17636-2:2013"""@no ;
-  rdfs:label "Positiv Material Identifikasjon (PMI)"@no ;
+  rdfs:label "Positiv material identifikasjon - PMI"@no ;
+  rdfs:label "Positive Material Identification - PMI"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Prosjekteringsfeil
@@ -2155,34 +1595,21 @@ NS-EN ISO 17636-2:2013"""@no ;
 :Prosjektidentifikasjon
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Project identification"@en ;
+  rdfs:label "Prosjektidentifikasjon"@no ;
   rdfs:range xsd:string ;
 .
 :Proving_syl
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Undersøke overflaten for råte.
-Gjennomføring
-En syl dyttes inn og vris om slik at en knekker de ytre fibrene. Skjærbrudd langs med fibrene antyder
-friskt tre. Rett brudd over sylen angir nedbrutt tre."""@no ;
-  rdfs:label "Prøving med syl"@no ;
+  rdfs:label "Prøving - syl"@no ;
+  rdfs:label "Testing - awl"@en ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
 :ROS_analyse
   rdf:type owl:Class ;
   :kode "5.7"^^xsd:double ;
-  rdfs:comment """ROS- analyse kan utføres når skader, utforming eller omgivelser gjør brua utsatt/sårbar for hendelser.
-En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 Bruforvaltning riksveg og håndbok N401 Bruforvaltning fylkesveg. ROS-analyse kan utføres ved f.eks. følgende sårbarheter:
-- Lavt rekkverk, sårbar for Trafikksikkerhet
-- Manglende sikkerhetsgjerde over utløp, sårbar Trafikksikkerhet
-- Påkjørt og reparert flere ganger, sårbar Påkjørsel
-- Rasutsatt bru, sårbar Skred/ras
-- Elva har gått opp i brudekket, sårbar Flom
-- Brua stenges ved flom, sårbar Flom
-- Stor vannføring ved flom og fare for erosjon under fundamenter, sårbar Flom
-- Forskyvning i rør pga. flom, sårbar Flom
-- Undergraving av fundamenter, sårbar Flom"""@no ;
   rdfs:label "ROS analyse"@no ;
-  rdfs:label "ROS analysis"@en ;
+  rdfs:label "Risk assessment"@en ;
   rdfs:subClassOf :Tiltak ;
   owl:disjointUnionOf (
       :Manglende_sikkerhetsgjerde_over_utlop_sarbar_Trafikksikkerhet
@@ -2200,23 +1627,19 @@ En ROS-analyse kan medføre at inspeksjonsintervallet endres, se håndbok R411 B
 :Rasutsatt_bru_sarbar_Skred_eller_ras
   rdf:type owl:Class ;
   :kode "5.7.04" ;
-  rdfs:label "Bridge susceptible to landslides, vulnerable avalanches / landslides"@en ;
+  rdfs:label "Bridge susceptible to landslides, Avalanches / landslides vulnurability"@en ;
   rdfs:label "Rasutsatt bru, sårbar Skred/ras"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Rate_eller_nedbrytning
   rdf:type :Skade_pa_tre ;
   :kode "62" ;
-  rdfs:label "Rot / decay"@en ;
+  rdfs:label "Rot /decay / decomposition"@en ;
   rdfs:label "Råte/nedbrytning"@no ;
 .
 :Ratedrill
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Undersøke et tverrsnitt for råte.
-Gjennomføring
-Treets tetthet måles ved å måle motstanden under boring. På bakgrunn av tetthetsmålingen kan råte
-inne i tverrsnittet oppdages."""@no ;
+  rdfs:label "Decay drill"@en ;
   rdfs:label "Råtedrill"@no ;
   rdfs:subClassOf :Materialundersokelse_tre ;
 .
@@ -2237,7 +1660,7 @@ inne i tverrsnittet oppdages."""@no ;
 :Reparasjon_av_betongskader_over_eller_under_vann
   rdf:type owl:Class ;
   :kode "5.2.03.01" ;
-  rdfs:label "Repair of damaged concrete above / below water level"@en ;
+  rdfs:label "Repair of damaged concrete above / below water surface"@en ;
   rdfs:label "Reparasjon av betongskader over/under vann"@no ;
   rdfs:subClassOf :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet ;
 .
@@ -2251,7 +1674,7 @@ inne i tverrsnittet oppdages."""@no ;
 :Reparasjon_av_skader_pa_elementer_av_stal_stein_tre_og_evt_andre_materialer
   rdf:type owl:Class ;
   :kode "5.2.03.02" ;
-  rdfs:label "Repair of damaged elements of steel, stone, wood and possible or other materials"@en ;
+  rdfs:label "Repair of damaged elements of steel, stone, wood and other materials"@en ;
   rdfs:label "Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer"@no ;
   rdfs:subClassOf :Planlagte_tiltak_som_utfores_for_a_gjenopprette_et_skadet_elements_funksjonsdyktighet ;
 .
@@ -2263,16 +1686,8 @@ inne i tverrsnittet oppdages."""@no ;
 .
 :Rontgenkontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Avdekke materialdefekter.
-Gjennomføring
-Røntgenkontroll i form av røntgenfilm. Bilder kan også produseres digitalt.
-Kontrollen utføres av personer med spesialkompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 17636-1:2013
-NS-EN ISO 17636-2:2013"""@no ;
   rdfs:label "Røntgenkontroll"@no ;
+  rdfs:label "X-Ray control"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Root
@@ -2291,12 +1706,13 @@ NS-EN ISO 17636-2:2013"""@no ;
 :Sammendrag
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Sammendrag"@no ;
+  rdfs:label "Summary"@en ;
   rdfs:range xsd:string ;
 .
 :Sarbarhet
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:comment "En sårbarhet er en egenskap ved brua eller omgivelsene som kan påvirke bruas funksjonalitet og sikkerhet. Slike sårbarheter registreres i Brutus når det ikke vurderes som en skade. Det kan også knyttes et tiltak til sårbarheten. Slike tiltak prioriteres sammen med andre registrerte tiltak i Brutus."@no ;
   rdfs:label "Sårbarhet"@no ;
   rdfs:label "Vulnerability"@en ;
   rdfs:subClassOf :Root ;
@@ -2333,32 +1749,28 @@ NS-EN ISO 17636-2:2013"""@no ;
 .
 :SarbarhetFlom
   rdf:type owl:Class ;
-  rdfs:comment """Brua kan være sårbar for flom f.eks.
-- Innsnevring av flomløp
-- For lite vanngjennomløp
-- Lav høyde over elv
-- Dårlig/manglende erosjonssikring
-- Dårlig fundamentering"""@no ;
-  rdfs:label "Flom"@no ;
+  rdfs:label "Sårbarhet flom"@no ;
+  rdfs:label "Vulnerability to flooding"@en ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :SarbarhetPakjorsel
   rdf:type owl:Class ;
-  rdfs:comment """Brua kan være sårbar for påkjørsel f.eks.
-- Lav høyde over veg
-- Lett brukonstruksjon over veg
-- Pilarer med dårlig kapasitet mot sidekrefter"""@no ;
-  rdfs:label "Påkjørsel"@no ;
+  rdfs:label "Sårbarhet påkjørsel"@no ;
+  rdfs:label "Vulnerability to collision"@en ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :Sarbarheter
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Inspeksjon_V441 ;
+  rdfs:label "Sårbarheter"@no ;
+  rdfs:label "Vulnerabilities"@en ;
   rdfs:range :Sarbarhet ;
 .
 :Sarbarhetsbeskrivelse
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Sarbarhet ;
+  rdfs:label "Beskrivelse av sårbarhet"@no ;
+  rdfs:label "Description of vulnerability"@en ;
   rdfs:subPropertyOf :Beskrivelse ;
 .
 :Setning
@@ -2370,23 +1782,13 @@ NS-EN ISO 17636-2:2013"""@no ;
 :Setningsmaling_av_pilarer_sarbar_baereevne
   rdf:type owl:Class ;
   :kode "5.8.02" ;
-  rdfs:label "Measaures of settlement of pillars, vulnerable loading capacity"@en ;
+  rdfs:label "Measaurement of settlement of pillars, Loading capacity vulnurability"@en ;
   rdfs:label "Setningsmåling av pilarer, sårbar bæreevne"@no ;
   rdfs:subClassOf :Innmaling_eller_Oppmaling ;
 .
 :Skade
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:comment """Ved vurdering av skader inngår følgende:
-- Bestemme hvilke skadetyper de enkelte skader består av
-- Vurdere skadegrad og -omfang
-- Vurdere årsakene til at skadene har oppstått
-- Vurdere hvor alvorlige skadene er for hele brua og/eller omgivelsene, dvs. skadekonsekvens
-Som oftest er grunnlaget for å bedømme skader visuell kontroll, oppmålinger og materialundersøkelser. I spesielle tilfeller kan det være nødvendig med statiske beregninger og/eller instrumentert overvåkning over lang tid for å få godt nok grunnlag til å vurdere skader riktig.
-For å ha en ensartet måte å beskrive skader på, brukes definerte skadetyper og skadeårsaker. I tillegg registreres skadegrad og en tekstlig beskrivelse av skaden. Hvilken konsekvens skaden har for hele brua, omgivelsene og brukerne beskrives med skadekonsekvens.
-Alle registrerte skader og tilhørende vurderinger knyttes til de ulike bruelementene.
-For hjelp til å bestemme skadegrad og skadekonsekvens, se kapittel 6 Beskrivelse av skadetyper og vedlegg V1 Eksempelsamling til skadetyper.
-Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være aktuelt å lage en utvidet rapport for mer detaljert beskrivelse, se vedlegg V3 Utvidet inspeksjonsrapport."""@no ;
   rdfs:label "Damage"@en ;
   rdfs:label "Skade"@no ;
   rdfs:subClassOf :Root ;
@@ -2478,13 +1880,13 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_pa_overflatebehandling
   rdf:type :Materialuavhengig_skade ;
   :kode "16"^^xsd:int ;
-  rdfs:label "Damage to the surface"@en ;
+  rdfs:label "Damage to the surface treatment"@en ;
   rdfs:label "Skade på overflatebehandling"@no ;
 .
 :Skade_pa_slitelag_eller_fuktisolasjon
   rdf:type owl:Class ;
   :kode "70"^^xsd:int ;
-  rdfs:label "Damage to wear layer / moisture insulation"@en ;
+  rdfs:label "Damage to wear-layer / moisture isolation"@en ;
   rdfs:label "Skade på slitelag / fuktisolasjon"@no ;
   rdfs:subClassOf :Skadetype ;
   owl:oneOf (
@@ -2539,13 +1941,13 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skade_som_kan_pavirke_baereevnen
   rdf:type :Konsekvenstype ;
   :kode "B" ;
-  rdfs:label "Damage that may affect the loading capacity"@en ;
+  rdfs:label "Damage that may affect the load bearing capacity"@en ;
   rdfs:label "Skade som kan påvirke bæreevnen"@no ;
 .
 :Skade_som_kan_pavirke_miljo_eller_estetikk
   rdf:type :Konsekvenstype ;
   :kode "M" ;
-  rdfs:label "Damage that may affect environmental / aesthetic"@en ;
+  rdfs:label "Damage that may affect environment / aesthetic"@en ;
   rdfs:label "Skade som kan påvirke miljø/estetikk"@no ;
 .
 :Skade_som_kan_pavirke_trafikksikkerheten
@@ -2575,26 +1977,6 @@ Ved spesialinspeksjon/hovedinspeksjon av store/spesielle bruer kan det være akt
 :Skadebeskrivelse
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:comment """Skadebeskrivelsen er en forklaring av det som observeres, måles eller som resultat av en prøvetaking,
-og den bør gi noen svar på noen spørsmål om skaden:
-- Hva er skaden
-- Hvor er skaden
-- Hva er omfanget på skaden
-Det beskrives hvor på brua og/eller elementet skader er lokalisert. Der det er hensiktsmessig kan man f.eks. gjøre det ved inntegning på skisser. For å gi en god beskrivelse av hvor skaden er lokalisert se kapittel 3.1 Lokalisering av skader.
-For å kunne foreslå tiltak beskrives også skadeomfang. Eksempelvis registrering av skadet areal, løpemeter, antall eller volum.
-Skader dokumenteres med bilder. Skadebeskrivelser og skisser/bilder er viktig for å kunne bedømme utvikling av skaden ved senere inspeksjoner.
-Mulige konsekvenser skaden kan ha for hele brua kan også beskrives. 
-
-En skade vil ofte være sammensatt av flere skadetyper. Der primærskaden og følgeskader opptrer sammen lokalt vil det være primærskaden vi velger å registrere som skadetype. Skaden beskrives med de skadetypene som observeres, men bedømmes som en helhet. F.eks. armeringskorrosjon opptrer ofte sammen med avskalling. Skadetypen som da registreres er 36 armeringskorrosjon.
-I andre tilfeller vil en skadetype (primærskade) føre til at andre skadetyper utvikler seg som følgeskader på andre steder. F.eks. manglende utkast i vannavløpshull som har fuktet undersiden av bruplaten, som igjen har ført til armeringskorrosjon og som igjen har ført til avskalling rundt avløpsutsparing.
-Primærskaden vil være manglende avløpsrør, men vi registrerer også armeringskorrosjon
-med avskalling i underkant plate.
-Under er det listet opp noen eksempler på primærskader og mulige følgeskader:
-- Setning av landkar og pilarer vil føre til deformasjon av overbygning for kontinuerlige bruer.
-- Riss/sprekk i betong kan føre til lekkasje/fuktbelastning.
-- Lekkasje/fuktbelastning kan i mange tilfeller føre til misfarging.
-- Liten/skadet overdekning vil ofte føre til armeringskorrosjon og avskalling.
-Det er viktig å være klar over denne sammenhengen mellom primærskader og følgeskader både ved bedømmelse av skader og ved bestemmelse av reparasjonsmetode. I de fleste tilfeller må primærskaden avdekkes for å kunne utarbeide en egnet reparasjonsbeskrivelse. Reparasjoner rettet kun mot følgeskader blir sjelden vellykkede."""@no ;
   rdfs:label "Damage description "@en ;
   rdfs:label "Skadebeskrivelse"@no ;
   rdfs:subClassOf :Root ;
@@ -2622,12 +2004,14 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 :Skadebeskrivelser
   rdf:type owl:ObjectProperty ;
   rdfs:domain :Inspeksjon_V441 ;
+  rdfs:label "Beskrivelse av skade"@no ;
+  rdfs:label "Description of damage"@en ;
   rdfs:range :Skadebeskrivelse ;
 .
 :Skadegrad
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:label "Damage degree"@en ;
+  rdfs:label "Degree of damage"@en ;
   rdfs:label "Skadegrad"@no ;
   rdfs:subClassOf :Kodeliste ;
   owl:oneOf (
@@ -2640,7 +2024,6 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 :Skadekonsekvens
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:comment "Skadekonsekvens består av konsekvenstype og konsekvensgrad og benyttes sammen for å angi konsekvensen skaden har for hele brua, omgivelsene og brukerne av brua. En skadetype kan ha flere skadekonsekvenser."@no ;
   rdfs:label "Consequence of damage "@en ;
   rdfs:label "Skadekonsekvens"@no ;
   rdfs:subClassOf :Root ;
@@ -2688,68 +2071,32 @@ Det er viktig å være klar over denne sammenhengen mellom primærskader og føl
 .
 :Skred
   rdf:type owl:Class ;
-  rdfs:comment """Brua kan være sårbar for skred f.eks.
-- Ligger nedenfor eller krysser en foss
-- Fundamentering i områder med kvikkleire
-- Ligger ved foten av et skredutsatt fjellparti
-- Ligger i et snøskredutsatt område"""@no ;
-  rdfs:label "Skred"@no ;
+  rdfs:label "Sårbarhet skred"@no ;
+  rdfs:label "Vulnerability to landslides"@en ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :Slitasje_eller_gnisning
   rdf:type :Skade_pa_stal ;
   :kode "43"^^xsd:int ;
   rdfs:label "Slitasje/gnisning"@no ;
-  rdfs:label "Wear / friction"@en ;
+  rdfs:label "Wear / friction /rubbing"@en ;
 .
 :Slitelag_og_membranarbeider
   rdf:type owl:Class ;
   :kode "5.2.02.04" ;
   rdfs:label "Slitelag- og membranarbeider"@no ;
-  rdfs:label "Wear layer and membrane works"@en ;
+  rdfs:label "Wear-layer and membrane works"@en ;
   rdfs:subClassOf :Planlagte_tiltak_for_a_opprettholde_bruenes_standard ;
 .
 :Spennkabelkontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Foreta en kontroll av tilstanden til forspente og etterspente kabler i betong. Kontroll av etterspente
-kabler kan være aktuell dersom det er mistanke om mangelfull injisering. Mangelfull injisering kan få
-svært alvorlige konsekvenser for bruas bæreevne.
-Gjennomføring
-Det eksisterer ikke i dag en lett anvendelig, veldokumentert, ikke-destruktiv metode for vurdering
-av korrosjonstilstand på spennarmering. Metoder som skal brukes i undersøkelser vil være valgt
-ut i fra den aktuelle situasjonen og som kombinasjon av metoder som kan supplere hverandre for å
-lokalisere kablene og for å vurdere korrosjonstilstanden.
-Tilgjengelige NDT-metoder er
-- Radar – GPR (Ground Penetration Radar)
-- Røngten
-- Termofotografering – IRT (Infrared Thermography)
-- Magnetisme – MFL (Magnetic Flux Leakage), MMFM
-- Ultralyd – UST, USE
-- Akustikk – IE (Impect Echo), S, UPV, LFUT, VT
-- Elektrokjemiske – ECT (Electrical Capacitance tomography), EIS
-Kontroll av etterspente kabler er krevende og må derfor gjøres av firmaer med spesialkompetanse og
-spesialutstyr og kun i samråd med brukonstruktører.
-Det finnes også destruktive tester, men disse kan gi alvorlige konsekvenser dersom man borer feil og
-skader en spennkabel. Bruk av endoskop med fiberoptikk krever at det bores hull inn til kabelrørene.
-Man bør da ha en oppfatning av hvor hulrommet/skaden er lokalisert.
-Hovedinspeksjon
-Spennkabelkontroll utføres normalt ikke.
-Spesialinspeksjon
-Spennkabelkontroll utføres etter behov, f.eks. ved mistanke om dårlig injiserte kabelrør.
-Fordeler og ulemper
-Metoden kan gi god oversikt over tilstanden inne i kabelrøret, men den er destruktiv og det er svært
-vanskelig å treffe kabelrør og hulrom. Det er i tillegg fare for å skade kabelen.
-Henvisninger"""@no ;
   rdfs:label "Spennkabelkontroll"@no ;
+  rdfs:label "Tension cable control"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Spesialinspeksjon
   rdf:type owl:Class ;
-  rdfs:comment """Spesialinspeksjon utføres ved ekstraordinær hendelse eller når det er behov for grundigere undersøkelser av påviste skader eller spesielle forhold. Spesialinspeksjon kan utføres for å skaffe til veie grunnlag for å beskrive og tidfeste tiltak der det forventes kostbare og/eller kompliserte arbeider.
-Spesialinspeksjon utføres på hele brua eller bare på enkeltelement. Spesialinspeksjon omfatter nær visuell kontroll og eventuelle oppmålinger/ materialundersøkelser, se vedlegg V2 Metoder oppmålinger/ materialundersøkelser.
-Spesialinspeksjonen utføres så grundig og omfattende at skadetype, konsekvens, omfang og årsak kan bestemmes. Den kan inkludere en beskrivelse av alternative tiltak med tilhørende kostnads- og levetidsvurderinger, samt danne grunnlag for valg av tiltak og utarbeidelse av konkurransegrunnlag.
-En spesialinspeksjon kan også resultere i statiske beregninger for å kontrollere bruas kapasitet."""@no ;
+  rdfs:label "Special inspection"@en ;
   rdfs:label "Spesialinspeksjon"@no ;
   rdfs:subClassOf :Inspeksjon_V441 ;
 .
@@ -2768,14 +2115,14 @@ En spesialinspeksjon kan også resultere i statiske beregninger for å kontrolle
 :Stopesar
   rdf:type :Skade_pa_betong ;
   :kode "33"^^xsd:int ;
-  rdfs:label "Casting wounds"@en ;
+  rdfs:label "Casting defect"@en ;
   rdfs:label "Støpesår"@no ;
 .
 :Stor_konsekvens_Bruforvalter_eller_oppdragsgiver_kontaktes_umiddelbart
   rdf:type :Konsekvensgrad ;
   :kode "4"^^xsd:int ;
-  rdfs:label "Large consequence. Bridge maintainer / client shall be contacted immediately"@en ;
-  rdfs:label "Stor konsekvens. Bruforvalter/oppdragsgiver kontaktes umiddelbart."@no ;
+  rdfs:label "Large consequence. Bridge manager / client shall be contacted immediately"@en ;
+  rdfs:label "Stor konsekvens. Bruforvalter/oppdragsgiver kontaktes umiddelbart"@no ;
 .
 :Stor_skade
   rdf:type :Skadegrad ;
@@ -2786,7 +2133,7 @@ En spesialinspeksjon kan også resultere i statiske beregninger for å kontrolle
 :Stor_vannforing_ved_flom_og_fare_for_erosjon_under_fundamenter_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.07" ;
-  rdfs:label "Large water flow by flooding and risk of erosion below foundations, vulnerable floods"@en ;
+  rdfs:label "Large water flow caused by flooding and risk of erosion under foundations, Flood vulnurability"@en ;
   rdfs:label "Stor vannføring ved flom og fare for erosjon under fundamenter, sårbar Flom"@no ;
   rdfs:subClassOf :ROS_analyse ;
 .
@@ -2798,61 +2145,7 @@ En spesialinspeksjon kan også resultere i statiske beregninger for å kontrolle
 .
 :Strukturanalyse
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Bestemme betongens indre struktur (f.eks. homogenitet, porøsitet, rissomfang) og sammensetning
-(f.eks. tilslagstype, kjemiske omvandlingsreaksjoner). Strukturanalyser benyttes blant annet for å
-finne skadeårsak og skadeomfang, f.eks. ved potensielle/dokumenterte alkalireaksjoner.
-Gjennomføring
-Strukturanalyser inkluderer visuelle undersøkelser av a) betongkjerner, b) planslip og c) tynnslip, se
-figur V1-7. Etter at kjernene er undersøkt tildannes spesialpreparerte plan-/tynnslip avhengig av hva
-som er formålet med analysen. Først deles kjernene i to deler i lengderetningen, deretter tildannes
-normalt planslipet fra den ene halvdelen og ett/flere tynnslip fra den andre. Både preparering av slip
-og etterfølgende analyser utføres iht. gjeldende håndbøker.
-Betongkjerne
-Kjernene undersøkes for
-- Riss
-- Utfellinger
-- Reaksjonsrender rundt tilslag
-- Inhomogeniteter m.m.
-Planslip
-Et planslip dekker normalt et areal tilsvarende kjernens diameter x lengde. Sagflaten impregneres
-med fluoriserende epoksy og slipes med stor presisjon, slik at alle fine riss og porer trer fram i
-UV-belysning. En planslipanalyse kan gjennomføres både med og uten mikroskop og kan gi
-informasjon om:
-- Riss i tilslag og pasta (mønster og omfang)
-- Reaksjonsrender rundt tilslag
-- Utfellinger i porer og riss
-- Fordeling av tilslag (kvalitativt)
-- Luftporer (innhold og fordeling)
-I spesielle tilfeller kan det være aktuelt å kvantifisere opprissingen i betongen, f.eks. ved automatisert
-fotoanalyse eller manuelle risstellinger. Dette er spesialmetoder, som delvis er under utvikling, og
-som må beskrives i hvert tilfelle.
-Det finnes en egen metode (NS-EN 480-11) som beskriver automatisert luftporeanalyse av planslip.
-Denne metoden benyttes oftest til dokumentasjon av en betongs frostbestandighet i forbindelse
-med produksjon/bygging og er lite brukt i forbindelse med tilstandsundersøkelser av eldre
-konstruksjoner.
-Tynnslip
-Et tynnslip undersøkes i mikroskop og gir opplysninger om:
-- Tilslagstype (bergartstyper)
-- Kjemiske reaksjonsprodukter, f.eks. alkaligel, ettringitt
-- v/c-forhold
-- Luftinnhold
-- Karbonatiseringsdybde
-Hovedinspeksjon
-Strukturanalyse utføres normalt ikke.
-Spesialinspeksjon
-Strukturanalyse utføres ved f.eks. mistanke om alkalireaksjoner.
-Alkalireaksjoner skal dokumenteres ved strukturanalyser før skadeårsak 25 «Alkalireaktivt tilslag»
-settes i Brutus.
-Fordeler og ulemper
-Planslip og tynnslip er gode metoder for bestemmelse av betongens kvalitet, men de er destruktive,
-kostbare og tidkrevende. De er kun aktuelle å benytte når eventuelle skader og skadeårsaker ikke
-kan fastslås på annen måte eller når det er viktig å finne betongens sammensetning.
-Henvisninger
-Håndbok R210 Laboratorieundersøkelser
-Håndbok R211 Feltundersøkelser
-NS-EN 932
-NS-EN 480-11"""@no ;
+  rdfs:label "Structural analysis"@en ;
   rdfs:label "Strukturanalyse"@no ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
@@ -2864,14 +2157,8 @@ NS-EN 480-11"""@no ;
 .
 :Sveisekontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Kontrollere om det er sveisefeil eller har oppstått skader på sveiser.
-Gjennomføring
-Ved mistanke om materialdefekter bør det i tillegg til visuell kontroll utføres en røntgen- eller
-ultralydkontroll.
-Fordeler og ulemper
-Henvisning"""@no ;
   rdfs:label "Sveisekontroll"@no ;
+  rdfs:label "Welding control"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Svinn_eller_kryp
@@ -2888,26 +2175,13 @@ Henvisning"""@no ;
 .
 :Termokamera
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Oppdage delaminering, bom og lekkasje/fukt på undersiden av ei bruplate.
-Gjennomføring
-Termofotografering av overflater mistenkt for delaminering, manglende heft eller lekkasjer. Fuktige
-eller inhomogene flater vil på stigende temperatur fremstå som kaldere enn omgivelsene.
-Spesialinspeksjon
-Vil kun være aktuell å utføre i forbindelse med en spesialinspeksjon.
-Fordeler og ulemper
-Rask og ikke-destruktiv metode. Kan utføres fra undersiden av bruer uten spesiell tilkomst og på
-oversiden av dekket uten å stenge for trafikk. Metoden fungerer best på stigende temperatur for å
-registrere temperaturforskjeller. Krever erfaring for tolking av resultater. Resultatene kontrolleres med
-bomkontroll med hammer etter uttak av kjerneprøver.
-Henvisninger"""@no ;
   rdfs:label "Termokamera"@no ;
+  rdfs:label "Thermal camera"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Tiltak
   rdf:type owl:Class ;
   :kode "-" ;
-  rdfs:comment "På bakgrunn av inspeksjonen og tilstand på brua kan bruinspektøren foreslå ett eller flere tiltak. Se kapittel 3.5.2 Konsekvensgrad for når tiltak beskrives. Tiltakene registreres i Brutus og vil senere være grunnlag for innspill til budsjettarbeidet."@no ;
   rdfs:label "Measures"@en ;
   rdfs:label "Tiltak"@no ;
   rdfs:subClassOf :Root ;
@@ -2951,12 +2225,7 @@ Henvisninger"""@no ;
 :Tiltak_for_a_rette_pa_akutte_skader_eller_tiltak_som_ikke_kan_planlegges_pa_lang_sikt
   rdf:type owl:Class ;
   :kode "5.2.01" ;
-  rdfs:comment """Dette kan f.eks. være oppretting/ utskifting av deler av skadet rekkverk eller fugekonstruksjon, oppfylling etter undergraving osv.
-Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding om skade etter uhell.
-- Grunnarbeider etter erosjon, undergraving osv.
-- Utskifting av skadede elementer av betong, stål, stein, tre eller annet materiale
-- Utskifting av skadet bru- og kaiutstyr"""@no ;
-  rdfs:label "Measures to repair the acute injury or measures that can not be planned for the long term"@en ;
+  rdfs:label "Measures to repair acute damages or measures that can not be planned in the long term"@en ;
   rdfs:label "Tiltak for å rette på akutte skader eller tiltak som ikke kan planlegges på lang sikt"@no ;
   rdfs:subClassOf :Vedlikehold ;
   owl:disjointUnionOf (
@@ -2968,19 +2237,21 @@ Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding 
 :Tiltak_som_oker_baereevnen_for_ei_bru_eller_et_element__skadet_eller_ikke_skadet
   rdf:type owl:Class ;
   :kode "5.4.01" ;
-  rdfs:label "Measures that increase the load capacity of a bridge or an element, damaged or nor damaged"@en ;
+  rdfs:label "Measures that increase the load bearing capacity of a bridge or an element, damaged or not damaged (intact)"@en ;
   rdfs:label "Tiltak som øker bæreevnen for ei bru eller et element, skadet eller ikke skadet"@no ;
   rdfs:subClassOf :Forsterkning ;
 .
 :Tiltaksbeskrivelse
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Tiltak ;
+  rdfs:label "Beskrivelse av tiltak"@no ;
+  rdfs:label "Description of measures"@en ;
   rdfs:subPropertyOf :Beskrivelse ;
 .
 :Tradbrudd
   rdf:type :Skade_pa_stal ;
   :kode "44"^^xsd:int ;
-  rdfs:label "Strand break"@en ;
+  rdfs:label "Strand breakage"@en ;
   rdfs:label "Trådbrudd"@no ;
 .
 :Trafikklast
@@ -2991,95 +2262,38 @@ Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding 
 .
 :Trafikksikkerhet
   rdf:type owl:Class ;
-  rdfs:comment """En registrert sårbarhet for trafikksikkerhet betyr at brua har et vesentlig avvik fra gjeldende vegnormalkrav, f.eks.
-- Rekkverk som ikke er i henhold til dagens standard
-- Dårlig veg-geometri
-- Vegkryss tett på brua"""@no ;
+  rdfs:label "Traffic safety"@en ;
   rdfs:label "Trafikksikkerhet"@no ;
   rdfs:subClassOf :Sarbarhet ;
 .
 :Trykkfasthet_stein
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Bestemme trykkfastheten. Kan være aktuelt ved kontroll av bæreevnen for steinbruer.
-Gjennomføring
-Trykkfasthet for stein bestemmes ved å ta ut kjerner som trykkprøves. Steinkjernen som benyttes
-må være fri for sprekker og riss. Metoden kan også benyttes til å finne elastisitetsmodulen.
-Fordel og ulemper
-Metoden er destruktiv og bør bare benyttes i svært begrenset omfang."""@no ;
-  rdfs:label "Trykkprøving"@no ;
+  rdfs:label "Compressive strength - stone"@en ;
+  rdfs:label "Trykkfasthet - stein"@no ;
   rdfs:subClassOf :Materialundersokelse_stein ;
 .
 :Tykkelse_overflatebelegg_stal
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle om tykkelsen av tørr malingsfilm/-belegg på stål.
-Gjennomføring
-Total filmtykkelse, inkludert både sinkbelegg og malingsbelegg, måles med magnetisk
-tykkelsesmåler i henhold til NS-EN ISO 2178.
-Tykkelse på malingsbelegget måles med ikke-magnetisk tykkelsesmåler i henhold til NS-EN ISO
-2360.
-Krav til kalibrering og utførelse er gitt i håndbok R762 Prosesskode 2.
-Hovedinspeksjon
-Beleggtykkelse måles vanligvis ikke ved hovedinspeksjon.
-Spesialinspeksjon
-Måling av beleggtykkelse gjøres hovedsakelig ved en spesialinspeksjon.
-Fordeler og ulemper
-Tykkelsesmåling er en ikke destruktiv testmetode og gir god informasjon om belegges tykkelse.
-Henvisning
-Håndbok R762 Prosesskode 2
-NS-EN ISO 2178 Måling av beleggtykkelse – Magnetisk metode
-NS-EN ISO 2360 Måling av beleggtykkelse – Amplitudesensitiv virvelstrømsmetode"""@no ;
-  rdfs:label "Tykkelse av overflatebelegg på stål"@no ;
+  rdfs:label "Thickness coating - steel"@en ;
+  rdfs:label "Tykkelse overflatebelegg - stål"@no ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :Ujevnhet
   rdf:type :Skade_pa_slitelag_eller_fuktisolasjon ;
   :kode "72" ;
   rdfs:label "Ujevnhet"@no ;
-  rdfs:label "Unevenness"@en ;
+  rdfs:label "Unevenness / ununiformity"@en ;
 .
 :Ultralyd
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Måle tykkelser på betong, armeringsdiameter, kartlegge porer og hulrom i utstøpte kabelrør,
-registrere delaminering, riss og sprekker i betong.
-Gjennomføring
-Kombinert ultralyd plasseres på betongoverflaten med flere sendere/mottakere plassert sammen
-i måleapparatet. Pulserende ultralydbølger sendes ut, reflekteres og leses av mottaker. Signalene
-prosesseres av en pc som lager en 3D modell av et område der armeringsplassering og -dimensjon,
-riss, sprekker og hulrom fremgår.
-Hovedinspeksjon
-Måling med ultralyd utføres normal ikke
-Spesialinspeksjon
-Måling med ultralyd på konstruksjonsdeler for å kartlegge dimensjoner eller avdekke feil.
-Fordeler og ulemper
-Ikke destruktiv metode med stor presisjon. Relativt kostbart utstyr som kun dekker mindre flater ved
-hver måling. Tidkrevende å dekke større arealer.
-Henvisninger"""@no ;
   rdfs:label "Ultralyd"@no ;
+  rdfs:label "Ultrasonic"@en ;
   rdfs:subClassOf :Materialundersokelse_betong ;
 .
 :Ultralydkontroll
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Avdekke/ kartlegge/ finne materialdefekter i sveiser eller sprekker i skruer og nagler.
-Gjennomføring
-Målingene med ultralyd utføres med et prøvehode som sender og mottar ultralydbølger.
-Ultralydbølger har en frekvens som overstiger høregrensen (ca. 16.000 Hz). Lydbølgene forplanter
-seg i faste stoffer, men ikke i luft. Prøvehodet plasseres på overflaten og lydbølgene reflekteres fra
-prøveområdets motsatte flate.
-Resultatene av målingene registreres ved hjelp av et oscilloskop.
-Ultralydkontroll og røntgenkontroll kompletterer hverandre. Ved bindefeil og visse sprekketyper er
-ultralydkontroll å foretrekke.
-Tolkingen av resultatene stiller store krav til operatøren. Operatøren skal inneha de nødvendige
-kvalifikasjoner og erfaring for å registrere og tolke måleresultatene. Kontrollen utføres derfor av
-firmaer med spesialkompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 17640:2018
-NS-EN ISO 19285"""@no ;
   rdfs:label "Ultralydkontroll"@no ;
+  rdfs:label "Ultrasonic control"@en ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Ulykkeslast
@@ -3100,16 +2314,14 @@ NS-EN ISO 19285"""@no ;
 :Undergraving_av_fundamenter_sarbar_Flom
   rdf:type owl:Class ;
   :kode "5.7.09" ;
+  rdfs:label "Scouring of foundations, Flood vulnurability"@en ;
   rdfs:label "Undergraving av fundamenter, sårbar Flom"@no ;
-  rdfs:label "Undermining of foundations, vulnerable floods"@en ;
   rdfs:subClassOf :ROS_analyse ;
 .
 :Utford
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Date when activity was finalized"@en ;
-  rdfs:comment "Dato når aktiviteten ble utført"@no ;
-  rdfs:label "Executed"@en ;
-  rdfs:label "Utførd"@no ;
+  rdfs:label "Done"@en ;
+  rdfs:label "Utført"@no ;
   rdfs:range xsd:date ;
 .
 :Utfore_materialundersokelse_ved_en_spesialinspeksjon
@@ -3138,7 +2350,7 @@ NS-EN ISO 19285"""@no ;
 :Utglidning
   rdf:type :Skade_pa_stein ;
   :kode "51"^^xsd:int ;
-  rdfs:label "Slipping"@en ;
+  rdfs:label "Slippage"@en ;
   rdfs:label "Utglidning"@no ;
 .
 :Utluting
@@ -3191,38 +2403,25 @@ NS-EN ISO 19285"""@no ;
 :Utvasking
   rdf:type :Skade_pa_betong ;
   :kode "37"^^xsd:int ;
+  rdfs:label "Leaching"@en ;
   rdfs:label "Utvasking"@no ;
-  rdfs:label "Washout"@en ;
 .
 :V441Lokasjon
   rdf:type owl:Class ;
+  rdfs:label "V441 Lokasjon"@no ;
+  rdfs:label "V441 location"@en ;
   rdfs:subClassOf :Lokasjon ;
 .
 :Vaerforhold
   rdf:type owl:DatatypeProperty ;
   rdfs:domain :Inspeksjon ;
+  rdfs:label "Værforhold"@no ;
+  rdfs:label "Weather conditions"@en ;
   rdfs:range xsd:string ;
 .
 :Vedlikehold
   rdf:type owl:Class ;
   :kode "5.2"^^xsd:double ;
-  rdfs:comment """Tiltak for å rette på akutte skader eller tiltak som ikke kan planlegges på lang sikt. Dette kan f.eks. være oppretting/ utskifting av deler av skadet rekkverk eller fugekonstruksjon, oppfylling etter undergraving osv.
-Vedlikehold utføres med bakgrunn i funn gjort under inspeksjoner eller melding om skade etter uhell.
-- Grunnarbeider etter erosjon, undergraving osv.
-- Utskifting av skadede elementer av betong, stål, stein, tre eller annet materiale
-- Utskifting av skadet bru- og kaiutstyr
-Planlagte tiltak for å opprettholde bruenes standard.
-Tiltakene utføres før det oppstår skader og ofte med regelmessige intervaller. Dette kan f.eks. være påføring av vannavvisende impregnering på betong ved regelmessige intervaller. Det kan også være tiltak som utføres etter forutgående vurdering av tilstanden, f.eks. overflatebehandling av betongbruer for å forebygge skader pga. karbonatisering og kloridinntrengning, overflatebehandling av stål, eller asfaltering når spordybden har nådd nivået som vedlikeholdsstandarden beskriver.
-- Overflatebehandling av stål
-- Overflatebehandling av betong
-- Overflatebehandling av tre
-- Slitelag- og membranarbeider
-Planlagte tiltak som utføres for å gjenopprette et skadet elements funksjonsdyktighet.
-Det kan f.eks. være mekanisk reparasjon av betongskader, større oppretting/utskifting av rekkverk,
-fuger, lager osv.
-- Reparasjon av betongskader over/under vann
-- Reparasjon av skader på elementer av stål, stein, tre og evt. andre materialer
-- Reparasjon av skader på bru- og kaiutstyr"""@no ;
   rdfs:label "Maintenance"@en ;
   rdfs:label "Vedlikehold"@no ;
   rdfs:subClassOf :Tiltak ;
@@ -3236,8 +2435,8 @@ fuger, lager osv.
 :Vesentlige_konsekvens_Forslag_til_tiltak_registreres_i_Brutus_Inspeksjonsintervall_ma_vurderes
   rdf:type :Konsekvensgrad ;
   :kode "3"^^xsd:int ;
-  rdfs:label "Significant consequence. Proposed actions shall be recorded in Brutus. Inspection interval must be considered"@en ;
-  rdfs:label "Vesentlige konsekvens. Forslag til tiltak registreres i Brutus. Inspeksjonsintervall må vurderes."@no ;
+  rdfs:label "Significant consequence. Proposed measures shall be recorded in Brutus. Inspection interval must be evaluated"@en ;
+  rdfs:label "Vesentlige konsekvens. Forslag til tiltak registreres i Brutus. Inspeksjonsintervall må vurderes"@no ;
 .
 :Vindlast
   rdf:type :Belastning ;
@@ -3247,46 +2446,14 @@ fuger, lager osv.
 .
 :Virvelstromproving
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Gi indikasjoner på sprekker i og nær overflaten på stål under malingsbelegg, som ikke kan oppdages
-ved visuell kontroll. Kan utføres uten å fjerne overflatebehandling.
-Gjennomføring
-Sprekkbildet bør dokumenteres ved hjelp av skisser eller fotografier. Både gjennomgående
-sprekker og sprekker i overflaten avtegnes. Kontrollen gir ikke noe mål på hvor dype sprekkene
-er. Kontrollen kan utføres uten å fjerne overflatebehandlingen. Indikasjoner må følges opp med
-magnetpulverkontroll.
-Kontrollen utføres av firmaer med spesialutstyr og -kompetanse.
-Fordeler og ulemper
-Henvisning
-NS-EN ISO 17643:2015"""@no ;
+  rdfs:label "Eddy Current Testing"@en ;
   rdfs:label "Virvelstrømprøving"@no ;
   rdfs:subClassOf :Materialundersokelse_stal ;
 .
 :Visuell_inspeksjon_overflatebelegg
   rdf:type owl:Class ;
-  rdfs:comment """Hensikt
-Inspisere overflaten visuelt for å vurdere og bestemme grad av nedbrytning av overflatebelegg.
-Gjennomføring
-Overflaten inspiseres med utgangspunkt i ISO 4628 «Bedømmelse av nedbryting av belegg
-– Betegnelse av kvantitativ og størrelse på vanlige defekter og intensitet av jevn forandring av
-utseende»
-Hovedinspeksjon
-Det er ikke aktuelt å bruke ISO 4628 ved hovedinspeksjon. Det utføres en «standard» visuell
-inspeksjon med gradering i henhold til Brutus sine karaktersystemer på hovedinspeksjon.
-Spesialinspeksjon
-Visuell inspeksjon av overflatebelegg gjøres etter ISO 4628 ved en spesialinspeksjon. Det skal i
-tillegg til rapport etter ISO 4628 rapporteres inn i Brutus «standard reg. system».
-Fordeler og ulemper
-Ikke destruktiv testing av overflatebelegg.
-Henvisning
-ISO 4628-1:2016 Generell introduksjon og betegnelsessystem
-ISO 4628-2:2016 Vurdering av grad av blæring
-ISO 4628-3:2016 Vurdering av grad av rusting
-ISO 4628-4:2016 Vurdering av grad av krakelering
-ISO 4628-5:2016 Vurdering av grad av avflaking
-ISO 4628-6:2011 Bedømmelse av grad av kritting ved tapemetoden
-ISO 4628-7:2016 Bedømmelse av grad av kritting ved fløyelsdukmetoden"""@no ;
-  rdfs:label "Visuell inspeksjon av overflatebelegg"@no ;
+  rdfs:label "Visual inspection - surface coatings"@en ;
+  rdfs:label "Visuell inspeksjon - overflatebelegg"@no ;
   rdfs:subClassOf :Kontroll_overflatebelegg ;
 .
 :bSINorway
@@ -3298,8 +2465,6 @@ ISO 4628-7:2016 Bedømmelse av grad av kritting ved fløyelsdukmetoden"""@no ;
 :kode
   rdf:type owl:AnnotationProperty ;
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Code according to handbook V441"@en ;
-  rdfs:comment "Kod enligt håndbok V441"@no ;
+  rdfs:label "V441 code"@en ;
   rdfs:label "V441-kode"@no ;
-  rdfs:label "v441 code"@en ;
 .
