@@ -1,11 +1,11 @@
-# baseURI: http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_v440-owl
+# baseURI: https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_v440-owl
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://rdf.vegdata.no/V440/v440-brudata-owl
 # imports: http://rdf.vegdata.no/V440/v440-owl
-# imports: http://rdf.vegdata.no/bridge/v441/core/v441-owl
 # imports: http://xmlns.com/foaf/0.1/
+# imports: https://ontologi.atlas.vegvesen.no/v441/core/v441-owl
 
-@prefix : <http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_v440-owl#> .
+@prefix : <https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_v440-owl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -14,7 +14,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix v440-brudata-owl: <http://rdf.vegdata.no/V440/v440-brudata-owl#> .
 @prefix v440-owl: <http://rdf.vegdata.no/V440/v440-owl#> .
-@prefix v441-owl: <http://rdf.vegdata.no/bridge/v441/core/v441-owl#> .
+@prefix v441-owl: <https://ontologi.atlas.vegvesen.no/v441/core/v441-owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -49,7 +49,7 @@ v441-owl:V441Lokasjon
       owl:onProperty v440-brudata-owl:Aksenummer ;
     ] ;
 .
-<http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_v440-owl>
+<https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_v440-owl>
   rdf:type owl:Ontology ;
   dc:creator :SVV ;
   dc:creator :bSINorway ;
@@ -61,8 +61,8 @@ v441-owl:V441Lokasjon
   owl:imports dc: ;
   owl:imports <http://rdf.vegdata.no/V440/v440-brudata-owl> ;
   owl:imports <http://rdf.vegdata.no/V440/v440-owl> ;
-  owl:imports <http://rdf.vegdata.no/bridge/v441/core/v441-owl> ;
   owl:imports foaf: ;
+  owl:imports <https://ontologi.atlas.vegvesen.no/v441/core/v441-owl> ;
   owl:versionInfo "0.1" ;
 .
 :ReferererElement

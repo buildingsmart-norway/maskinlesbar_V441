@@ -1,17 +1,17 @@
-# baseURI: http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_geosparql
+# baseURI: https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_geosparql
 # imports: http://purl.org/dc/elements/1.1/
-# imports: http://rdf.vegdata.no/bridge/v441/core/v441-owl
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://xmlns.com/foaf/0.1/
+# imports: https://ontologi.atlas.vegvesen.no/v441/core/v441-owl
 
-@prefix : <http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_geosparql#> .
+@prefix : <https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_geosparql#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix v441-owl: <http://rdf.vegdata.no/bridge/v441/core/v441-owl#> .
+@prefix v441-owl: <https://ontologi.atlas.vegvesen.no/v441/core/v441-owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -34,7 +34,7 @@ v441-owl:Lokasjon
       owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     ] ;
 .
-<http://rdf.vegdata.no/bridge/v441/lrs/lrs_v441-owl_geosparql>
+<https://ontologi.atlas.vegvesen.no/v441/lrs/lrs_v441-owl_geosparql>
   rdf:type owl:Ontology ;
   dc:creator :SVV ;
   dc:creator :bSINorway ;
@@ -44,8 +44,8 @@ v441-owl:Lokasjon
   vann:preferredNamespacePrefix "lrs-v441--geosparql" ;
   vann:preferredNamespaceUri "http://rdf.vegdata.no/bridge/v441/lrs-v441-owl--geosparql" ;
   owl:imports dc: ;
-  owl:imports <http://rdf.vegdata.no/bridge/v441/core/v441-owl> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports foaf: ;
+  owl:imports <https://ontologi.atlas.vegvesen.no/v441/core/v441-owl> ;
   owl:versionInfo "0.1" ;
 .
