@@ -29,10 +29,10 @@ vann:preferredNamespaceUri
   dcterms:abstract "Ontology representing the content and structure of Handbook V441"@en ;
   dcterms:created "2020-10-30" ;
   vann:preferredNamespacePrefix "v441" ;
-  vann:preferredNamespaceUri "http://rdf.vegdata.no/bridge/v441/core/v441-owl" ;
+  vann:preferredNamespaceUri "https://ontologi.atlas.vegvesen.no/v441/core/v441-owl" ;
   owl:imports dc: ;
   owl:imports foaf: ;
-  owl:versionInfo "0.1" ;
+  owl:versionInfo "1.0" ;
 .
 :Akselererende_utvikling
   rdf:type :Skadeutvikling ;
